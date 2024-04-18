@@ -278,6 +278,27 @@ nav.main-menu a {
   padding-bottom: 30px;
   text-align: center;
 }
+.whatsapp {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -250px;
+}
+.whatsappbtn {
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out,
+    border-radius 0.5s ease-in-out;
+}
+.whatsappbtn:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+  transform: scale(1.1);
+}
+.whatsappbtn img {
+  transition: 0.5s ease-in-out;
+  /* border: 1px solid black; */
+  width: 30rem;
+}
 #templatemo_features .feature-box {
   transition: all 0.5s;
   background: transparent;
