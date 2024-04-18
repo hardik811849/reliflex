@@ -282,8 +282,15 @@ nav.main-menu a {
   /* border: 1px solid red; */
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   top: -280px;
+}
+.whatsapp p {
+  margin-top: 20rem;
+  font-size: 10px;
+  color: white;
 }
 .whatsappbtn {
   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out,
