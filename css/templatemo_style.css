@@ -290,13 +290,14 @@ nav.main-menu a {
     border-radius 0.5s ease-in-out;
 }
 .whatsappbtn:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(255, 255, 255, 0.9) 0px 5px 15px;
   border-radius: 20px;
   transform: scale(1.1);
 }
 .whatsappbtn img {
   transition: 0.5s ease-in-out;
-  /* border: 1px solid black; */
+  border: 2px solid white;
+  border-radius: 20px;
   width: 27rem;
 }
 #templatemo_features .feature-box {
