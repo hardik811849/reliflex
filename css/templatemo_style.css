@@ -283,7 +283,7 @@ nav.main-menu a {
   display: flex;
   justify-content: center;
   position: relative;
-  top: -250px;
+  top: -280px;
 }
 .whatsappbtn {
   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out,
@@ -297,7 +297,7 @@ nav.main-menu a {
 .whatsappbtn img {
   transition: 0.5s ease-in-out;
   /* border: 1px solid black; */
-  width: 30rem;
+  width: 27rem;
 }
 #templatemo_features .feature-box {
   transition: all 0.5s;
