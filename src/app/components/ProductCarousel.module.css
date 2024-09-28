@@ -1,0 +1,45 @@
+.cardContainer {
+  position: relative;
+  /* border: 1px solid red !important; */
+  width: 10%;
+}
+
+.card {
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+  width: 80%; /* Adjust width as needed */
+  margin: 0 auto; /* Center align the card */
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.cardContent {
+  position: relative;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.description {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .description {
+  opacity: 1;
+}
+
+.MuiTypography-h6 {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .MuiTypography-h6 {
+  opacity: 0;
+}
+
+.customSlideWidth {
+  width: 90%; /* Adjust width as needed */
+  margin: 0 auto; /* Center align the custom width slide */
+}
