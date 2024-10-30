@@ -21,11 +21,6 @@ import product5 from "../../../public/featuredProducts/product5.svg";
 import product6 from "../../../public/featuredProducts/product6.svg";
 import product7 from "../../../public/featuredProducts/product7.svg";
 import product8 from "../../../public/featuredProducts/product8.svg";
-import product9 from "../../../public/featuredProducts/product9.svg";
-import product10 from "../../../public/featuredProducts/product10.svg";
-import product11 from "../../../public/featuredProducts/product11.svg";
-import product12 from "../../../public/featuredProducts/product12.svg";
-import Link from "next/link";
 
 const FeaturedProducts = () => {
   const [selected, setSelected] = useState(0);
@@ -162,7 +157,7 @@ const FeaturedProducts = () => {
     ],
   ];
   const handleChange = (event, newValue) => {
-    setSelected(newValue);
+    setValue(newValue);
   };
   return (
     <Box sx={{ mb: 10 }}>
@@ -188,7 +183,7 @@ const FeaturedProducts = () => {
           mt: { lg: -21, md: -10, sm: -8, xs: 2 },
         }}
       >
-        Our
+        Our{" "}
         <Typography
           component="span"
           sx={{
@@ -248,7 +243,22 @@ const FeaturedProducts = () => {
       </Box>
       <Box sx={{ mt: 5, mx: { xl: 28, lg: 10, sm: 2 } }}>
         <Grid container spacing={4}>
-          {tabContent[selected]}
+          <Product imgSrc={product1} imgAlt="product1" text="RVR880" />
+          <Product imgSrc={product2} imgAlt="product2" text="GQ40" />
+          <Product imgSrc={product3} imgAlt="product3" text="RT36" />
+          <Product imgSrc={product4} imgAlt="product4" text="GQ42" />
+          <Product imgSrc={product5} imgAlt="product5" text="MIX180T" />
+          <Product imgSrc={product6} imgAlt="product6" text="RCS16" />
+          <Product
+            imgSrc={product7}
+            imgAlt="product7"
+            text="PORTABLE BATCHING P-500"
+          />
+          <Product
+            imgSrc={product8}
+            imgAlt="product8"
+            text="SOLAR TOWER LIGHT"
+          />
         </Grid>
         <Box sx={{ display: "flex" }}>
           <Button
@@ -261,7 +271,7 @@ const FeaturedProducts = () => {
               mx: "auto",
             }}
           >
-            <Link href="/equipment">Explore more</Link>
+            Explore more
           </Button>
         </Box>
       </Box>
