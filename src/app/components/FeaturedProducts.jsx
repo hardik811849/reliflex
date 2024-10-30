@@ -84,25 +84,81 @@ const FeaturedProducts = () => {
   };
   const tabContent = [
     [
-      <Product imgSrc={product1} imgAlt="product1" text="RVR880" />,
-      <Product imgSrc={product2} imgAlt="product2" text="GQ40" />,
-      <Product imgSrc={product3} imgAlt="product3" text="RT36" />,
-      <Product imgSrc={product4} imgAlt="product4" text="GQ42" />,
-      <Product imgSrc={product5} imgAlt="product5" text="MIX180T" />,
-      <Product imgSrc={product6} imgAlt="product6" text="RCS16" />,
       <Product
+        key="product1"
+        imgSrc={product1}
+        imgAlt="product1"
+        text="RVR880"
+      />,
+      <Product
+        key="product2"
+        imgSrc={product2}
+        imgAlt="product2"
+        text="GQ40"
+      />,
+      <Product
+        key="product3"
+        imgSrc={product3}
+        imgAlt="product3"
+        text="RT36"
+      />,
+      <Product
+        key="product4"
+        imgSrc={product4}
+        imgAlt="product4"
+        text="GQ42"
+      />,
+      <Product
+        key="product5"
+        imgSrc={product5}
+        imgAlt="product5"
+        text="MIX180T"
+      />,
+      <Product
+        key="product6"
+        imgSrc={product6}
+        imgAlt="product6"
+        text="RCS16"
+      />,
+      <Product
+        key="product7"
         imgSrc={product7}
         imgAlt="product7"
         text="PORTABLE BATCHING P-500"
       />,
-      <Product imgSrc={product8} imgAlt="product8" text="SOLAR TOWER LIGHT" />,
+      <Product
+        key="product8"
+        imgSrc={product8}
+        imgAlt="product8"
+        text="SOLAR TOWER LIGHT"
+      />,
     ],
     [
       // Content for "Bar Bender Series" tab
-      <Product imgSrc={product9} imgAlt="product9" text="GF26" />,
-      <Product imgSrc={product10} imgAlt="product10" text="GWH32" />,
-      <Product imgSrc={product11} imgAlt="product11" text="GW20S" />,
-      <Product imgSrc={product12} imgAlt="product12" text="GW20" />,
+      <Product
+        key="product9"
+        imgSrc={product9}
+        imgAlt="product9"
+        text="GF26"
+      />,
+      <Product
+        key="product10"
+        imgSrc={product10}
+        imgAlt="product10"
+        text="GWH32"
+      />,
+      <Product
+        key="product11"
+        imgSrc={product11}
+        imgAlt="product11"
+        text="GW20S"
+      />,
+      <Product
+        key="product12"
+        imgSrc={product12}
+        imgAlt="product12"
+        text="GW20"
+      />,
     ],
   ];
   const handleChange = (event, newValue) => {
