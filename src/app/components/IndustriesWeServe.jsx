@@ -134,7 +134,14 @@ const IndustriesWeServe = () => {
         their kind in their respective field.
       </Typography>
       <Box sx={{ mt: 5, mx: { xxl: 28, xl: 10, lg: 6, md: 4, sm: 4 } }}>
-        <Grid container spacing={4}>
+        <Grid
+          container
+          spacing={4}
+          sx={{
+            color: theme.palette.text.main,
+            fontWeight: 700,
+          }}
+        >
           <Industry imgSrc={Shape1} imgAlt="shape1" text="Construction" />
           <Industry imgSrc={Shape2} imgAlt="shape2" text="Agriculture" />
           <Industry
