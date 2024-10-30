@@ -25,6 +25,18 @@ import product9 from "../../../public/featuredProducts/product9.svg";
 import product10 from "../../../public/featuredProducts/product10.svg";
 import product11 from "../../../public/featuredProducts/product11.svg";
 import product12 from "../../../public/featuredProducts/product12.svg";
+import GW42J from "../../../public/featuredProducts/GW42J.svg";
+import GW50 from "../../../public/featuredProducts/GW50.svg";
+import GT414C from "../../../public/featuredProducts/GT4-14C.svg";
+import GT414E from "../../../public/featuredProducts/GT4-14E.svg";
+import GTW410 from "../../../public/featuredProducts/GT4-10.svg";
+import GT414A1 from "../../../public/featuredProducts/GT4-14A1.svg";
+import GT414A from "../../../public/featuredProducts/GT4-14A.svg";
+import RT28 from "../../../public/featuredProducts/RT28.svg";
+import RT281 from "../../../public/featuredProducts/RT28_1.svg";
+import RT36 from "../../../public/featuredProducts/RT36.svg";
+import RT36L from "../../../public/featuredProducts/RT36L.svg";
+import RT361 from "../../../public/featuredProducts/RT36_1.svg";
 import Link from "next/link";
 const FeaturedProducts = () => {
   const [selected, setSelected] = useState(0);
@@ -158,6 +170,38 @@ const FeaturedProducts = () => {
         imgAlt="product12"
         text="GW20"
       />,
+      <Product key="GW42J" imgSrc={GW42J} imgAlt="GW42J" text="GW42J" />,
+      <Product key="GW50" imgSrc={GW50} imgAlt="GW50" text="GW50" />,
+    ],
+    [
+      <Product
+        key="GT4-14A_1"
+        imgSrc={GT414A}
+        imgAlt="GT4-14A"
+        text="GT4-14A"
+      />,
+      <Product
+        key="GT4-14A1"
+        imgSrc={GT414A1}
+        imgAlt="GT4-14A"
+        text="GT4-14A"
+      />,
+      <Product key="GTW4-10" imgSrc={GTW410} imgAlt="GTW4-10" text="GTW4-10" />,
+      <Product
+        key="GT4-14A_2"
+        imgSrc={GT414A}
+        imgAlt="GT4-14A"
+        text="GT4-14A"
+      />,
+      <Product key="GT4-14E" imgSrc={GT414E} imgAlt="GT4-14E" text="GT4-14E" />,
+      <Product key="GT4-14C" imgSrc={GT414C} imgAlt="GT4-14C" text="GT4-14C" />,
+    ],
+    [
+      <Product key="RT28" imgSrc={RT28} imgAlt="RT28" text="RT28" />,
+      <Product key="RT28_1" imgSrc={RT281} imgAlt="RT28" text="RT28" />,
+      <Product key="RT36" imgSrc={RT36} imgAlt="RT36" text="RT36" />,
+      <Product key="RT36L" imgSrc={RT36L} imgAlt="RT36L" text="RT36L" />,
+      <Product key="RT36_1" imgSrc={RT361} imgAlt="RT36" text="RT36" />,
     ],
   ];
   const handleChange = (event, newValue) => {
