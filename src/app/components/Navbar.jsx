@@ -159,7 +159,7 @@ const Navbar = () => {
           >
             Events
           </MenuItem>
-          {/* <MenuItem
+          <MenuItem
             onClick={() => {
               router.push("/photo-gallery");
               handleMediaCloseMenu();
@@ -174,7 +174,7 @@ const Navbar = () => {
             }}
           >
             Video Gallery
-          </MenuItem> */}
+          </MenuItem>
         </Menu>
         <Toolbar sx={{ mx: { xl: "100px", xxl: "250px" } }}>
           <IconButton

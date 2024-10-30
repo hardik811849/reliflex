@@ -45,9 +45,9 @@ export default function Home() {
     <Box sx={{ backgroundColor: "white" }}>
       <Hero />
       <About showHeader showSideCrane />
-      {/* <Manufacturing /> */}
+      <Manufacturing />
       <LatestUpdates />
-      {/* <OurServices /> */}
+      <OurServices />
       <FeaturedProducts />
       <IndustriesWeServe />
       <HowDoesItWorks />

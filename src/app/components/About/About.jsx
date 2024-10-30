@@ -17,7 +17,6 @@ import styled from "@emotion/styled";
 import AboutUsLeftImageGrid from "./AboutUsLeftImageGrid";
 import AboutHeading from "./AboutHeading";
 import SideCraneWithBg from "./SideCraneWithBg";
-import Link from "next/link";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -160,7 +159,7 @@ const About = ({ showHeader, showSideCrane }) => {
               mt: "20px",
             }}
           >
-            <Link href="/about-us">Explore more</Link>
+            Explore more
           </Button>
         </Box>
       </Box>
