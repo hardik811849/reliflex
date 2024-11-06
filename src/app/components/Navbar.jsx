@@ -20,6 +20,7 @@ import { useTheme } from "@emotion/react";
 import { KeyboardArrowDown } from "@mui/icons-material";
 import { useRouter } from "next/navigation";
 import { Menu as MenuIcon } from "@mui/icons-material";
+import Link from "next/link";
 
 const Navbar = () => {
   const theme = useTheme();
@@ -191,13 +192,15 @@ const Navbar = () => {
             <MenuIcon sx={{ color: "white" }} />
           </IconButton>
           <Box variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Image
-              src={reliflexLogo}
-              width={screenSizeXs && !screenSizeMd ? 120 : 200}
-              height={screenSizeXs && !screenSizeMd ? "auto" : 60}
-              alt="reliflex logo"
-              priority
-            />
+            <Link href="/">
+              <Image
+                src={reliflexLogo}
+                width={screenSizeXs && !screenSizeMd ? 120 : 200}
+                height={screenSizeXs && !screenSizeMd ? "auto" : 60}
+                alt="reliflex logo"
+                priority
+              />
+            </Link>
           </Box>
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             {navItems.map((item, index) => (
