@@ -129,6 +129,7 @@ const RecentNews = () => {
           fontWeight: 700,
           fontSize: { xl: "50px", lg: "40px", md: "30px", xs: "20px" },
           textAlign: "center",
+          color: theme.palette.text.main,
           mt: { sm: -20, xs: 3 },
         }}
       >

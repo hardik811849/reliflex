@@ -15,6 +15,7 @@ import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ProductCarousel from "./components/ProductCarousel";
 
 export default function Home() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -42,64 +43,66 @@ export default function Home() {
   };
 
   return (
-    <Box sx={{ backgroundColor: "white" }}>
-      <Hero />
-      <About showHeader showSideCrane />
-      {/* <Manufacturing /> */}
-      <LatestUpdates />
-      {/* <OurServices /> */}
-      <FeaturedProducts />
-      <IndustriesWeServe />
-      <HowDoesItWorks />
-      <PublicFeedback />
-      <RecentNews />
+    <>
+      <Box sx={{ backgroundColor: "white" }}>
+        <Hero />
+        <About showHeader showSideCrane />
+        {/* <Manufacturing /> */}
+        <LatestUpdates />
+        {/* <OurServices /> */}
+        <FeaturedProducts />
+        <IndustriesWeServe />
+        <HowDoesItWorks />
+        <PublicFeedback />
+        <RecentNews />
 
-      <Dialog
-        open={openPopup}
-        onClose={handleClose}
-        PaperProps={{
-          style: {
-            width: "100vw",
-            height: "80.5vh",
-            maxWidth: "90vw",
-          },
-        }}
-      >
-        <Slider {...settings}>
-          <Box position="relative" height={"80vh"} width={"100%"}>
-            <Image
-              src="/B1.svg"
-              alt="Image 1"
-              layout="fill"
-              objectFit="cover"
-            />
-          </Box>
-          <Box position="relative" height={"80vh"} width={"100%"}>
-            <Image
-              src="/B2.svg"
-              alt="Image 2"
-              layout="fill"
-              objectFit="cover"
-            />
-          </Box>
-          <Box position="relative" height={"80vh"} width={"100%"}>
-            <Image
-              src="/B3.svg"
-              alt="Image 3"
-              layout="fill"
-              objectFit="cover"
-            />
-          </Box>
-          <Box position="relative" height={"80vh"} width={"100%"}>
-            <Image
-              src="/B4.svg"
-              alt="Image 4"
-              layout="fill"
-              objectFit="cover"
-            />
-          </Box>
-        </Slider>
-      </Dialog>
-    </Box>
+        <Dialog
+          open={openPopup}
+          onClose={handleClose}
+          PaperProps={{
+            style: {
+              width: "100vw",
+              height: "80.5vh",
+              maxWidth: "90vw",
+            },
+          }}
+        >
+          <Slider {...settings}>
+            <Box position="relative" height={"80vh"} width={"100%"}>
+              <Image
+                src="/B1.svg"
+                alt="Image 1"
+                layout="fill"
+                objectFit="cover"
+              />
+            </Box>
+            <Box position="relative" height={"80vh"} width={"100%"}>
+              <Image
+                src="/B2.svg"
+                alt="Image 2"
+                layout="fill"
+                objectFit="cover"
+              />
+            </Box>
+            <Box position="relative" height={"80vh"} width={"100%"}>
+              <Image
+                src="/B3.svg"
+                alt="Image 3"
+                layout="fill"
+                objectFit="cover"
+              />
+            </Box>
+            <Box position="relative" height={"80vh"} width={"100%"}>
+              <Image
+                src="/B4.svg"
+                alt="Image 4"
+                layout="fill"
+                objectFit="cover"
+              />
+            </Box>
+          </Slider>
+        </Dialog>
+      </Box>
+    </>
   );
 }
