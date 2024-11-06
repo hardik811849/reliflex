@@ -13,7 +13,8 @@ import { BarBenderModelGWH32 } from "../components/Equipments/all-equipments/bar
 const EquipmentPage = () => {
   const theme = useTheme();
   const [demoSelectModel, setDemoSelectModel] = useState();
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState();
+
   const screenSizeMd = useMediaQuery(theme.breakpoints.up("md"));
   const screenSizeSm = useMediaQuery(theme.breakpoints.up("sm"));
   const screenSizeXs = useMediaQuery(theme.breakpoints.up("xs"));
@@ -43,6 +44,8 @@ const EquipmentPage = () => {
       textAlign: "center",
     },
   };
+  console.log("setSelectedCategory", setSelectedCategory);
+
   return (
     <Box sx={{ backgroundColor: "white", pb: 15 }}>
       <Box sx={styles.container}>
@@ -161,8 +164,8 @@ const EquipmentPage = () => {
                   screenSizeXs && !screenSizeSm
                     ? "200px"
                     : screenSizeSm && !screenSizeMd
-                    ? "300px"
-                    : 450,
+                      ? "300px"
+                      : 450,
                 height: "auto",
               }}
             />
@@ -178,7 +181,6 @@ const EquipmentPage = () => {
         <Grid item xs={12} sm={5} md={3} lg={2}>
           <EquipmentSidebar
             demoSelectModel={demoSelectModel}
-            setDemoSelectModel={setDemoSelectModel}
             setSelectedCategory={setSelectedCategory}
           />
         </Grid>
