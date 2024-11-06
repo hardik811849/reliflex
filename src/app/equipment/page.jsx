@@ -1,6 +1,6 @@
 "use client";
 import { useTheme } from "@emotion/react";
-import { Box, Divider, Typography, useMediaQuery } from "@mui/material";
+import { Box, Divider, Grid, Typography, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import allSectionsHero from "../../../public/allSectionsHero.svg";
 import yellowBulldozer from "../../../public/manufacturing/yellowBulldozer.svg";
@@ -13,6 +13,7 @@ import { BarBenderModelGWH32 } from "../components/Equipments/all-equipments/bar
 const EquipmentPage = () => {
   const theme = useTheme();
   const [demoSelectModel, setDemoSelectModel] = useState();
+  const [selectedCategory, setSelectedCategory] = useState();
   const screenSizeMd = useMediaQuery(theme.breakpoints.up("md"));
   const screenSizeSm = useMediaQuery(theme.breakpoints.up("sm"));
   const screenSizeXs = useMediaQuery(theme.breakpoints.up("xs"));
@@ -159,33 +160,36 @@ const EquipmentPage = () => {
                   screenSizeXs && !screenSizeSm
                     ? "200px"
                     : screenSizeSm && !screenSizeMd
-                    ? "300px"
-                    : 450,
+                      ? "300px"
+                      : 450,
                 height: "auto",
               }}
             />
           </Box>
         </Box>
       )}
-      <Box>
-        <EquipmentSidebar
-          setDemoSelectModel={setDemoSelectModel}
-          demoSelectModel={demoSelectModel}
-        />
-        <Box
-          component="main"
-          sx={{
-            ml: "240px",
-          }}
+      <Grid
+        container
+        width={{ sm: "90%", xs: "100%", md: "100%" }}
+        sx={{ display: "flex", mx: "auto" }}
+        spacing={2}
+      >
+        <Grid item xs={12} sm={5} md={3} lg={2}>
+          <EquipmentSidebar
+            demoSelectModel={demoSelectModel}
+            setSelectedCategory={setSelectedCategory}
+          />
+        </Grid>
+        <Grid item xs={12} sm={6} md={9} lg={10}
         >
-          {demoSelectModel ? (
-            <BarBenderModelGWH32 />
-          ) : (
-            <EquipmentsStarterPage />
-          )}
-        </Box>
-      </Box>
-    </Box>
+          <EquipmentsStarterPage
+            demoSelectModel={demoSelectModel}
+            setDemoSelectModel={setDemoSelectModel}
+            selectedCategory={selectedCategory}
+          />
+        </Grid>
+      </Grid>
+    </Box >
   );
 };
 export default EquipmentPage;
