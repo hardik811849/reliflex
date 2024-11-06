@@ -160,7 +160,6 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
     { id: 50, imgSrc: equipment1, imgAlt: "equipment1", equipmentName: "GTW4-12", category: "power trowels/ power floater" },
     { id: 51, imgSrc: equipment1, imgAlt: "equipment1", equipmentName: "GTW4-12", category: "power trowels/ power floater" },
 
-
     { id: 52, imgSrc: equipment1, imgAlt: "equipment1", equipmentName: "GTW4-12", category: "ride on trowel" },
     { id: 53, imgSrc: equipment1, imgAlt: "equipment1", equipmentName: "GTW4-12", category: "ride on trowel" },
     { id: 54, imgSrc: equipment1, imgAlt: "equipment1", equipmentName: "GTW4-12", category: "ride on trowel" },
@@ -220,16 +219,12 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
     { id: 106, imgSrc: equipment1, imgAlt: "equipment1", equipmentName: "GTW4-12", category: "concrete spraying machine" },
     { id: 107, imgSrc: equipment1, imgAlt: "equipment1", equipmentName: "GTW4-12", category: "flooring equipment" },
 
-
   ];
-
-  // console.log(EquipmentSidebar.summaries)
 
   // Filter equipment data based on selectedCategory
   const filteredEquipments = selectedCategory
     ? allEquipmentsData.filter(item => item.category === selectedCategory)
     : defaultEquipmentsData; // Show all if no category is selected
-
 
   return (
     <Grid
