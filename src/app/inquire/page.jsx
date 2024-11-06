@@ -300,7 +300,10 @@ const InquirePage = () => {
               { label: "Email Address", type: "text" },
               { label: "Subject", type: "text" },
             ].map((item, index) => (
-              <Box key={index} sx={{ display: "flex", mb: 2, alignItems: "center" }}>
+              <Box
+                key={index}
+                sx={{ display: "flex", mb: 2, alignItems: "center" }}
+              >
                 <Typography sx={{ width: "150px", color: "#878787" }}>
                   {item.label} :
                 </Typography>
@@ -312,7 +315,11 @@ const InquirePage = () => {
                       <MenuItem value="department3">Department 3</MenuItem>
                     </Select>
                   ) : (
-                    <TextField variant="outlined" fullWidth sx={{ color: "#333" }} />
+                    <TextField
+                      variant="outlined"
+                      fullWidth
+                      sx={{ color: "#333" }}
+                    />
                   )}
                 </FormControl>
               </Box>
@@ -357,10 +364,7 @@ const InquirePage = () => {
             ></iframe>
           </Box>
         </Box>
-        
       </Box>
-
-
     </Box>
   );
 };

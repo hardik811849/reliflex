@@ -1,9 +1,14 @@
 "use client";
 import React from "react";
+import Head from "next/head";
 import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
 import hero1 from "../../../public/hero/hero1.svg";
 
+export const metadata = {
+  title: "Reliable Machinery for Heavy Constructions",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+};
 const Hero = () => {
   const styles = {
     container: {
@@ -45,47 +50,56 @@ const Hero = () => {
   };
 
   return (
-    <Box sx={styles.container}>
-      <Image
-        src={hero1}
-        alt="hero1 image"
-        fill
-        style={{ objectFit: "cover" }}
-      />
-      <Box sx={{ position: "absolute", width: "80%" }}>
-        <Typography sx={styles.heading}>
-          RELIABLE MACHINERY FOR HEAVY CONSTRUCTIONS
-        </Typography>
-        <Typography sx={styles.subHeading}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum
-          dolor sit amet.
-        </Typography>
-        <Box sx={styles.buttonContainer}>
-          <Button
-            variant="contained"
-            sx={{
-              color: "white",
-              height: { xl: "40px", xxl: "48px" },
-              width: "174px",
-              mb: { xs: "20px", md: 0 },
-            }}
-          >
-            Explore more
-          </Button>
-          <Button
-            variant="outlined"
-            sx={{
-              color: "white",
-              height: { xl: "40px", xxl: "48px", borderWidth: "2px" },
-              width: "165px",
-            }}
-          >
-            Get in touch
-          </Button>
+    <>
+      <Head>
+        <title>Reliable Machinery for Heavy Constructions</title>
+        <meta
+          name="description"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        />
+      </Head>
+      <Box sx={styles.container}>
+        <Image
+          src={hero1}
+          alt="hero1 image"
+          fill
+          style={{ objectFit: "cover" }}
+        />
+        <Box sx={{ position: "absolute", width: "80%" }}>
+          <Typography sx={styles.heading}>
+            RELIABLE MACHINERY FOR HEAVY CONSTRUCTIONS
+          </Typography>
+          <Typography sx={styles.subHeading}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+            ipsum dolor sit amet.
+          </Typography>
+          <Box sx={styles.buttonContainer}>
+            <Button
+              variant="contained"
+              sx={{
+                color: "white",
+                height: { xl: "40px", xxl: "48px" },
+                width: "174px",
+                mb: { xs: "20px", md: 0 },
+              }}
+            >
+              Explore more
+            </Button>
+            <Button
+              variant="outlined"
+              sx={{
+                color: "white",
+                height: { xl: "40px", xxl: "48px", borderWidth: "2px" },
+                width: "165px",
+              }}
+            >
+              Get in touch
+            </Button>
+          </Box>
         </Box>
       </Box>
-    </Box>
+    </>
   );
 };
 
