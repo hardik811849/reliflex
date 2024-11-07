@@ -108,7 +108,7 @@ const RecentNews = () => {
   };
 
   return (
-    <Box mb={10}>
+    <Box sx={{ pb: 10 }}>
       <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
         <Image
           src={concreteRoadCutterMachine}
