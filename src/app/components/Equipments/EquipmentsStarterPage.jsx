@@ -46,7 +46,7 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
     });
 
 
-    // Filter equipment data based on selectedCategory
+    // Filter equipment data based on selectedCategory ...
     const filteredEquipments = selectedCategory
       ? tempProductArray.filter(item => item.categoryName === selectedCategory)
       : tempProductArray.filter(item => item.categoryId === 1); // Display products from the first category
@@ -79,6 +79,7 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
             />
           ))
         ) : (
+
           <Typography>No products available for this category.</Typography> // Message if no products found
         )}
       </Grid>
