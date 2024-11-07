@@ -183,7 +183,7 @@ const AboutUsLeftImageGrid = () => {
             fontSize: { xxl: "20px", lg: "18px", md: "14px" },
           }}
         >
-          25 Years
+          10 Years
         </Typography>
         <Typography
           sx={{
