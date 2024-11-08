@@ -225,7 +225,7 @@ const Footer = () => {
                   textAlign: { xs: "center", sm: "left" },
                 }}
               >
-                Reliflex Machinery & Equipment's is a rapidly growing company involved in the design and manufacture of an extensive range of Machinery & Equipment's for the building and construction industry.
+                Reliflex Machinery & Equipments is a rapidly growing company involved in the design and manufacture of an extensive range of Machinery & Equipments for the building and construction industry.
               </Typography>
               <br />
               <Typography

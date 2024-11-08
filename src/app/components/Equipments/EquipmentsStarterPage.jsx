@@ -56,98 +56,98 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
     });
 
     const filteredEquipments = tempProductArray.filter(item => item.id === exploremoreid);
-    
+
     return (
       <Grid container>
         {filteredEquipments.map((item, index) => (
-          <Box p={5} maxW="900px" mx="auto" bg="white" boxShadow="md" borderRadius="md">
-          {/* Machine Image */}
-          <Box display="flex" justifyContent="center" mb={5}>
-            <Image
-              src={item.image}
-              alt={item.Model}
-              width={500}
-              height={300}
-              layout="responsive"
-              style={{
-                border: "2px solid",
-                borderColor: "blue.300",
-                borderRadius: "md",
-              }}
-            />
+          <Box key={index} p={5} maxW="900px" mx="auto" bg="white" boxShadow="md" borderRadius="md">
+            {/* Machine Image */}
+            <Box display="flex" justifyContent="center" mb={5}>
+              <Image
+                src={item.image}
+                alt={item.Model}
+                width={500}
+                height={300}
+                layout="responsive"
+                style={{
+                  border: "2px solid",
+                  borderColor: "blue.300",
+                  borderRadius: "md",
+                }}
+              />
+            </Box>
+
+            {/* Specifications Grid */}
+            <Grid templateColumns="repeat(2, 1fr)" gap={4} bg="gray.100" p={5} borderRadius="md">
+              {/* Specification Items */}
+              <GridItem>
+                <Typography fontWeight="bold">Model:</Typography>
+                <Typography>GWH32</Typography>
+              </GridItem>
+
+              <GridItem>
+                <Typography fontWeight="bold">Working Type:</Typography>
+                <Typography>Automatic / Manual</Typography>
+              </GridItem>
+
+              <GridItem>
+                <Typography fontWeight="bold">Input Voltage (Phase / Current):</Typography>
+                <Typography>Three Phase 50-60 Hz</Typography>
+              </GridItem>
+
+              <GridItem>
+                <Typography fontWeight="bold">Motor Power:</Typography>
+                <Typography>3.5 kW / 415 V / 380 V</Typography>
+              </GridItem>
+
+              <GridItem>
+                <Typography fontWeight="bold">Diameter (Round Bar):</Typography>
+                <Typography>16-32 mm</Typography>
+              </GridItem>
+
+              <GridItem>
+                <Typography fontWeight="bold">Motor RPM:</Typography>
+                <Typography>1440 / min</Typography>
+              </GridItem>
+
+              <GridItem>
+                <Typography fontWeight="bold">Diameter (Threaded Steel):</Typography>
+                <Typography>16-32 mm</Typography>
+              </GridItem>
+
+              <GridItem>
+                <Typography fontWeight="bold">Pedals:</Typography>
+                <Typography>2 No</Typography>
+              </GridItem>
+
+              <GridItem>
+                <Typography fontWeight="bold">Diameter of Working Disc:</Typography>
+                <Typography>360 mm</Typography>
+              </GridItem>
+
+              <GridItem>
+                <Typography fontWeight="bold">Dimensions:</Typography>
+                <Typography>850*850*1000 mm</Typography>
+              </GridItem>
+
+              <GridItem>
+                <Typography fontWeight="bold">Adjustable Bending Speed:</Typography>
+                <Typography>10-20 R/min</Typography>
+              </GridItem>
+
+              <GridItem>
+                <Typography fontWeight="bold">Weight:</Typography>
+                <Typography>320 kgs</Typography>
+              </GridItem>
+            </Grid>
+
+            {/* Download Button */}
+            <Box textAlign="center" mt={5}>
+              <Button colorScheme="blue" size="md">
+                Download Brochure
+              </Button>
+            </Box>
           </Box>
-
-          {/* Specifications Grid */}
-          <Grid templateColumns="repeat(2, 1fr)" gap={4} bg="gray.100" p={5} borderRadius="md">
-            {/* Specification Items */}
-            <GridItem>
-              <Typography fontWeight="bold">Model:</Typography>
-              <Typography>GWH32</Typography>
-            </GridItem>
-
-            <GridItem>
-              <Typography fontWeight="bold">Working Type:</Typography>
-              <Typography>Automatic / Manual</Typography>
-            </GridItem>
-
-            <GridItem>
-              <Typography fontWeight="bold">Input Voltage (Phase / Current):</Typography>
-              <Typography>Three Phase 50-60 Hz</Typography>
-            </GridItem>
-
-            <GridItem>
-              <Typography fontWeight="bold">Motor Power:</Typography>
-              <Typography>3.5 kW / 415 V / 380 V</Typography>
-            </GridItem>
-
-            <GridItem>
-              <Typography fontWeight="bold">Diameter (Round Bar):</Typography>
-              <Typography>16-32 mm</Typography>
-            </GridItem>
-
-            <GridItem>
-              <Typography fontWeight="bold">Motor RPM:</Typography>
-              <Typography>1440 / min</Typography>
-            </GridItem>
-
-            <GridItem>
-              <Typography fontWeight="bold">Diameter (Threaded Steel):</Typography>
-              <Typography>16-32 mm</Typography>
-            </GridItem>
-
-            <GridItem>
-              <Typography fontWeight="bold">Pedals:</Typography>
-              <Typography>2 No</Typography>
-            </GridItem>
-
-            <GridItem>
-              <Typography fontWeight="bold">Diameter of Working Disc:</Typography>
-              <Typography>360 mm</Typography>
-            </GridItem>
-
-            <GridItem>
-              <Typography fontWeight="bold">Dimensions:</Typography>
-              <Typography>850*850*1000 mm</Typography>
-            </GridItem>
-
-            <GridItem>
-              <Typography fontWeight="bold">Adjustable Bending Speed:</Typography>
-              <Typography>10-20 R/min</Typography>
-            </GridItem>
-
-            <GridItem>
-              <Typography fontWeight="bold">Weight:</Typography>
-              <Typography>320 kgs</Typography>
-            </GridItem>
-          </Grid>
-
-          {/* Download Button */}
-          <Box textAlign="center" mt={5}>
-            <Button colorScheme="blue" size="md">
-              Download Brochure
-            </Button>
-          </Box>
-        </Box>
         ))}
       </Grid>
     );
@@ -200,7 +200,8 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
             },
           }}>
           {filteredEquipments.map((item, index) => (
-              <Grid
+            <Grid
+              key={index}
               item
               xs={12}
               sm={6}
@@ -234,7 +235,7 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
                   }}
                 />
               </Box>
-    
+
               <Typography
                 sx={{
                   mt: 2,
@@ -246,7 +247,7 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
               >
                 {item.equipmentName}
               </Typography>
-    
+
               <Box
                 onClick={() => handleExploreMoreClick(1, item.id)}
                 sx={{
@@ -258,7 +259,7 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
                 }}
               >
                 <Typography
-    
+
                   sx={{
                     textTransform: "uppercase",
                     color: "black",
