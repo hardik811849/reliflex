@@ -44,6 +44,25 @@ const Navbar = () => {
   const handleMediaMenuOpen = (event) => {
     setMediaAnchorEl(event.currentTarget);
   };
+
+  const InquireNow = (
+    <Box
+      sx={{
+        backgroundColor: "white",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: { lg: "175px", md: "130px", xs: "inherit" },
+        height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
+        color: theme.palette.primary.main,
+        fontSize: { md: "14px", xxl: "16px", xs: "14px" },
+        fontWeight: 600,
+        borderRadius: "4px",
+      }}
+    >
+      Inquire Now
+    </Box>
+  );
   const raiseTicketButton = (
     <Box
       sx={{
@@ -63,12 +82,12 @@ const Navbar = () => {
     </Box>
   );
   const navItems = [
-    { label: "Home", path: "/" },
-    { label: "Company", path: "/company" },
-    { label: "Equipment", path: "/equipment" },
-    { label: "Media", path: "/media" },
-    { label: "Inquire Now", path: "/inquire" },
-    { label: raiseTicketButton, path: "/raise-ticket" },
+    "Home",
+    "Company",
+    "Equipment",
+    "Media",
+    InquireNow,
+    raiseTicketButton,
   ];
 
   const dropdownClick = (event, item) => {
@@ -76,8 +95,12 @@ const Navbar = () => {
       handleCompanyMenuOpen(event);
     } else if (item.label === "Media") {
       handleMediaMenuOpen(event);
-    } else {
-      router.push(item.path);
+    } else if (item === InquireNow) {
+      router.push("/inquire");
+    } else if (item === "Home") {
+      router.push("/");
+    } else if (item === "Equipment") {
+      router.push("/equipment");
     }
   };
 

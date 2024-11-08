@@ -69,7 +69,6 @@ const Footer = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          zIndex: -1,
           height: {
             xxl: "176px",
             xl: "140px",
@@ -91,7 +90,6 @@ const Footer = () => {
             width: "100%",
             height: "100%",
             backgroundColor: "rgba(0, 175, 249, 0.8)",
-            zIndex: 1,
           }}
         />
 
@@ -137,6 +135,14 @@ const Footer = () => {
                 "& .MuiOutlinedInput-notchedOutline": {
                   borderColor: "transparent",
                 },
+                "& .MuiOutlinedInput-root": {
+                  "&:hover .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "transparent",
+                  },
+                  "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "transparent",
+                  },
+                },
               }}
               InputLabelProps={{
                 style: {
@@ -169,7 +175,6 @@ const Footer = () => {
           backgroundColor: "#181818",
           position: "relative",
           width: "100%",
-          zIndex: -1,
           px: { xxl: 20, xl: 10, lg: 8, md: 2, sm: 2 },
         }}
       >
@@ -269,7 +274,9 @@ const Footer = () => {
             >
               <Box sx={{ mr: 4 }}>
                 <FooterHeaderItem heading="Useful Links" />
-                <FooterItem text="Home" />
+                <Link href="/">
+                  <FooterItem text="Home" />
+                </Link>
                 <FooterItem text="Services" />
                 <FooterItem text="Projects" />
                 <FooterItem text="Blog" />
@@ -370,7 +377,7 @@ const Footer = () => {
                 >
                   Contact:
                 </Typography>{" "}
-                +91 99012 57700
+                <a href="tel:+919901257700">+91 99012 57700</a>
               </Typography>
               <Typography
                 sx={{

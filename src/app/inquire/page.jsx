@@ -227,9 +227,19 @@ const InquirePage = () => {
                 }}
               />
               <Typography sx={{ color: "#878787", fontWeight: 600 }}>
-                +91 99012 57700
+                <a
+                  href="tel:+919901257700"
+                  style={{ color: "#878787", textDecoration: "none" }}
+                >
+                  +91 99012 57700
+                </a>
                 <br />
-                +91 63605 55872
+                <a
+                  href="tel:+916360555872"
+                  style={{ color: "#878787", textDecoration: "none" }}
+                >
+                  +91 63605 55872
+                </a>
               </Typography>
             </Box>
           </Grid>
@@ -257,9 +267,19 @@ const InquirePage = () => {
                 }}
               />
               <Typography sx={{ color: "#878787", fontWeight: 600 }}>
-                reliflexmachinery@reliflex.in
+                <a
+                  href="mailto:reliflexmachinery@reliflex.in"
+                  style={{ color: "#878787", textDecoration: "none" }}
+                >
+                  reliflexmachinery@reliflex.in
+                </a>
                 <br />
-                hello@reliflex.in
+                <a
+                  href="mailto:hello@reliflex.in"
+                  style={{ color: "#878787", textDecoration: "none" }}
+                >
+                  hello@reliflex.in
+                </a>
               </Typography>
             </Box>
           </Grid>
