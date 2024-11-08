@@ -63,25 +63,21 @@ const Navbar = () => {
     </Box>
   );
   const navItems = [
-    "Home",
-    "Company",
-    "Equipment",
-    "Media",
-    "Inquire Now",
-    raiseTicketButton,
+    { label: "Home", path: "/" },
+    { label: "Company", path: "/company" },
+    { label: "Equipment", path: "/equipment" },
+    { label: "Media", path: "/media" },
+    { label: "Inquire Now", path: "/inquire" },
+    { label: raiseTicketButton, path: "/raise-ticket" },
   ];
 
   const dropdownClick = (event, item) => {
-    if (item === "Company") {
+    if (item.label === "Company") {
       handleCompanyMenuOpen(event);
-    } else if (item === "Media") {
+    } else if (item.label === "Media") {
       handleMediaMenuOpen(event);
-    } else if (item === "Inquire Now") {
-      router.push("/inquire");
-    } else if (item === "Home") {
-      router.push("/");
-    } else if (item === "Equipment") {
-      router.push("/equipment");
+    } else {
+      router.push(item.path);
     }
   };
 
@@ -160,22 +156,6 @@ const Navbar = () => {
           >
             Events
           </MenuItem>
-          {/* <MenuItem
-            onClick={() => {
-              router.push("/photo-gallery");
-              handleMediaCloseMenu();
-            }}
-          >
-            Photo Gallery
-          </MenuItem>
-          <MenuItem
-            onClick={() => {
-              router.push("/video-gallery");
-              handleMediaCloseMenu();
-            }}
-          >
-            Video Gallery
-          </MenuItem> */}
         </Menu>
         <Toolbar sx={{ mx: { xl: "100px", xxl: "250px" } }}>
           <IconButton
@@ -205,26 +185,26 @@ const Navbar = () => {
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             {navItems.map((item, index) => (
               <Button
-                key={item}
+                key={item.label}
                 sx={{
                   color:
-                    item === "Home"
+                    router.pathname === item.path
                       ? theme.palette.primary.main
                       : theme.palette.primary.white,
                   fontSize: { lg: "14px", xxl: "16px", md: "13px", sm: "12px" },
                   fontWeight: 500,
                   zIndex: 10,
-                  mr: index !== 5 && 4,
+                  mr: index !== navItems.length - 1 ? 4 : 0,
                   position: "relative",
                 }}
                 endIcon={
-                  (item === "Company" || item === "Media") && (
-                    <KeyboardArrowDown sx={{ ml: -0.8 }} />
+                  (item.label === "Company" || item.label === "Media") && (
+                    <KeyboardArrowDown />
                   )
                 }
                 onClick={(event) => dropdownClick(event, item)}
               >
-                {item}
+                {typeof item.label === "string" ? item.label : item.label}
               </Button>
             ))}
           </Box>
@@ -236,7 +216,7 @@ const Navbar = () => {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { sm: "block", md: "none" },
@@ -248,15 +228,14 @@ const Navbar = () => {
           }}
         >
           {navItems.map((item) => (
-            <ListItem key={item} disablePadding>
+            <ListItem key={item.label} disablePadding>
               <ListItemButton sx={{ textAlign: "left", mx: 2 }}>
                 <ListItemText
-                  primary={item}
+                  primary={typeof item.label === "string" ? item.label : ""}
                   onClick={(event) => dropdownClick(event, item)}
                 />
-                {(item === "Company" || item === "Media") && (
+                {(item.label === "Company" || item.label === "Media") && (
                   <KeyboardArrowDown
-                    sx={{ ml: -0.8 }}
                     onClick={(event) => dropdownClick(event, item)}
                   />
                 )}
