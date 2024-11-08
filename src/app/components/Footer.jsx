@@ -208,17 +208,19 @@ const Footer = () => {
                 mx: { xs: 2.5, sm: 0 },
               }}
             >
-              <Box sx={{ display: "flex" }}>
-                <Image
-                  src={reliflexLogo}
-                  alt="reliflex logo"
-                  width={screenSizeXs && !screenSizeMd ? 120 : 200}
-                  height={screenSizeXs && !screenSizeMd ? "auto" : 60}
-                  style={{
-                    margin: screenSizeXs && !screenSizeSm && "10px auto",
-                  }}
-                />
-              </Box>
+              <Link href="/">
+                <Box sx={{ display: "flex" }}>
+                  <Image
+                    src={reliflexLogo}
+                    alt="reliflex logo"
+                    width={screenSizeXs && !screenSizeMd ? 120 : 200}
+                    height={screenSizeXs && !screenSizeMd ? "auto" : 60}
+                    style={{
+                      margin: screenSizeXs && !screenSizeSm && "10px auto",
+                    }}
+                  />
+                </Box>
+              </Link>
               <Typography
                 sx={{
                   color: theme.palette.text.footer,
@@ -228,9 +230,7 @@ const Footer = () => {
                   textAlign: { xs: "center", sm: "left" },
                 }}
               >
-                Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
-                metus nec fringillaaccumsan, risus sem.
+                Reliflex Machinery & Equipments is a rapidly growing company involved in the design and manufacture of an extensive range of Machinery & Equipments for the building and construction industry.
               </Typography>
               <br />
               <Typography
@@ -241,8 +241,7 @@ const Footer = () => {
                   textAlign: { xs: "center", sm: "left" },
                 }}
               >
-                Maecenas eget condimentum velit, sit amet feugiat lectus. Class
-                aptent taciti sociosqu ad litora torquent per conubia nostra.
+                We started our business by importing these machineries from countries like Germany, Japan, China, Turkey, USA, Vietnam to name few in the year 2011.
               </Typography>
               <Box sx={{ display: "flex" }}>
                 <Button
@@ -473,7 +472,7 @@ const Footer = () => {
               mx: { xs: "auto", sm: 0 },
             }}
           >
-            @ Copyright 2024 Construction. All Rights Reserved.{" "}
+            @ Copyright 2024 Reliflex. All Rights Reserved.{" "}
           </Typography>
           <Typography
             sx={{
@@ -491,7 +490,7 @@ const Footer = () => {
                 fontSize: { xs: "12px", sm: "16px" },
               }}
             >
-              XYZ Company
+              Reliflex
             </Typography>
           </Typography>
         </Box>

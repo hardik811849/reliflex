@@ -4,31 +4,29 @@ import { FileDownloadOutlined, NavigateNext } from "@mui/icons-material";
 import { Box, Button, Grid, Typography, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import redMachine from "../../../../../../public/ourServices/redMachine.svg";
-import demoModel from "../../../../../../public/equipments/demoModel.svg";
-import equipment1 from "../../../../../../public/equipments/equipment1.svg";
 
 const allEquipmentsData = [
   {
     id: 1,
-    imgSrc: equipment1,
+    imgSrc: Image,
     imgAlt: "equipment1",
     equipmentName: "GW20S",
   },
   {
     id: 2,
-    imgSrc: equipment1,
+    imgSrc: Image,
     imgAlt: "equipment1",
     equipmentName: "GW20",
   },
   {
     id: 3,
-    imgSrc: equipment1,
+    imgSrc: Image,
     imgAlt: "equipment1",
     equipmentName: "GW20D",
   },
   {
     id: 4,
-    imgSrc: equipment1,
+    imgSrc: Image,
     imgAlt: "equipment1",
     equipmentName: "GF26",
   },
@@ -201,7 +199,7 @@ export const BarBenderModelGWH32 = () => {
         </Box>
         <Box sx={{ display: "flex" }}>
           <Image
-            src={demoModel}
+            src={Image}
             alt="demo model"
             style={{
               margin: "0 auto",

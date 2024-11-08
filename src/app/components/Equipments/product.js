@@ -1,8 +1,9 @@
 export const products = {
+
   "bar bender": [
     {
       id: 1,
-      image: "equipments/Bar_bender/GW20S.png",
+      image: "/equipments/Bar_bender/GW20S.png",
       Model: "GW20S",
       Input_Voltage: "Single Phase / Three Phase Type 50-60 Hz",
       Diameter_Round_Bar: "04-20 mm",
@@ -19,7 +20,7 @@ export const products = {
     {
       id: 2,
       Model: "GW20",
-      image: "equipments/Bar_bender/GW20.png",
+      image: "/equipments/Bar_bender/GW20.png",
       Input_Voltage: "Single Phase / Three Phase Type 50-60 Hz",
       Diameter_Round_Bar: "04-20 mm",
       Diameter_Threaded_Steel: "04-16 mm",
@@ -35,7 +36,7 @@ export const products = {
     {
       id: 3,
       Model: "GW20D",
-      image: "equipments/Bar_bender/GW20D.png",
+      image: "/equipments/Bar_bender/GW20D.png",
       Input_Voltage: "Single Phase / Three Phase Type 50-60 Hz",
       Diameter_Round_Bar: "04-20 mm",
       Diameter_Threaded_Steel: "04-16 mm",
@@ -51,7 +52,7 @@ export const products = {
     {
       id: 4,
       Model: "GF26",
-      image: "equipments/Bar_bender/GF26.png",
+      image: "/equipments/Bar_bender/GF26.png",
       Input_Voltage: "Single Phase / Three Phase Type 50-60 Hz",
       Diameter_Round_Bar: "04-22 mm",
       Diameter_Threaded_Steel: "04-26 mm",
@@ -67,7 +68,7 @@ export const products = {
     {
       id: 5,
       Model: "GWH32",
-      image: "equipments/Bar_bender/GWH32.png",
+      image: "/equipments/Bar_bender/GWH32.png",
       Input_Voltage: "Three Phase 50-60 Hz",
       Diameter_Round_Bar: "16-32 mm",
       Diameter_Threaded_Steel: "16-32 mm",
@@ -83,7 +84,7 @@ export const products = {
     {
       id: 6,
       Model: "GWH36",
-      image: "equipments/Bar_bender/GWH36.png",
+      image: "/equipments/Bar_bender/GWH36.png",
       Input_Voltage: "",
       Diameter_Round_Bar: "16-50 mm",
       Diameter_Threaded_Steel: "16-42 mm",
@@ -99,7 +100,7 @@ export const products = {
     {
       id: 7,
       Model: "GW40",
-      image: "equipments/Bar_bender/GW40.png",
+      image: "/equipments/Bar_bender/GW40.png",
       Input_Voltage: "380V/415V THREE PHASE 50-60 Hz",
       Diameter_Round_Bar: "6mm-40mm",
       Diameter_Threaded_Steel: "6mm-28mm",
@@ -115,7 +116,7 @@ export const products = {
     {
       id: 8,
       Model: "GW42J",
-      image: "equipments/Bar_bender/GW42J.png",
+      image: "/equipments/Bar_bender/GW42J.png",
       Input_Voltage: "380V/415V THREE PHASE 50-60 Hz",
       Diameter_Round_Bar: "6mm-40mm",
       Diameter_Threaded_Steel: "6mm-32mm",
@@ -131,7 +132,7 @@ export const products = {
     {
       id: 9,
       Model: "GW42R",
-      image: "equipments/Bar_bender/GW42R.png",
+      image: "/equipments/Bar_bender/GW42R.png",
       Input_Voltage: "380V/415V THREE PHASE 50-60 Hz",
       Diameter_Round_Bar: "6mm-40mm",
       Diameter_Threaded_Steel: "6mm-32mm",
@@ -147,7 +148,7 @@ export const products = {
     {
       id: 10,
       Model: "GW42D",
-      image: "equipments/Bar_bender/GW42D.png",
+      image: "/equipments/Bar_bender/GW42D.png",
       Input_Voltage: "380V/415V THREE PHASE 50-60 Hz",
       Diameter_Round_Bar: "6mm-40mm",
       Diameter_Threaded_Steel: "6mm-32mm",
@@ -163,7 +164,7 @@ export const products = {
     {
       id: 11,
       Model: "GW50",
-      image: "equipments/Bar_bender/GW50.png",
+      image: "/equipments/Bar_bender/GW50.png",
       Input_Voltage: "380V/415V THREE PHASE 50-60 Hz",
       Diameter_Round_Bar: "6mm-50mm",
       Diameter_Threaded_Steel: "6mm-42mm",
@@ -181,7 +182,7 @@ export const products = {
     {
       id: 1,
       Model: "GQ40",
-      image: "equipments/bar_cutter/GQ40.png",
+      image: "/equipments/bar_cutter/GQ40.png",
       Input_Voltage: "THREE PHASE 50-60 Hz",
       Diameter_Threaded_Steel: "Ø4mm-28mm",
       Diameter_Round_Bar: "Ø6mm-32mm",
@@ -195,7 +196,7 @@ export const products = {
     {
       id: 2,
       Model: "GQ42",
-      image: "equipments/bar_cutter/GQ42.png",
+      image: "/equipments/bar_cutter/GQ42.png",
       Input_Voltage: "THREE PHASE 50-60 Hz",
       Diameter_Threaded_Steel: "Ø4mm-32mm",
       Diameter_Round_Bar: "Ø6mm-40mm",
@@ -209,7 +210,7 @@ export const products = {
     {
       id: 3,
       Model: "GQ50",
-      image: "equipments/bar_cutter/GQ50.png",
+      image: "/equipments/bar_cutter/GQ50.png",
       Input_Voltage: "THREE PHASE 50-60 Hz",
       Diameter_Threaded_Steel: "Ø4mm-42mm",
       Diameter_Round_Bar: "Ø6mm-50mm",
@@ -225,7 +226,7 @@ export const products = {
     {
       id: 1,
       Model: "RB16",
-      image: "equipments/portable_bar_bender/RB16.png",
+      image: "/equipments/portable_bar_bender/RB16.png",
       Voltage: "230V/110V/220V",
       Wattage: "800/900w",
       Working_Type: "Bender Only Hydraulic Type",
@@ -242,7 +243,7 @@ export const products = {
     {
       id: 2,
       Model: "RB25",
-      image: "equipments/portable_bar_bender/RB25.png",
+      image: "/equipments/portable_bar_bender/RB25.png",
       Voltage: "230V/110V/220V",
       Wattage: "950/1350w",
       Working_Type: "Bender Only Hydraulic Type",
@@ -259,7 +260,7 @@ export const products = {
     {
       id: 3,
       Model: "RB32",
-      image: "equipments/portable_bar_bender/RB32.png",
+      image: "/equipments/portable_bar_bender/RB32.png",
       Voltage: "230V/110V/220V",
       Wattage: "1170w",
       Working_Type: "Bender Only Hydraulic Type",
@@ -276,7 +277,7 @@ export const products = {
     {
       id: 4,
       Model: "HRB32",
-      image: "equipments/portable_bar_bender/HRB32.png",
+      image: "/equipments/portable_bar_bender/HRB32.png",
       Voltage: "230V/110V/220V",
       Wattage: "1200w",
       Working_Type: "Bender / Straightner\nHydraulic Type",
