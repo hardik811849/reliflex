@@ -45,24 +45,6 @@ const Navbar = () => {
     setMediaAnchorEl(event.currentTarget);
   };
 
-  const InquireNow = (
-    <Box
-      sx={{
-        backgroundColor: "white",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        width: { lg: "175px", md: "130px", xs: "inherit" },
-        height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
-        color: theme.palette.primary.main,
-        fontSize: { md: "14px", xxl: "16px", xs: "14px" },
-        fontWeight: 600,
-        borderRadius: "4px",
-      }}
-    >
-      Inquire Now
-    </Box>
-  );
   const raiseTicketButton = (
     <Box
       sx={{
@@ -81,13 +63,31 @@ const Navbar = () => {
       Raise a Ticket
     </Box>
   );
+  const InquireNow = (
+    <Box
+      sx={{
+        backgroundColor: "white",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: { lg: "175px", md: "130px", xs: "inherit" },
+        height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
+        color: theme.palette.primary.main,
+        fontSize: { md: "14px", xxl: "16px", xs: "14px" },
+        fontWeight: 600,
+        borderRadius: "4px",
+      }}
+    >
+      Inquire Now
+    </Box>
+  );
   const navItems = [
-    "Home",
-    "Company",
-    "Equipment",
-    "Media",
-    InquireNow,
-    raiseTicketButton,
+    { label: "Home", path: "/" },
+    { label: "Company", path: "/company" },
+    { label: "Equipment", path: "/equipment" },
+    { label: "Media", path: "/media" },
+    { label: InquireNow, path: "/inquire" },
+    { label: raiseTicketButton, path: "/raise-ticket" },
   ];
 
   const dropdownClick = (event, item) => {
@@ -95,12 +95,8 @@ const Navbar = () => {
       handleCompanyMenuOpen(event);
     } else if (item.label === "Media") {
       handleMediaMenuOpen(event);
-    } else if (item === InquireNow) {
-      router.push("/inquire");
-    } else if (item === "Home") {
-      router.push("/");
-    } else if (item === "Equipment") {
-      router.push("/equipment");
+    } else {
+      router.push(item.path);
     }
   };
 
@@ -124,6 +120,7 @@ const Navbar = () => {
       <AppBar
         component="nav"
         style={{
+          paddingRight: "0px",
           backgroundColor: backgroundDrop ? "rgba(0,0,0,0.75)" : "transparent",
           boxShadow: "none",
           height: "80px",
