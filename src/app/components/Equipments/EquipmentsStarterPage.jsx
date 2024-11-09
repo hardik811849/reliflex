@@ -11,6 +11,7 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
 
   const [exploremore, setExploremore] = useState(null); // null instead of "" for clarity
   const [exploremoreid, setExploremoreid] = useState(null); // null instead of "" for clarity
+  const [catid, setcatid] = useState(null);
 
   // Reset the exploremore state when selectedCategory changes (i.e., when navigating between categories)
   useEffect(() => {
@@ -18,9 +19,10 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
     setExploremoreid(null); // Reset exploremoreid when category changes
   }, [selectedCategory]);
 
-  const handleExploreMoreClick = (value, id) => {
+  const handleExploreMoreClick = (value, id, cid) => {
     setExploremore(value); // Setting the value to 1 or 0
     setExploremoreid(id); // Setting the id of the selected item
+    setcatid(cid);
   };
 
   // This is the CardDetail component placed inside the same file
@@ -28,38 +30,41 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
 
   if (exploremore === 1 && exploremoreid) {
 
-
     const tempProductArray = [];
 
     // Iterate through all categories and assign category IDs (index starting from 1)
-    Object.keys(products).forEach((category, categoryIndex) => {
+    Object.keys(products).forEach((category) => {
       products[category].forEach((product) => {
-        tempProductArray.push({
-          id: product.id,
-          categoryId: categoryIndex + 1,
-          categoryName: category,
-          image: product.image,
-          Model: product.Model,
-          Input_Voltage: product.Input_Voltage,
-          Diameter_Round_Bar: product.Diameter_Round_Bar,
-          Diameter_Threaded_Steel: product.Diameter_Threaded_Steel,
-          Diameter_of_WorkingDisc: product.Diameter_of_WorkingDisc,
-          Adjustable_Bending_Speed: product.Adjustable_Bending_Speed,
-          Working_Type: product.Working_Type,
-          Motor_Power_Voltage: product.Motor_Power_Voltage,
-          Motor_RPM: product.Motor_RPM,
-          Pedals: product.Pedals,
-          Dimensions: product.Dimensions,
-          Weight: product.Weight,
-        });
+        if (product.categoryId == catid && product.id == exploremoreid) {
+            tempProductArray.push({
+              id: product.id,
+              categoryId: product.categoryId,
+              categoryName: category,
+              image: product.image,
+              Model: product.Model,
+              Input_Voltage: product.Input_Voltage,
+              Diameter_Round_Bar: product.Diameter_Round_Bar,
+              Diameter_Threaded_Steel: product.Diameter_Threaded_Steel,
+              Diameter_of_WorkingDisc: product.Diameter_of_WorkingDisc,
+              Adjustable_Bending_Speed: product.Adjustable_Bending_Speed,
+              Working_Type: product.Working_Type,
+              Motor_Power_Voltage: product.Motor_Power_Voltage,
+              Motor_RPM: product.Motor_RPM,
+              Pedals: product.Pedals,
+              Dimensions: product.Dimensions,
+              Weight: product.Weight,
+            });
+          }
       });
     });
 
-    const filteredEquipments = tempProductArray.filter(item => item.id === exploremoreid);
+
+    const filteredEquipment = tempProductArray.filter(item => item.id === exploremoreid);
+
 
     return (
       <Grid container>
-        {filteredEquipments.map((item, index) => (
+        {filteredEquipment.map((item, index) => (
           <Box key={index} p={5} maxW="900px" mx="auto" bg="white" boxShadow="md" borderRadius="md">
             {/* Machine Image */}
             <Box display="flex" justifyContent="center" mb={5}>
@@ -77,9 +82,9 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
               />
             </Box>
 
-            {/* Specifications Grid */}
-            <Grid templateColumns="repeat(2, 1fr)" gap={4} bg="gray.100" p={5} borderRadius="md">
-              {/* Specification Items */}
+
+            {/* <Grid templateColumns="repeat(2, 1fr)" gap={4} bg="gray.100" p={5} borderRadius="md">
+           
               <GridItem>
                 <Typography fontWeight="bold">Model:</Typography>
                 <Typography>GWH32</Typography>
@@ -139,7 +144,7 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
                 <Typography fontWeight="bold">Weight:</Typography>
                 <Typography>320 kgs</Typography>
               </GridItem>
-            </Grid>
+            </Grid> */}
 
             {/* Download Button */}
             <Box textAlign="center" mt={5}>
@@ -152,6 +157,7 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
       </Grid>
     );
   } else {
+
 
     const tempProductArray = [];
 
@@ -180,7 +186,7 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
     });
 
     // Filter products based on selectedCategory
-    const filteredEquipments = selectedCategory
+    const filteredEquipment = selectedCategory
       ? tempProductArray.filter(item => item.categoryName === selectedCategory)
       : tempProductArray.filter(item => item.categoryId === 1);
 
@@ -199,7 +205,7 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
               xxl: 24,
             },
           }}>
-          {filteredEquipments.map((item, index) => (
+          {filteredEquipment.map((item, index) => (
             <Grid
               key={index}
               item
@@ -245,11 +251,11 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
                   color: "black",
                 }}
               >
-                {item.equipmentName}
+                {item.Model}
               </Typography>
 
               <Box
-                onClick={() => handleExploreMoreClick(1, item.id)}
+                onClick={() => handleExploreMoreClick(1, item.id, item.categoryId)}
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
@@ -287,5 +293,3 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
 };
 
 export default EquipmentsStarterPage;
-
-// key={`${item.id}-${index}`}
