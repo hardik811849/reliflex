@@ -215,3 +215,4 @@ const EquipmentSidebar = ({ demoSelectModel, setSelectedCategory }) => {
 };
 
 export default EquipmentSidebar;
+
