@@ -20,7 +20,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 1,
       Model: "GW20",
       image: "/equipments/Bar_bender/GW20.png",
       Input_Voltage: "Single Phase / Three Phase Type 50-60 Hz",
@@ -37,7 +37,7 @@ export const products = {
     },
     {
       id: 3,
-      categoryId: 3,
+      categoryId: 1,
       Model: "GW20D",
       image: "/equipments/Bar_bender/GW20D.png",
       Input_Voltage: "Single Phase / Three Phase Type 50-60 Hz",
@@ -54,7 +54,7 @@ export const products = {
     },
     {
       id: 4,
-      categoryId: 4,
+      categoryId: 1,
       Model: "GF26",
       image: "/equipments/Bar_bender/GF26.png",
       Input_Voltage: "Single Phase / Three Phase Type 50-60 Hz",
@@ -71,7 +71,7 @@ export const products = {
     },
     {
       id: 5,
-      categoryId: 5,
+      categoryId: 1,
       Model: "GWH32",
       image: "/equipments/Bar_bender/GWH32.png",
       Input_Voltage: "Three Phase 50-60 Hz",
@@ -88,7 +88,7 @@ export const products = {
     },
     {
       id: 6,
-      categoryId: 6,
+      categoryId: 1,
       Model: "GWH36",
       image: "/equipments/Bar_bender/GWH36.png",
       Input_Voltage: "",
@@ -105,7 +105,7 @@ export const products = {
     },
     {
       id: 7,
-      categoryId: 7,
+      categoryId: 1,
       Model: "GW40",
       image: "/equipments/Bar_bender/GW40.png",
       Input_Voltage: "380V/415V THREE PHASE 50-60 Hz",
@@ -122,7 +122,7 @@ export const products = {
     },
     {
       id: 8,
-      categoryId: 8,
+      categoryId: 1,
       Model: "GW42J",
       image: "/equipments/Bar_bender/GW42J.png",
       Input_Voltage: "380V/415V THREE PHASE 50-60 Hz",
@@ -139,7 +139,7 @@ export const products = {
     },
     {
       id: 9,
-      categoryId: 9,
+      categoryId: 1,
       Model: "GW42R",
       image: "/equipments/Bar_bender/GW42R.png",
       Input_Voltage: "380V/415V THREE PHASE 50-60 Hz",
@@ -156,7 +156,7 @@ export const products = {
     },
     {
       id: 10,
-      categoryId: 10,
+      categoryId: 1,
       Model: "GW42D",
       image: "/equipments/Bar_bender/GW42D.png",
       Input_Voltage: "380V/415V THREE PHASE 50-60 Hz",
@@ -173,7 +173,7 @@ export const products = {
     },
     {
       id: 11,
-      categoryId: 11,
+      categoryId: 1,
       Model: "GW50",
       image: "/equipments/Bar_bender/GW50.png",
       Input_Voltage: "380V/415V THREE PHASE 50-60 Hz",
@@ -192,7 +192,7 @@ export const products = {
   "bar cutter": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 2,
       Model: "GQ40",
       image: "/equipments/bar_cutter/GQ40.png",
       Input_Voltage: "THREE PHASE 50-60 Hz",
@@ -222,7 +222,7 @@ export const products = {
     },
     {
       id: 3,
-      categoryId: 3,
+      categoryId: 2,
       Model: "GQ50",
       image: "/equipments/bar_cutter/GQ50.png",
       Input_Voltage: "THREE PHASE 50-60 Hz",
@@ -239,7 +239,7 @@ export const products = {
   "portable bar bender": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 3,
       Model: "RB16",
       image: "/equipments/portable_bar_bender/RB16.png",
       Voltage: "230V/110V/220V",
@@ -257,7 +257,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 3,
       Model: "RB25",
       image: "/equipments/portable_bar_bender/RB25.png",
       Voltage: "230V/110V/220V",
@@ -293,7 +293,7 @@ export const products = {
     },
     {
       id: 4,
-      categoryId: 4,
+      categoryId: 3,
       Model: "HRB32",
       image: "/equipments/portable_bar_bender/HRB32.png",
       Voltage: "230V/110V/220V",
@@ -313,7 +313,7 @@ export const products = {
   "portable bar cutter": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 4,
       Model: "RC16",
       Voltage: "220V / 110V",
       Wattage: "850/900w",
@@ -330,7 +330,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 4,
       Model: "RC20",
       Voltage: "220V / 110V",
       Wattage: "1400/1600w",
@@ -347,7 +347,7 @@ export const products = {
     },
     {
       id: 3,
-      categoryId: 3,
+      categoryId: 4,
       Model: "RC25",
       Voltage: "220V/110V",
       Wattage: "1600/1700w",
@@ -383,7 +383,7 @@ export const products = {
   "portable machine": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 5,
       Model: "NRT-25",
       Battery: "DC 14 4V 4.0Ah",
       DiaSize: "25mm",
@@ -400,7 +400,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 5,
       Model: "NRT-40",
       Battery: "DC 14 4V 4.0Ah",
       DiaSize: "40mm",
@@ -417,7 +417,7 @@ export const products = {
     },
     {
       id: 3,
-      categoryId: 3,
+      categoryId: 5,
       Model: "RCT36",
       WrenchSize: "16-36MM",
       Power: "2800KW",
@@ -427,7 +427,7 @@ export const products = {
     },
     {
       id: 4,
-      categoryId: 4,
+      categoryId: 5,
       Model: "RCT42",
       WrenchSize: "16-42MM",
       Power: "3200KW",
@@ -456,7 +456,7 @@ export const products = {
   "bar threading machine": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 6,
       Model: "CDRG-45R",
       Threading_Diameter: "16-45 mm",
       Thread_Pitch_Helix_Angle: "2.5/3.0/3.5 (123 TYPE)",
@@ -472,7 +472,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 6,
       Model: "CDRG-40R",
       Threading_Diameter: "16-40 mm",
       Thread_Pitch_Helix_Angle: "2.5/3.0/3.5 (123 TYPE)",
@@ -488,7 +488,7 @@ export const products = {
     },
     {
       id: 3,
-      categoryId: 3,
+      categoryId: 6,
       Model: "HGS40R",
       Threading_Diameter: "06-40 mm",
       Thread_Pitch_Helix_Angle: "2.0/2.5/3.0/3.5 (0.0.0 TYPE)",
@@ -504,7 +504,7 @@ export const products = {
     },
     {
       id: 4,
-      categoryId: 4,
+      categoryId: 6,
       Model: "HGS50R",
       Threading_Diameter: "06-50 mm",
       Thread_Pitch_Helix_Angle: "2.0/2.5/3.0/3.5/4.0 (0.0.0 TYPE)",
@@ -522,7 +522,7 @@ export const products = {
   "scraper straightening machine": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 7,
       Model: "RGX14",
       straightening_Diameter: "6-14mm",
       working_Speed: "28MTR/MIN",
@@ -536,7 +536,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 7,
       Model: "RGX25",
       straightening_Diameter: "16-25mm",
       working_Speed: "28MTR/MIN",
@@ -552,7 +552,7 @@ export const products = {
   "decoil machine": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 8,
       Model: "GT4-14A",
       name: "Hydraulic steel bar straightening machine",
       weight: "650KG",
@@ -569,7 +569,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 8,
       Model: "GT4-14B",
       name: "Hydraulic steel bar straightening machine",
       weight: "550KG",
@@ -586,7 +586,7 @@ export const products = {
     },
     {
       id: 3,
-      categoryId: 3,
+      categoryId: 8,
       Model: "GT4-14C",
       straightening_Range_Round_Bar: "5-14mm",
       straightening_Range_DeformedBar: "5-12mm",
@@ -599,7 +599,7 @@ export const products = {
     },
     {
       id: 4,
-      categoryId: 4,
+      categoryId: 8,
       Model: "GT4-14D",
       straightening_Range_Round_Bar: "5-14mm",
       straightening_Range_DeformedBar: "5-12mm",
@@ -612,7 +612,7 @@ export const products = {
     },
     {
       id: 5,
-      categoryId: 5,
+      categoryId: 8,
       Model: "GT4-14E",
       straightening_Range_Round_Bar: "5-14mm",
       straightening_Range_DeformedBar: "5-12mm",
@@ -625,7 +625,7 @@ export const products = {
     },
     {
       id: 6,
-      categoryId: 6,
+      categoryId: 8,
       Model: "GT4-10",
       Motor_Power: "7.5kW (1440r/min)",
       straighten_Rebar_Diameter: "≤10mm",
@@ -639,7 +639,7 @@ export const products = {
     },
     {
       id: 7,
-      categoryId: 7,
+      categoryId: 8,
       Model: "GT4-12",
       Motor_Power: "9kW (1440r/min)",
       straighten_Rebar_Diameter: "≤12mm",
@@ -666,7 +666,7 @@ export const products = {
     },
     {
       id: 9,
-      categoryId: 9,
+      categoryId: 8,
       Model: "GTW4-12",
       capacity_For_Single_Line: "4-12mm",
       capacity_For_Double_Line: "4-10mm",
@@ -681,7 +681,7 @@ export const products = {
   "punching shearing machine": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 9,
       Model: "QA32-8",
       Max_Shearing_Force: "400KN",
       Cutter_Stoke_Length: "27mm",
@@ -703,7 +703,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 9,
       Model: "QA32-10",
       Max_Shearing_Force: "600KN",
       Cutter_Stoke_Length: "30mm",
@@ -725,7 +725,7 @@ export const products = {
     },
     {
       id: 3,
-      categoryId: 3,
+      categoryId: 9,
       Model: "QA32-12",
       Max_Shearing_Force: "900KN",
       Cutter_Stoke_Length: "36mm",
@@ -747,7 +747,7 @@ export const products = {
     },
     {
       id: 4,
-      categoryId: 4,
+      categoryId: 9,
       Model: "QA32-14",
       Max_Shearing_Force: "1000KN",
       Cutter_Stoke_Length: "36 mm",
@@ -771,7 +771,7 @@ export const products = {
   "power trowels/ power floater": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 10,
       Model: "PL16",
       Drive_Type: "Motor 1PH 220V",
       Disc_Size: "380mm Diameter",
@@ -784,7 +784,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 10,
       Model: "RWT24",
       Drive_Type: "Engine",
       Disc_Size: "600mm Diameter",
@@ -797,7 +797,7 @@ export const products = {
     },
     {
       id: 3,
-      categoryId: 3,
+      categoryId: 10,
       Model: "RWT38",
       Drive_Type: "Motor / Engine",
       Disc_Size: "880mm Diameter",
@@ -810,7 +810,7 @@ export const products = {
     },
     {
       id: 4,
-      categoryId: 4,
+      categoryId: 10,
       Model: "RWT40",
       Drive_Type: "Motor / Engine",
       Disc_Size: "980mm Diameter",
@@ -823,7 +823,7 @@ export const products = {
     },
     {
       id: 5,
-      categoryId: 5,
+      categoryId: 10,
       Model: "RWT48",
       Drive_Type: "Motor / Engine",
       Disc_Size: "1000mm Diameter",
@@ -836,7 +836,7 @@ export const products = {
     },
     {
       id: 6,
-      categoryId: 6,
+      categoryId: 10,
       Model: "RWT52",
       Drive_Type: "Motor/Engine",
       Disc_Size: "1000mm Diameter",
@@ -851,7 +851,7 @@ export const products = {
   "ride on trowel": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 11,
       Model: "RT28",
       Drive: "Petrol Honda GX390",
       Speed: "90-140 RPM",
@@ -866,7 +866,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 11,
       Model: "RT36",
       Drive: "Petrol Honda GX690",
       Speed: "90-140 RPM",
@@ -881,7 +881,7 @@ export const products = {
     },
     {
       id: 3,
-      categoryId: 3,
+      categoryId: 11,
       Model: "RT36L",
       Drive: "Petrol Honda GX690",
       Speed: "90-140 RPM",
@@ -898,7 +898,7 @@ export const products = {
   "concrete cutter / groove cutter": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 12,
       Model: "RCS10",
       CuttingWidth: "2-4 mm",
       MaxCuttingDepth: "105mm",
@@ -914,7 +914,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 12,
       Model: "RCS14",
       CuttingWidth: "5-8 mm",
       MaxCuttingDepth: "150mm",
@@ -931,7 +931,7 @@ export const products = {
     },
     {
       id: 3,
-      categoryId: 3,
+      categoryId: 12,
       Model: "RCS16",
       CuttingWidth: "5-8 mm",
       MaxCuttingDepth: "180mm",
@@ -948,7 +948,7 @@ export const products = {
     },
     {
       id: 4,
-      categoryId: 4,
+      categoryId: 12,
       Model: "RCS18",
       CuttingWidth: "5-8 mm",
       MaxCuttingDepth: "180mm",
@@ -965,7 +965,7 @@ export const products = {
     },
     {
       id: 5,
-      categoryId: 5,
+      categoryId: 12,
       Model: "RCS18H",
       CuttingWidth: "5-8 mm",
       MaxCuttingDepth: "180mm",
@@ -982,7 +982,7 @@ export const products = {
     },
     {
       id: 6,
-      categoryId: 6,
+      categoryId: 12,
       Model: "RCS19",
       CuttingWidth: "5-8 mm",
       MaxCuttingDepth: "180mm",
@@ -999,7 +999,7 @@ export const products = {
     },
     {
       id: 7,
-      categoryId: 7,
+      categoryId: 12,
       Model: "RCS20",
       CuttingWidthmm: "5-8 mm",
       MaxCuttingDepthmm: "180mm",
@@ -1016,7 +1016,7 @@ export const products = {
     },
     {
       id: 8,
-      categoryId: 8,
+      categoryId: 12,
       Model: "RCS20A",
       CuttingWidthmm: "5-10mm",
       MaxCuttingDepthmm: "180mm",
@@ -1033,7 +1033,7 @@ export const products = {
     },
     {
       id: 9,
-      categoryId: 9,
+      categoryId: 12,
       Model: "RCS22",
       CuttingWidthmm: "5-10mm",
       MaxCuttingDepthmm: "220mm",
@@ -1050,7 +1050,7 @@ export const products = {
     },
     {
       id: 10,
-      categoryId: 10,
+      categoryId: 12,
       Model: "RCS28",
       CuttingWidthmm: "5-10mm",
       MaxCuttingDepthmm: "260mm",
@@ -1067,7 +1067,7 @@ export const products = {
     },
     {
       id: 11,
-      categoryId: 11,
+      categoryId: 12,
       Model: "RCS40",
       CuttingWidthmm: "5-14mm",
       MaxCuttingDepthmm: "400mm",
@@ -1086,7 +1086,7 @@ export const products = {
   "vibrator screed": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 13,
       Model: "RVS25R",
       Blade_Size: "1-6 Mtr",
       Drive: "Robin Engine",
@@ -1098,7 +1098,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 13,
       Model: "RVS25H",
       Blade_Size: "1-6 Mtr",
       Drive: "Honda Engine",
@@ -1110,7 +1110,7 @@ export const products = {
     },
     {
       id: 3,
-      categoryId: 3,
+      categoryId: 13,
       Model: "RVS25E",
       Blade_Size: "1-6 Mtr",
       Drive: "3Phase Motor",
@@ -1122,7 +1122,7 @@ export const products = {
     },
     {
       id: 4,
-      categoryId: 4,
+      categoryId: 13,
       Model: "RVS25ES",
       Blade_Size: "1-6 Mtr",
       Drive: "1Phase Motor",
@@ -1134,7 +1134,7 @@ export const products = {
     },
     {
       id: 5,
-      categoryId: 5,
+      categoryId: 13,
       Model: "RVS10B",
       ProductName: "Lithium battery leveling ruler",
       RotatingSpeed: "3000-6000r/min",
@@ -1149,7 +1149,7 @@ export const products = {
   "concrete vibratory paver": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 14,
       Model: "RVP219-4",
       LengthoftheRoller: "4000mm",
       VibratoryFrequency: "50-60Hz",
@@ -1171,7 +1171,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 14,
       Model: "RVP219-6",
       LengthoftheRoller: "6000mm",
       VibratoryFrequency: "50-60Hz",
@@ -1195,7 +1195,7 @@ export const products = {
   "truss screed": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 15,
       Model: "RTS600S",
       Body: "Metal Frame",
       Drive: "Motor/Engine",
@@ -1210,7 +1210,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 15,
       Model: "RTS600A",
       Body: "Aluminium Frame",
       Drive: "Motor/Engine",
@@ -1227,7 +1227,7 @@ export const products = {
   "plate compactor": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 16,
       Model: "RPC200E",
       Drive_Type: "Electric Motor",
       Powerkwhp: "4.0kw/5.5hp\n(3P/1P/415V)",
@@ -1241,7 +1241,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 16,
       Model: "RPC160",
       Drive_Type: "Diesel / Petrol Engine",
       Powerkwhp: "4.0kw / 5.5hp",
@@ -1255,7 +1255,7 @@ export const products = {
     },
     {
       id: 3,
-      categoryId: 3,
+      categoryId: 16,
       Model: "RPC90",
       Drive_Type: "Diesel / Petrol Engine",
       Powerkwhp: "4.0kw / 5.5hp",
@@ -1269,7 +1269,7 @@ export const products = {
     },
     {
       id: 4,
-      categoryId: 4,
+      categoryId: 16,
       Model: "RPC3001",
       Drive_Type: "Diesel / Petrol Engine",
       Powerkwhp: "4.0kw / 5.5hp",
@@ -1283,7 +1283,7 @@ export const products = {
     },
     {
       id: 5,
-      categoryId: 5,
+      categoryId: 16,
       Model: "RPC5001",
       Drive_Type: "Diesel / Petrol Engine",
       Powerkwhp: "4.0kw / 5.5hp",
@@ -1299,7 +1299,7 @@ export const products = {
   "tamping rammer": [
     {
       id: 6,
-      categoryId: 6,
+      categoryId: 17,
       Model: "RTR80ES",
       Drive: "Electric Motor 1 Phase",
       Power: "3.0kw / 5.5hp",
@@ -1315,7 +1315,7 @@ export const products = {
     },
     {
       id: 7,
-      categoryId: 7,
+      categoryId: 17,
       Model: "RTR80E",
       Drive: "Electric Motor 3 Phase",
       Power: "3.0kw / 5.5hp",
@@ -1331,7 +1331,7 @@ export const products = {
     },
     {
       id: 8,
-      categoryId: 8,
+      categoryId: 17,
       Model: "RTR100",
       Drive: "Honda Engine (Petrol)",
       Power: "4.0kw / 5.5hp",
@@ -1347,7 +1347,7 @@ export const products = {
     },
     {
       id: 9,
-      categoryId: 9,
+      categoryId: 17,
       Model: "RTR90",
       Drive: "Robin Engine (Petrol)",
       Power: "4.0kw / 5.5hp",
@@ -1363,7 +1363,7 @@ export const products = {
     },
     {
       id: 10,
-      categoryId: 10,
+      categoryId: 17,
       Model: "RTR110",
       Drive: "Changfa Engine (Diesel)",
       Power: "4.0kw / 5.5hp",
@@ -1381,7 +1381,7 @@ export const products = {
   "vibratorry road roller": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 18,
       Model: "RVR600S",
       ExcingForce: "15kn",
       EngineType: "Petrol/DieselEngine",
@@ -1403,7 +1403,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 18,
       Model: "RVR600G/H/C",
       ExcingForce: "20-25kn",
       EngineType: "Petrol/DieselEngine",
@@ -1425,7 +1425,7 @@ export const products = {
     },
     {
       id: 3,
-      categoryId: 3,
+      categoryId: 18,
       Model: "RVR850",
       ExcingForce: "25-30kn",
       EngineType: "Petrol/DieselEngine",
@@ -1447,7 +1447,7 @@ export const products = {
     },
     {
       id: 4,
-      categoryId: 4,
+      categoryId: 18,
       Model: "RVR880",
       ExcingForce: "25kn",
       EngineType: "Petrol / Diesel Engines",
@@ -1469,7 +1469,7 @@ export const products = {
     },
     {
       id: 5,
-      categoryId: 5,
+      categoryId: 18,
       Model: "RVR1000",
       ExcingForce: "35kn",
       EngineType: "Petrol / Diesel Engines",
@@ -1493,7 +1493,7 @@ export const products = {
   "laser screed": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 19,
       Model: "RLS325",
       Walking_speed: "0-2.5 km/Hour",
       Whole_flat_width: "2500 mm",
@@ -1520,7 +1520,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 19,
       Model: "RLS400",
       Walking_speed: "0-2.5 km/Hour",
       Whole_flat_width: "2500 mm",
@@ -1547,7 +1547,7 @@ export const products = {
     },
     {
       id: 3,
-      categoryId: 3,
+      categoryId: 19,
       Model: "LS-500",
       Engine: "Yanmar",
       Engine_Power: "20kw@2200RPM",
@@ -1573,7 +1573,7 @@ export const products = {
   "grinding polishing machine": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 20,
       Model: "RLD330",
       PanDiameter: "330mm",
       Motor_PowerKW: "3.0kw",
@@ -1586,7 +1586,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 20,
       Model: "RLD400",
       PanDiameter: "400mm",
       Motor_PowerKW: "4.0kw",
@@ -1601,7 +1601,7 @@ export const products = {
   "milling / scarifying machine": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 21,
       Model: "RMM150",
       Drive: "Motor / Engine",
       Power: "7.5 KW / 9-13HP",
@@ -1617,7 +1617,7 @@ export const products = {
   "road marking machine": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 22,
       Model: "RM15",
       Capacity: "100 KG",
       RoadMarkingType: "Thremoplastic Paint",
@@ -1638,7 +1638,7 @@ export const products = {
   "suspended platform": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 23,
       Model: "RLP800",
       PlatformSizes: "2.5 Meter x 2nos 1.5 Meter x 1nos 1Meter x 1no.s",
       MaterialofPlatform: "M.S. Steel Platform & Beta Dip Hot Galvanized",
@@ -1664,7 +1664,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 23,
       Model: "RHT500",
       LiftingHeight: "30 Mtr",
       Drive: "Motor Type Electric Winch With Gearbox Motor",
@@ -1680,7 +1680,7 @@ export const products = {
   "stand tyre mixer": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 24,
       Model: "MIX180S",
       Capacity: "180 LTR",
       Motor_Type: "Diesel Engine",
@@ -1692,7 +1692,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 24,
       Model: "MIX220S",
       Capacity: "220 LTR",
       Motor_Type: "Diesel Engine",
@@ -1704,7 +1704,7 @@ export const products = {
     },
     {
       id: 3,
-      categoryId: 3,
+      categoryId: 24,
       Model: "MIX260S",
       Capacity: "260 LTR",
       Motor_Type: "Diesel Engine",
@@ -1716,7 +1716,7 @@ export const products = {
     },
     {
       id: 4,
-      categoryId: 4,
+      categoryId: 24,
       Model: "MIX5001",
       Capacity: "450 LTR",
       Motor_Type: "Diesel Engine",
@@ -1730,7 +1730,7 @@ export const products = {
   "trolley mixer": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 25,
       Model: "MIX180T",
       Capacity: "180 LTR",
       MotorEngine_Power: "MOTOR/ENGINE TYPE",
@@ -1742,7 +1742,7 @@ export const products = {
     },
     {
       id: 2,
-      categoryId: 2,
+      categoryId: 25,
       Model: "MIX230T",
       Capacity: "230 LTR",
       MotorEngine_Power: "MOTOR/ENGINE TYPE",
@@ -1754,7 +1754,7 @@ export const products = {
     },
     {
       id: 3,
-      categoryId: 3,
+      categoryId: 25,
       Model: "MIX280T",
       Capacity: "280 LTR",
       MotorEngine_Power: "MOTOR/ENGINE TYPE",
@@ -1766,7 +1766,7 @@ export const products = {
     },
     {
       id: 4,
-      categoryId: 4,
+      categoryId: 25,
       Model: "MIX350T",
       Capacity: "350 LTR",
       MotorEngine_Power: "MOTOR/ENGINE TYPE",
@@ -1780,7 +1780,7 @@ export const products = {
   "shotcrete pump": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 26,
       Model: "RSC15",
       Motor_Power: "15KW",
       voltageThreePhase: "380V-415V",
@@ -1801,7 +1801,7 @@ export const products = {
   "concrete spraying machine": [
     {
       id: 1,
-      categoryId: 1,
+      categoryId: 27,
       Model: "RPL300",
       deliveryPressure: "3-6Mpa",
       voltage: "380V/415V/220v",
@@ -1823,7 +1823,7 @@ export const products = {
   "flooring equipment": [
     {
       id: 30,
-      categoryId: 30,
+      categoryId: 28,
       name: "Floor Scraper",
       price: 1800,
       description: "A machine for removing old flooring materials.",
@@ -1832,7 +1832,7 @@ export const products = {
   engines: [
     {
       id: 31,
-      categoryId: 31,
+      categoryId: 29,
       name: "Diesel Engine",
       price: 1500,
       description: "A high-performance diesel engine.",
@@ -1841,7 +1841,7 @@ export const products = {
   machines: [
     {
       id: 32,
-      categoryId: 32,
+      categoryId: 30,
       name: "Multi-Purpose Machine",
       price: 5000,
       description: "A versatile machine for various construction tasks.",

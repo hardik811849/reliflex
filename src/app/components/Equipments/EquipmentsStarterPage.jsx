@@ -2,6 +2,7 @@
 import { Box, Grid, Typography, GridItem, useMediaQuery, Button } from "@mui/material";
 import Image from "next/image";
 import { NavigateNext } from "@mui/icons-material";
+import DownloadIcon from '@mui/icons-material/Download';
 import { useTheme } from "@emotion/react";
 import { useEffect, useState } from "react";
 import { products } from "./product";
@@ -36,25 +37,25 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
     Object.keys(products).forEach((category) => {
       products[category].forEach((product) => {
         if (product.categoryId == catid && product.id == exploremoreid) {
-            tempProductArray.push({
-              id: product.id,
-              categoryId: product.categoryId,
-              categoryName: category,
-              image: product.image,
-              Model: product.Model,
-              Input_Voltage: product.Input_Voltage,
-              Diameter_Round_Bar: product.Diameter_Round_Bar,
-              Diameter_Threaded_Steel: product.Diameter_Threaded_Steel,
-              Diameter_of_WorkingDisc: product.Diameter_of_WorkingDisc,
-              Adjustable_Bending_Speed: product.Adjustable_Bending_Speed,
-              Working_Type: product.Working_Type,
-              Motor_Power_Voltage: product.Motor_Power_Voltage,
-              Motor_RPM: product.Motor_RPM,
-              Pedals: product.Pedals,
-              Dimensions: product.Dimensions,
-              Weight: product.Weight,
-            });
-          }
+          tempProductArray.push({
+            id: product.id,
+            categoryId: product.categoryId,
+            categoryName: category,
+            image: product.image,
+            Model: product.Model,
+            Input_Voltage: product.Input_Voltage,
+            Diameter_Round_Bar: product.Diameter_Round_Bar,
+            Diameter_Threaded_Steel: product.Diameter_Threaded_Steel,
+            Diameter_of_WorkingDisc: product.Diameter_of_WorkingDisc,
+            Adjustable_Bending_Speed: product.Adjustable_Bending_Speed,
+            Working_Type: product.Working_Type,
+            Motor_Power_Voltage: product.Motor_Power_Voltage,
+            Motor_RPM: product.Motor_RPM,
+            Pedals: product.Pedals,
+            Dimensions: product.Dimensions,
+            Weight: product.Weight,
+          });
+        }
       });
     });
 
@@ -63,98 +64,90 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
 
 
     return (
-      <Grid container>
+
+      <Box>
         {filteredEquipment.map((item, index) => (
-          <Box key={index} p={5} maxW="900px" mx="auto" bg="white" boxShadow="md" borderRadius="md">
+          <Box
+            key={index}
+            mt={5}
+            p={5}
+            maxWidth="1300px"
+            mx="auto"
+            bgcolor="white"
+            border="1px solid #0000001A"
+            borderRadius={2}
+            mb={4} // Margin between boxes
+          >
             {/* Machine Image */}
             <Box display="flex" justifyContent="center" mb={5}>
               <Image
                 src={item.image}
                 alt={item.Model}
-                width={500}
-                height={300}
-                layout="responsive"
-                style={{
-                  border: "2px solid",
-                  borderColor: "blue.300",
-                  borderRadius: "md",
-                }}
+                width={500} // Adjusted width
+                height={150} // Adjusted height
+                layout="intrinsic"
               />
             </Box>
 
-
-            {/* <Grid templateColumns="repeat(2, 1fr)" gap={4} bg="gray.100" p={5} borderRadius="md">
-           
-              <GridItem>
-                <Typography fontWeight="bold">Model:</Typography>
-                <Typography>GWH32</Typography>
-              </GridItem>
-
-              <GridItem>
-                <Typography fontWeight="bold">Working Type:</Typography>
-                <Typography>Automatic / Manual</Typography>
-              </GridItem>
-
-              <GridItem>
-                <Typography fontWeight="bold">Input Voltage (Phase / Current):</Typography>
-                <Typography>Three Phase 50-60 Hz</Typography>
-              </GridItem>
-
-              <GridItem>
-                <Typography fontWeight="bold">Motor Power:</Typography>
-                <Typography>3.5 kW / 415 V / 380 V</Typography>
-              </GridItem>
-
-              <GridItem>
-                <Typography fontWeight="bold">Diameter (Round Bar):</Typography>
-                <Typography>16-32 mm</Typography>
-              </GridItem>
-
-              <GridItem>
-                <Typography fontWeight="bold">Motor RPM:</Typography>
-                <Typography>1440 / min</Typography>
-              </GridItem>
-
-              <GridItem>
-                <Typography fontWeight="bold">Diameter (Threaded Steel):</Typography>
-                <Typography>16-32 mm</Typography>
-              </GridItem>
-
-              <GridItem>
-                <Typography fontWeight="bold">Pedals:</Typography>
-                <Typography>2 No</Typography>
-              </GridItem>
-
-              <GridItem>
-                <Typography fontWeight="bold">Diameter of Working Disc:</Typography>
-                <Typography>360 mm</Typography>
-              </GridItem>
-
-              <GridItem>
-                <Typography fontWeight="bold">Dimensions:</Typography>
-                <Typography>850*850*1000 mm</Typography>
-              </GridItem>
-
-              <GridItem>
-                <Typography fontWeight="bold">Adjustable Bending Speed:</Typography>
-                <Typography>10-20 R/min</Typography>
-              </GridItem>
-
-              <GridItem>
-                <Typography fontWeight="bold">Weight:</Typography>
-                <Typography>320 kgs</Typography>
-              </GridItem>
-            </Grid> */}
+            {/* Machine Details */}
+            <Box
+              display="flex"
+              flexWrap="wrap"
+              justifyContent="space-between"
+              bgcolor="#ffffff" // Ensure background is white
+              p={5}
+              borderRadius="8px"
+              border="1px solid #0000001A" // Add black border to the entire box
+            >
+              {/* Mapping machine details with white text and black borders */}
+              {[
+                { label: "Model", value: item.Model },
+                { label: "Working Type", value: item.Working_Type },
+                { label: "Input Voltage (Phase / Current)", value: item.Input_Voltage },
+                { label: "Motor Power", value: item.Motor_Power },
+                { label: "Diameter (Round Bar)", value: item.Diameter_Round_Bar },
+                { label: "Motor RPM", value: item.Motor_RPM },
+                { label: "Diameter (Threaded Steel)", value: item.Diameter_Threaded_Steel },
+                { label: "Pedals", value: item.Pedals },
+                { label: "Diameter of Working Disc", value: item.Working_Disc_Diameter },
+                { label: "Dimensions", value: item.Dimensions },
+                { label: "Adjustable Bending Speed", value: item.Adjustable_Bending_Speed },
+                { label: "Weight", value: item.Weight },
+              ].map((detail, i) => (
+                <Box flexBasis="49%" mb={3} key={i} border="1px solid #0000001A" p={2} borderRadius="8px">
+                  <Typography fontWeight="bold" color="black">
+                    {detail.label}:
+                  </Typography>
+                  <Typography color="black">
+                    {detail.value || 'N/A'}
+                  </Typography>
+                </Box>
+              ))}
+            </Box>
 
             {/* Download Button */}
             <Box textAlign="center" mt={5}>
-              <Button colorScheme="blue" size="md">
+              <Button
+                variant="contained"
+                color="primary"
+                size="medium"
+                startIcon={<DownloadIcon />} // Add icon before text
+                sx={{
+                  color: 'white',        // Set text color to white
+                  backgroundColor: '#2196f3', // Set button background color (if needed)
+                  '&:hover': {
+                    backgroundColor: '#1976d2', // Optional: Hover effect color
+                  }
+                }}
+              >
                 Download Brochure
               </Button>
             </Box>
+
           </Box>
         ))}
-      </Grid>
+      </Box>
+
     );
   } else {
 
