@@ -44,6 +44,7 @@ const Navbar = () => {
   const handleMediaMenuOpen = (event) => {
     setMediaAnchorEl(event.currentTarget);
   };
+
   const raiseTicketButton = (
     <Box
       sx={{
@@ -62,12 +63,30 @@ const Navbar = () => {
       Raise a Ticket
     </Box>
   );
+  const InquireNow = (
+    <Box
+      sx={{
+        backgroundColor: "white",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: { lg: "175px", md: "130px", xs: "inherit" },
+        height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
+        color: theme.palette.primary.main,
+        fontSize: { md: "14px", xxl: "16px", xs: "14px" },
+        fontWeight: 600,
+        borderRadius: "4px",
+      }}
+    >
+      Inquire Now
+    </Box>
+  );
   const navItems = [
     { label: "Home", path: "/" },
     { label: "Company", path: "/company" },
     { label: "Equipment", path: "/equipment" },
     { label: "Media", path: "/media" },
-    { label: "Inquire Now", path: "/inquire" },
+    { label: InquireNow, path: "/inquire" },
     { label: raiseTicketButton, path: "/raise-ticket" },
   ];
 
@@ -101,6 +120,7 @@ const Navbar = () => {
       <AppBar
         component="nav"
         style={{
+          paddingRight: "0px",
           backgroundColor: backgroundDrop ? "rgba(0,0,0,0.75)" : "transparent",
           boxShadow: "none",
           height: "80px",
