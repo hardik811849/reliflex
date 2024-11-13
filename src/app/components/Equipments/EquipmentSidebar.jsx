@@ -59,7 +59,7 @@ const EquipmentSidebar = ({ demoSelectModel, setSelectedCategory }) => {
   ];
 
   const drawerContent = (
-    <Box sx={{ maxHeight: "500px", overflowY: "auto" }}>
+    <Box sx={{ height: "100vh",overflowY: "auto" }}>
       <Box sx={{ display: "flex", mb: 4 }}>
         <FormControl sx={{ m: 1, width: "35ch", mx: "auto" }} variant="filled">
           <OutlinedInput
@@ -164,8 +164,7 @@ const EquipmentSidebar = ({ demoSelectModel, setSelectedCategory }) => {
               "& .MuiDrawer-paper": {
                 boxSizing: "border-box",
                 width: drawerWidth.sm,
-                maxHeight: "500px", // Set max height to 500px
-                overflowY: "auto",  // Allow vertical scrolling if content exceeds the height
+                height: "100vh",
               },
             }}
           >
@@ -179,6 +178,7 @@ const EquipmentSidebar = ({ demoSelectModel, setSelectedCategory }) => {
             display: { xs: "none", sm: "block" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
+              height: "100vh",
               width: drawerWidth,
               position: "absolute",
               transition: "none !important",
@@ -201,7 +201,6 @@ const EquipmentSidebar = ({ demoSelectModel, setSelectedCategory }) => {
                 backgroundColor: "rgba(0,0,0,.1)",
                 borderRadius: "10px",
               },
-              maxHeight: "450px", // Set max height to 500px for the permanent drawer
               overflowY: "auto",  // Allow vertical scrolling if content exceeds the height
             },
           }}
