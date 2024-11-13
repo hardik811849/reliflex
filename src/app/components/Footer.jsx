@@ -46,18 +46,41 @@ const Footer = () => {
       </Box>
     );
   };
+
   const FooterItem = ({ text }) => {
+    let href = "#"; // Default href, in case none matches
+
+    // Determine the href based on the text
+    switch (text) {
+      case "Home":
+        href = "/";
+        break;
+      case "About us":
+        href = "/about-us";
+        break;
+      case "Equipment":
+        href = "/equipment";
+        break;
+      case "Inquire Now":
+        href = "/inquire";
+        break;
+      default:
+        break;
+    }
+
     return (
-      <Typography
-        sx={{
-          color: theme.palette.text.footer,
-          fontWeight: 500,
-          my: 3,
-          fontSize: { md: "16px", sm: "13px" },
-        }}
-      >
-        {text}
-      </Typography>
+      <Link href={href} passHref>
+        <Typography
+          sx={{
+            color: theme.palette.text.footer,
+            fontWeight: 500,
+            my: 3,
+            fontSize: { md: "16px", sm: "13px" },
+          }}
+        >
+          {text}
+        </Typography>
+      </Link>
     );
   };
   return (
@@ -191,7 +214,7 @@ const Footer = () => {
             alt="black bg design"
             fill
             priority
-            style={{ position: "absolute" }}
+            style={{ position: "absolute", zIndex: "-1" }}
           />
 
           <Box
@@ -230,7 +253,10 @@ const Footer = () => {
                   textAlign: { xs: "center", sm: "left" },
                 }}
               >
-                Reliflex Machinery & Equipments is a rapidly growing company involved in the design and manufacture of an extensive range of Machinery & Equipments for the building and construction industry.
+                Reliflex Machinery & Equipments is a rapidly growing company
+                involved in the design and manufacture of an extensive range of
+                Machinery & Equipments for the building and construction
+                industry.
               </Typography>
               <br />
               <Typography
@@ -241,7 +267,9 @@ const Footer = () => {
                   textAlign: { xs: "center", sm: "left" },
                 }}
               >
-                We started our business by importing these machineries from countries like Germany, Japan, China, Turkey, USA, Vietnam to name few in the year 2011.
+                We started our business by importing these machineries from
+                countries like Germany, Japan, China, Turkey, USA, Vietnam to
+                name few in the year 2011.
               </Typography>
               <Box sx={{ display: "flex" }}>
                 <Button
@@ -277,39 +305,21 @@ const Footer = () => {
                 <Link href="/">
                   <FooterItem text="Home" />
                 </Link>
-                <FooterItem text="Services" />
-                <FooterItem text="Projects" />
-                <FooterItem text="Blog" />
-                <FooterItem text="Newsletter" />
-                <FooterItem text="Contact Us" />
-              </Box>
-              <Box>
-                <FooterHeaderItem heading="Services" />
-                <FooterItem text="Service 1" />
-                <FooterItem text="Service 2" />
-                <FooterItem text="Service 3" />
-                <FooterItem text="Service 4" />
-                <FooterItem text="Service 5" />
-                <FooterItem text="Service 6" />
+                <FooterItem text="About us" />
+                <FooterItem text="Equipment" />
+                <FooterItem text="Events" />
+                <FooterItem text="Inquire Now" />
               </Box>
             </Box>
             <Box sx={{ display: { sm: "block", xs: "none" } }}>
               <FooterHeaderItem heading="Useful Links" />
-              <FooterItem text="Home" />
-              <FooterItem text="Services" />
-              <FooterItem text="Projects" />
-              <FooterItem text="Blog" />
-              <FooterItem text="Newsletter" />
-              <FooterItem text="Contact Us" />
-            </Box>
-            <Box sx={{ display: { sm: "block", xs: "none" } }}>
-              <FooterHeaderItem heading="Services" />
-              <FooterItem text="Service 1" />
-              <FooterItem text="Service 2" />
-              <FooterItem text="Service 3" />
-              <FooterItem text="Service 4" />
-              <FooterItem text="Service 5" />
-              <FooterItem text="Service 6" />
+              <Link href="/">
+                <FooterItem text="Home" />
+              </Link>
+              <FooterItem text="About us" />
+              <FooterItem text="Equipment" />
+              <FooterItem text="Events" />
+              <FooterItem text="Inquire Now" />
             </Box>
             <Box
               sx={{

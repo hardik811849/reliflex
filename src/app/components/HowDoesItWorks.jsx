@@ -44,7 +44,11 @@ const HowDoesItWorks = () => {
               {value}
             </Typography>
             <Typography
-              sx={{ fontWeight: 600, fontSize: { lg: "30px", md: "20px" } }}
+              sx={{
+                fontWeight: 600,
+                fontSize: { lg: "30px", md: "20px" },
+                color: theme.palette.primary.main,
+              }}
             >
               {heading}
             </Typography>
