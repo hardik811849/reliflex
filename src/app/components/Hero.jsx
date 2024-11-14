@@ -112,9 +112,10 @@ const Hero = () => {
                 RELIABLE MACHINERY FOR HEAVY CONSTRUCTIONS
               </Typography>
               <Typography sx={styles.subHeading}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Lorem ipsum dolor sit amet.
+                Find the best, most reliable heavy-duty construction equipment
+                that can perform the most demanding heavy construction jobs.
+                Reliflex Machinery & Equipment is tough and performs well; it is
+                safe, efficient, and maximizes productivity on every job site.
               </Typography>
               <Box sx={styles.buttonContainer}>
                 <Link href="/about-us">
@@ -181,12 +182,13 @@ const Hero = () => {
               }}
             >
               <Typography sx={styles.heading}>
-                RELIABLE MACHINERY FOR HEAVY CONSTRUCTIONS
+                Reliflex Equipment is Reliable Machinery for Construction Needs
               </Typography>
               <Typography sx={styles.subHeading}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Lorem ipsum dolor sit amet.
+                Reliflex Machinery & Equipment is a leading manufacturer of all
+                types of construction machinery used in construction work.
+                Construction Machinery and equipment are designed and created to
+                meet all your construction site necessities and needs.
               </Typography>
               <Box sx={styles.buttonContainer}>
                 <Link href="/about-us">
@@ -253,12 +255,14 @@ const Hero = () => {
               }}
             >
               <Typography sx={styles.heading}>
-                RELIABLE MACHINERY FOR HEAVY CONSTRUCTIONS
+                Reliflex Machinery & Equipment Durable, Low-Maintenance
+                Machinery Excellence
               </Typography>
               <Typography sx={styles.subHeading}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Lorem ipsum dolor sit amet.
+                Reliflex Machinery & Equipment, heavy duty and require minimal
+                maintenance. Detailed description of our designing,
+                manufacturing and customer approach is mentioned in the About Us
+                Section.
               </Typography>
               <Box sx={styles.buttonContainer}>
                 <Link href="/about-us">

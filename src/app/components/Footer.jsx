@@ -302,9 +302,7 @@ const Footer = () => {
             >
               <Box sx={{ mr: 4 }}>
                 <FooterHeaderItem heading="Useful Links" />
-                <Link href="/">
-                  <FooterItem text="Home" />
-                </Link>
+                <FooterItem text="Home" />
                 <FooterItem text="About us" />
                 <FooterItem text="Equipment" />
                 <FooterItem text="Events" />
@@ -313,9 +311,7 @@ const Footer = () => {
             </Box>
             <Box sx={{ display: { sm: "block", xs: "none" } }}>
               <FooterHeaderItem heading="Useful Links" />
-              <Link href="/">
-                <FooterItem text="Home" />
-              </Link>
+              <FooterItem text="Home" />
               <FooterItem text="About us" />
               <FooterItem text="Equipment" />
               <FooterItem text="Events" />
