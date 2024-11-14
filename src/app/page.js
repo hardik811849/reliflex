@@ -49,7 +49,7 @@ export default function Home() {
         <About showHeader showSideCrane />
         {/* <Manufacturing /> */}
         <LatestUpdates />
-        {/* <OurServices /> */}
+        <OurServices />
         <FeaturedProducts />
         <IndustriesWeServe />
         <HowDoesItWorks />

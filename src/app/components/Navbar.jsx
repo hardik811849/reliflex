@@ -147,14 +147,14 @@ const Navbar = () => {
           >
             About Us
           </MenuItem>
-          <MenuItem
+          {/* <MenuItem
             onClick={() => {
               router.push("/faqs");
               handleCompanyCloseMenu();
             }}
           >
             FAQ
-          </MenuItem>
+          </MenuItem> */}
         </Menu>
         <Menu
           anchorEl={mediaAnchorEl}
