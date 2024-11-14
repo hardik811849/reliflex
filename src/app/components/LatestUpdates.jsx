@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import latestUpdate1 from "../../../public/latestUpdates/latestUpdate1.svg";
+import latestUpdate1 from "../../../public/19092.jpg";
 import {
   KeyboardBackspace as KeyboardBackspaceIcon,
   East as EastIcon,
@@ -77,7 +77,7 @@ const LatestUpdates = () => {
               mb: 3,
             }}
           >
-            Reliflex Contribution to Society
+            Durability You Can Trust
           </Typography>
           <Image
             src={latestUpdate1}
@@ -101,9 +101,9 @@ const LatestUpdates = () => {
               mb: { xs: 2, sm: 0 },
             }}
           >
-            Reliflex Emergency Response Service Trust was launched to provide
-            Free of Cost 24 x 7 Emergency Response Service through a Single Toll
-            Free Number 987-6543-210 for the all of our customers.
+            The Reliflex Machinery & Equipment company is known to have
+            excellent strength, which is quite strong and can be used even in
+            the toughest construction environments.
           </Typography>
         </Box>
       </Box>

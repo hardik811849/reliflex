@@ -142,12 +142,7 @@ const HowDoesItWorks = () => {
         <ProcessItem
           value={1}
           heading="Search For The Equipment You Need"
-          content=" Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
-                metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
-                interdum tellus elit sed risus. Maecenas eget condimentum velit,
-                sit amet feugiat lectus. Class aptent taciti sociosqu ad litora
-                torquent per conubia nostra."
+          content=" At Reliflex Machinery & Equipments, we provide you with the best machinery to deliver on all construction. From advanced import models to custom-made solutions, our right equipment awaits every project. Explore our wide selection and look for the most reliable, high-performance tools that can boost your work towards the maximum. Trust Reliflex to provide you with quality machinery that gives pace to progress within the building industry."
           imgBlock={
             <Box id="img" sx={{ position: "relative" }}>
               <Image
@@ -208,12 +203,7 @@ const HowDoesItWorks = () => {
         <ProcessItem
           value={2}
           heading="Find The Equipment And Order It by Contact us"
-          content=" Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-          eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
-                metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
-                interdum tellus elit sed risus. Maecenas eget condimentum velit,
-                sit amet feugiat lectus. Class aptent taciti sociosqu ad litora
-                torquent per conubia nostra."
+          content=" Find the right equipment for your construction needs at Reliflex Machinery & Equipment. Our people can guide you to the right machinery from our vast collections. Once you find the one you want, just call us for an order. Contact us today to kit out your project with dependable high-quality tools and solutions."
           imgBlock={
             <Box id="img" sx={{ position: "relative", mr: { sm: 4, md: 0 } }}>
               <Image
@@ -274,12 +264,7 @@ const HowDoesItWorks = () => {
         <ProcessItem
           value={3}
           heading="Get The Equipment Shipped To Your Working"
-          content=" Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
-                metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
-                interdum tellus elit sed risus. Maecenas eget condimentum velit,
-                sit amet feugiat lectus. Class aptent taciti sociosqu ad litora
-                torquent per conubia nostra."
+          content="Reliflex Machinery & Equipment takes care of things for you. From when you finally settle on which machinery to use, we will see to it that we transport them to your work site in time with no damage. The trusted logistics department ensures your equipment is delivered right to your job site, ready to start work. Leave the details to Reliflex and attend to your work."
           imgBlock={
             <Box sx={{ ml: { md: 10, sm: 0 } }}>
               <Image
