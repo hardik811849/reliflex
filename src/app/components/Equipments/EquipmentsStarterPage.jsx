@@ -70,7 +70,9 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
           <Box
             key={index}
             mt={5}
-            p={5}
+            sx={{
+              p: { xs: 0, sm: 2, md: 5 }
+            }}
             maxWidth="1300px"
             mx="auto"
             bgcolor="white"
@@ -95,9 +97,11 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
               flexWrap="wrap"
               justifyContent="space-between"
               bgcolor="#ffffff" // Ensure background is white
-              p={5}
-              borderRadius="8px"
-              border="1px solid #0000001A" // Add black border to the entire box
+              sx={{
+                p: { xs: 0, sm: 2, md: 5 }, // Adjust padding for different screen sizes
+                borderRadius: "8px",
+                border: "1px solid #0000001A", // Add black border to the entire box
+              }}
             >
               {/* Mapping machine details with white text and black borders */}
               {[
@@ -114,9 +118,20 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
                 { label: "Adjustable Bending Speed", value: item.Adjustable_Bending_Speed },
                 { label: "Weight", value: item.Weight },
               ].map((detail, i) => (
-                <Box flexBasis="49%" mb={3} key={i} border="1px solid #0000001A" p={2} borderRadius="8px">
+                <Box 
+                flexBasis="49%" 
+                mb={3} 
+                key={i} 
+                border="1px solid #0000001A" 
+                sx={{
+                  p: { xs: 0, sm: 2, md: 2 },
+                  borderRadius: "8px",
+                  display: { xs: 'block', md: 'flex' }, 
+                  alignItems: { md: 'center' },
+                }}
+                >
                   <Typography fontWeight="bold" color="black">
-                    {detail.label}:
+                    {detail.label}:&nbsp;
                   </Typography>
                   <Typography color="black">
                     {detail.value || 'N/A'}
@@ -133,7 +148,7 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
                 size="medium"
                 startIcon={<DownloadIcon />} // Add icon before text
                 sx={{
-                  color: 'white',        // Set text color to white
+                  color: 'white', // Set text color to white
                   backgroundColor: '#2196f3', // Set button background color (if needed)
                   '&:hover': {
                     backgroundColor: '#1976d2', // Optional: Hover effect color
