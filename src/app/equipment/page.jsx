@@ -169,6 +169,7 @@ const EquipmentPage = () => {
         </Box>
       )}
       <Grid
+
         container
         width={{ sm: "90%", xs: "100%", md: "100%" }}
         sx={{ display: "flex", mx: "auto" }}
