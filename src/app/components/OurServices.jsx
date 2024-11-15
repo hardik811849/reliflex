@@ -159,49 +159,37 @@ const OurServices = () => {
             imgSSrc={icon1}
             imgAlt="icon1"
             heading="CONSTRUCTION"
-            content="Litora leo senectus suscipit phasellu a lectus.
-                mpot ullamcorper augue. Pellentesque.
-                Commodo vehiculavelia."
+            content="Reliflex Machinery & Equipment construction solutions are reliable with high-performance machinery designed to fulfill varied requirements, with efficiency and durability."
           />
           <ServiceItem
             imgSSrc={icon2}
             imgAlt="icon2"
             heading="CONCRETE TRANSPORT"
-            content="Litora leo senectus suscipit phasellu a lectus.
-                mpot ullamcorper augue. Pellentesque.
-                Commodo vehiculavelia."
+            content="Reliflex provides efficient and durable concrete transport solutions that assure smooth handling for all your construction projects."
           />
           <ServiceItem
             imgSSrc={icon3}
             imgAlt="icon3"
             heading="RENOVATION"
-            content="Litora leo senectus suscipit phasellu a lectus.
-                mpot ullamcorper augue. Pellentesque.
-                Commodo vehiculavelia."
+            content="Our Machinery is one of the most reliable equipment and tools in its kind, which was helpful in renovating jobs performed with perfection and efficiency."
           />
           <ServiceItem
             imgSSrc={icon4}
             imgAlt="icon4"
             heading="General Builder"
-            content="Litora leo senectus suscipit phasellu a lectus.
-                mpot ullamcorper augue. Pellentesque.
-                Commodo vehiculavelia."
+            content="We assist general builders with flexible, high-quality machinery that can accomplish a wide range of construction duties in the easiest manners possible."
           />
           <ServiceItem
             imgSSrc={icon5}
             imgAlt="icon5"
             heading="Refurbishment"
-            content="Litora leo senectus suscipit phasellu a lectus.
-                mpot ullamcorper augue. Pellentesque.
-                Commodo vehiculavelia."
+            content="Reliflex  services offer reliable tools and machines to make refurbishment projects easier, ensuring quality results every time."
           />
           <ServiceItem
             imgSSrc={icon6}
             imgAlt="icon6"
             heading="Security Service"
-            content="Litora leo senectus suscipit phasellu a lectus.
-                mpot ullamcorper augue. Pellentesque.
-                Commodo vehiculavelia."
+            content="Our services have strong and reliable security solutions with advanced technology to keep your operations safe and secure."
           />
         </Grid>
       </Box>
