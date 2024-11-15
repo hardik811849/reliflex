@@ -217,23 +217,20 @@ const AboutUsPage = () => {
       >
         <CircularAbout
           Icon={WorkOutlineOutlined}
-          number={986}
           percent={60}
-          heading=" 800+ dealer network in India"
+          heading=" 800+ Dealer Network in India"
           description="Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie."
         />
         <CircularAbout
           Icon={GroupsOutlined}
-          number={357}
           percent={40}
-          heading="Trusted Clients"
+          heading="50k Trusted Clients"
           description="Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie."
         />
         <CircularAbout
           Icon={EmojiEventsOutlined}
-          number={1423}
           percent={80}
-          heading="Awards Earned"
+          heading="70+ dealers Across Globe"
           description="Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie."
         />
       </Box>
