@@ -170,6 +170,7 @@ const EquipmentPage = () => {
       )}
       <Grid
         container
+        height={"100vh"}
         width={{ sm: "90%", xs: "100%", md: "100%" }}
         sx={{ display: "flex", mx: "auto" }}
         spacing={2}
