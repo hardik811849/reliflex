@@ -148,6 +148,7 @@ const AboutUsPage = () => {
               sx={{
                 fontWeight: 600,
                 fontSize: { xl: "32px", lg: "26px" },
+                color: theme.palette.primary.main,
                 mt: 3,
                 mb: 1,
               }}
@@ -218,7 +219,7 @@ const AboutUsPage = () => {
           Icon={WorkOutlineOutlined}
           number={986}
           percent={60}
-          heading="Projects Done"
+          heading=" 800+ dealer network in India"
           description="Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie."
         />
         <CircularAbout
