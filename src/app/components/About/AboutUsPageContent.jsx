@@ -168,10 +168,14 @@ const AboutUsPageContent = () => {
           </Box>
           <Box sx={{ mx: { md: 10, sm: 4, xs: 2 }, mt: 2 }}>
             <Typography
-              sx={{ fontWeight: 500, fontSize: { xxl: "30px", xl: "24px" } }}
+              sx={{
+                fontWeight: 500,
+                fontSize: { xxl: "30px", xl: "24px" },
+                color: theme.palette.text.subHead,
+              }}
             >
               Delivering Premium Quality Machinery And Equipment For Our
-              Esteemed Clientele
+              Esteemed Clients
             </Typography>
             <br />
             <Typography sx={styles.paraFont}>
@@ -246,7 +250,11 @@ const AboutUsPageContent = () => {
             }}
           >
             <Typography
-              sx={{ fontWeight: 500, fontSize: { xxl: "30px", xl: "24px" } }}
+              sx={{
+                fontWeight: 500,
+                fontSize: { xxl: "30px", xl: "24px" },
+                color: theme.palette.text.subHead,
+              }}
             >
               Meeting End To End Requirements For The Construction Industry
             </Typography>
@@ -461,7 +469,11 @@ const AboutUsPageContent = () => {
             }}
           >
             <Typography
-              sx={{ fontWeight: 500, fontSize: { xxl: "30px", xl: "24px" } }}
+              sx={{
+                fontWeight: 500,
+                fontSize: { xxl: "30px", xl: "24px" },
+                color: theme.palette.text.subHead,
+              }}
             >
               Products Delivered As Per Customer Needs
             </Typography>
@@ -519,7 +531,11 @@ const AboutUsPageContent = () => {
             }}
           >
             <Typography
-              sx={{ fontWeight: 500, fontSize: { xxl: "30px", xl: "24px" } }}
+              sx={{
+                fontWeight: 500,
+                fontSize: { xxl: "30px", xl: "24px" },
+                color: theme.palette.text.subHead,
+              }}
             >
               OUR MISSION
             </Typography>
@@ -722,7 +738,11 @@ const AboutUsPageContent = () => {
           </Box>
           <Box sx={{ mx: { md: 10, sm: 4, xs: 2 }, mt: 2 }}>
             <Typography
-              sx={{ fontWeight: 500, fontSize: { xxl: "30px", xl: "24px" } }}
+              sx={{
+                fontWeight: 500,
+                fontSize: { xxl: "30px", xl: "24px" },
+                color: theme.palette.text.subHead,
+              }}
             >
               OUR FOCUS
             </Typography>
