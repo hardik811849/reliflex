@@ -205,7 +205,7 @@ const AboutUsPageContent = () => {
             </Typography>
             <br />
             <Typography sx={styles.paraFont}>
-              We design and manufacture equipment that not only doesn't break
+              We design and manufacture equipment that not only doesn\'t break
               but also with extreme pressure does not lose its structure. We
               follow the global standard of manufacturing and, thereby, make
               machinery that meets international benchmarks for strength and
@@ -276,7 +276,7 @@ const AboutUsPageContent = () => {
             </Typography>
             <br />
             <Typography sx={styles.paraFont}>
-              India's march toward self-sufficiency has been unprecedented, and
+              India\'s march toward self-sufficiency has been unprecedented, and
               the construction equipment industry is no exception. What used to
               be second-rate material and machines from India is today sought
               after worldwide for its quality. Reliflex is part of this success
@@ -309,7 +309,7 @@ const AboutUsPageContent = () => {
             </Typography>
             <br />
             <Typography sx={styles.paraFont}>
-              At Reliflex, we don't just sell equipment alone, but provide
+              At Reliflex, we don\'t just sell equipment alone, but provide
               comprehensive solutions to support our clients in achieving their
               construction goals with self-confidence and without hindrance.
             </Typography>
@@ -492,7 +492,7 @@ const AboutUsPageContent = () => {
               project. This field seldom finds one-size-fits-all solutions.
               These needs are understood and indeed catered to by Reliflex
               Machinery & Equipment as requiring custom-fit solutions that will
-              best meet each client's unique needs. One does not have to look
+              best meet each client\'s unique needs. One does not have to look
               beyond local shores for custom equipment manufacturing with us.
             </Typography>
             <br />
@@ -511,7 +511,7 @@ const AboutUsPageContent = () => {
               unique, and the equipment we develop for them needs to be tailored
               to meet their demands. Whether small projects or very large,
               infrastructure-heavy initiatives, Reliflex ensures every piece of
-              machinery aligns perfectly with the project's requirements.
+              machinery aligns perfectly with the project\'s requirements.
             </Typography>
           </Box>
         </Box>
