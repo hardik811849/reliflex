@@ -91,7 +91,7 @@ const About = ({ showHeader, showSideCrane }) => {
               color: theme.palette.text.subHead,
             }}
           >
-            Reliflex Machinery & Equipment&apos;s is a Division of Reliflex Exim
+            Reliflex Machinery & Equipments is a Division of Reliflex Exim
             Services Pvt Ltd
           </Typography>
           <Typography
@@ -103,13 +103,13 @@ const About = ({ showHeader, showSideCrane }) => {
               mt: "20px",
             }}
           >
-            Reliflex Machinery & Equipment&apos;s is a rapidly growing company
-            involved in the design and manufacture of an extensive range of
-            Machinery & Equipment&apos;s for the building and construction
-            industry. We started our business by importing these machineries
-            from countries like Germany, Japan, China, Turkey, USA, Vietnam to
-            name few in the year 2011. Most of the machines are also
-            manufactured or assembled in In....
+            Reliflex Machinery & Equipmens is a rapidly growing company involved
+            in the design and manufacture of an extensive range of Machinery &
+            Equipments for the building and construction industry. We started
+            our business by importing these machineries from countries like
+            Germany, Japan, China, Turkey, USA, Vietnam to name few in the year
+            2011. Most of the machines are also manufactured or assembled in
+            In....
           </Typography>
           <Grid
             sx={{
