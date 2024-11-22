@@ -35,7 +35,7 @@ const AboutUsPageContent = () => {
     <Box>
       <Box sx={{ mx: { lg: 36, md: 22, sm: 10, xs: 2 } }}>
         <Typography sx={styles.paraFont}>
-          Reliflex Machinery & Equipment&apos;s is a Division of Reliflex Exim
+          Reliflex Machinery & Equipment s is a Division of Reliflex Exim
           Services Pvt Ltd,
         </Typography>
         <br />
@@ -380,8 +380,8 @@ const AboutUsPageContent = () => {
             >
               Our clients perceive us as the most reliable construction
               equipment manufacturer in the industry. Repeat clients are the
-              norm at Reliflex Machinery & Equipment&apos;s. Our relationship
-              with our clients is based on trust, which is a factor that is of a
+              norm at Reliflex Machinery & Equipment s. Our relationship with
+              our clients is based on trust, which is a factor that is of a
               paramount importance to us.
             </Typography>
           </Box>
@@ -763,7 +763,7 @@ const AboutUsPageContent = () => {
               the driving force in the quest for excellence. An effective supply
               chain manager Right from sourcing & supply of material at the door
               step of the customer in the field of Construction Machinery &
-              Equipment&apos;s and customers required verticals.
+              Equipments and customers required verticals.
             </Typography>
             <br />
             <Typography
@@ -775,10 +775,10 @@ const AboutUsPageContent = () => {
             <Typography sx={styles.paraFont}>
               With our expertise in manufacturing equipment and machinery for
               the construction industry, we plan to span our product offerings
-              to the international markets. Reliflex Machinery &
-              Equipment&apos;s is a beacon of trust in the Indian construction
-              industry. We intend to benefit the global construction industry
-              with our premium, reliable, and secure services.
+              to the international markets. Reliflex Machinery & Equipment s is
+              a beacon of trust in the Indian construction industry. We intend
+              to benefit the global construction industry with our premium,
+              reliable, and secure services.
             </Typography>
             <br />
             <Typography
