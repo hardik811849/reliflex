@@ -276,9 +276,9 @@ const AboutUsPageContent = () => {
             </Typography>
             <br />
             <Typography sx={styles.paraFont}>
-              India's march toward self-sufficiency has been unprecedented, and
-              the construction equipment industry is no exception. What used to
-              be second-rate material and machines from India is today sought
+              India&apos;s march toward self-sufficiency has been unprecedented,
+              and the construction equipment industry is no exception. What used
+              to be second-rate material and machines from India is today sought
               after worldwide for its quality. Reliflex is part of this success
               story by providing solutions to the highest possible international
               standards.
