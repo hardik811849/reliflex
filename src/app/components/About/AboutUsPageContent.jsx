@@ -35,7 +35,7 @@ const AboutUsPageContent = () => {
     <Box>
       <Box sx={{ mx: { lg: 36, md: 22, sm: 10, xs: 2 } }}>
         <Typography sx={styles.paraFont}>
-          Reliflex Machinery & Equipments is a Division of Reliflex Exim
+          Reliflex Machinery & Equipment&apos;s is a Division of Reliflex Exim
           Services Pvt Ltd,
         </Typography>
         <br />
@@ -205,7 +205,7 @@ const AboutUsPageContent = () => {
             </Typography>
             <br />
             <Typography sx={styles.paraFont}>
-              We design and manufacture equipment that not only doesn\'t break
+              We design and manufacture equipment that not only doesn't break
               but also with extreme pressure does not lose its structure. We
               follow the global standard of manufacturing and, thereby, make
               machinery that meets international benchmarks for strength and
@@ -276,7 +276,7 @@ const AboutUsPageContent = () => {
             </Typography>
             <br />
             <Typography sx={styles.paraFont}>
-              India\'s march toward self-sufficiency has been unprecedented, and
+              India's march toward self-sufficiency has been unprecedented, and
               the construction equipment industry is no exception. What used to
               be second-rate material and machines from India is today sought
               after worldwide for its quality. Reliflex is part of this success
@@ -309,7 +309,7 @@ const AboutUsPageContent = () => {
             </Typography>
             <br />
             <Typography sx={styles.paraFont}>
-              At Reliflex, we don\'t just sell equipment alone, but provide
+              At Reliflex, we don't just sell equipment alone, but provide
               comprehensive solutions to support our clients in achieving their
               construction goals with self-confidence and without hindrance.
             </Typography>
@@ -380,8 +380,8 @@ const AboutUsPageContent = () => {
             >
               Our clients perceive us as the most reliable construction
               equipment manufacturer in the industry. Repeat clients are the
-              norm at Reliflex Machinery & Equipments. Our relationship with our
-              clients is based on trust, which is a factor that is of a
+              norm at Reliflex Machinery & Equipment&apos;s. Our relationship
+              with our clients is based on trust, which is a factor that is of a
               paramount importance to us.
             </Typography>
           </Box>
@@ -492,7 +492,7 @@ const AboutUsPageContent = () => {
               project. This field seldom finds one-size-fits-all solutions.
               These needs are understood and indeed catered to by Reliflex
               Machinery & Equipment as requiring custom-fit solutions that will
-              best meet each client\'s unique needs. One does not have to look
+              best meet each client's unique needs. One does not have to look
               beyond local shores for custom equipment manufacturing with us.
             </Typography>
             <br />
@@ -511,7 +511,7 @@ const AboutUsPageContent = () => {
               unique, and the equipment we develop for them needs to be tailored
               to meet their demands. Whether small projects or very large,
               infrastructure-heavy initiatives, Reliflex ensures every piece of
-              machinery aligns perfectly with the project\'s requirements.
+              machinery aligns perfectly with the project's requirements.
             </Typography>
           </Box>
         </Box>
@@ -763,7 +763,7 @@ const AboutUsPageContent = () => {
               the driving force in the quest for excellence. An effective supply
               chain manager Right from sourcing & supply of material at the door
               step of the customer in the field of Construction Machinery &
-              Equipments and customers required verticals.
+              Equipment&apos;s and customers required verticals.
             </Typography>
             <br />
             <Typography
@@ -775,10 +775,10 @@ const AboutUsPageContent = () => {
             <Typography sx={styles.paraFont}>
               With our expertise in manufacturing equipment and machinery for
               the construction industry, we plan to span our product offerings
-              to the international markets. Reliflex Machinery & Equipments is a
-              beacon of trust in the Indian construction industry. We intend to
-              benefit the global construction industry with our premium,
-              reliable, and secure services.
+              to the international markets. Reliflex Machinery &
+              Equipment&apos;s is a beacon of trust in the Indian construction
+              industry. We intend to benefit the global construction industry
+              with our premium, reliable, and secure services.
             </Typography>
             <br />
             <Typography
