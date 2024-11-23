@@ -571,7 +571,7 @@ const AboutUsPageContent = () => {
                 <Typography sx={styles.paraFont}>
                   Commitment to quality is a core function ensuring that our
                   products fit and exceed the standards that can best assure our
-                  clients' future commitments to us.
+                  clients future commitments to us.
                 </Typography>
                 <br />
               </li>
@@ -596,8 +596,7 @@ const AboutUsPageContent = () => {
                 <Typography sx={styles.paraFont}>
                   In that regard, we make sure clients receive unmatched value.
                   We secure our place in the construction industry to some
-                  extent as a credible partner by focusing on customers'
-                  success.
+                  extent as a credible partner by focusing on customers success.
                 </Typography>
                 <br />
               </li>
@@ -771,8 +770,8 @@ const AboutUsPageContent = () => {
               relationships and mutual growth with the clients. We aim to
               deliver excellent service and value at every step-from sourcing
               materials to delivering construction machinery and equipment right
-              to the client's doorstep, ensuring a seamlessness in carrying out
-              our operations tailored to their needs.
+              to the client&apos;s doorstep, ensuring a seamlessness in carrying
+              out our operations tailored to their needs.
             </Typography>
             <br />
             <Typography
