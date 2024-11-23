@@ -554,49 +554,56 @@ const AboutUsPageContent = () => {
             <ul style={{ width: screenSizeSm && !screenSizeMd && "120%" }}>
               <li>
                 <Typography sx={styles.paraFont}>
-                  Being market leaders in defend market segments.
+                  We want to stand as a market leader by excelling in our core
+                  segments and setting benchmarks for quality and service.
                 </Typography>
                 <br />
               </li>
               <li>
                 <Typography sx={styles.paraFont}>
-                  Providing quality products & reliable services and sourcing
-                  raw materials from reputed manufacturers.
+                  We source raw materials from the reputed manufacturers, so our
+                  products retain the higher standards of reliability and
+                  performance.
                 </Typography>
                 <br />
               </li>
               <li>
                 <Typography sx={styles.paraFont}>
-                  Providing quality products & reliable services and sourcing
-                  raw materials from reputed manufacturers.
+                  Commitment to quality is a core function ensuring that our
+                  products fit and exceed the standards that can best assure our
+                  clients future commitments to us.
                 </Typography>
                 <br />
               </li>
               <li>
                 <Typography sx={styles.paraFont}>
-                  Being the preferred supplier of our customers, with our
-                  products exceeding their quality requirements.
+                  Our mission is prompt communication. This will ensure
+                  customers know everything currently happening within the
+                  market trend and dynamics.
                 </Typography>
                 <br />
               </li>
               <li>
                 <Typography sx={styles.paraFont}>
-                  Giving timely information to the customers regarding trends of
-                  the market dynamics.
+                  We define success through collaboration and innovation, where
+                  creativity will be shown through a culture of teamwork. This
+                  enables us to keep improving and adapting to the rapidly
+                  changing needs of the industry.
                 </Typography>
                 <br />
               </li>
               <li>
                 <Typography sx={styles.paraFont}>
-                  Harnessing the creative energies of all our people through
-                  team work, develop and a transparent work environment.
+                  In that regard, we make sure clients receive unmatched value.
+                  We secure our place in the construction industry to some
+                  extent as a credible partner by focusing on customers success.
                 </Typography>
                 <br />
               </li>
               <li>
                 <Typography sx={styles.paraFont}>
-                  Making sure customer is satisfied with the products & after
-                  sales services.
+                  leading with excellence, building trust, and providing
+                  solutions that enable our customers to achieve their goals.
                 </Typography>
               </li>
             </ul>
@@ -759,27 +766,26 @@ const AboutUsPageContent = () => {
             </Typography>
             <br />
             <Typography sx={styles.paraFont}>
-              Reliflex focus is to foster growth and promote enduring business
-              ties with its client. Customer responsiveness and commitment is
-              the driving force in the quest for excellence. An effective supply
-              chain manager Right from sourcing & supply of material at the door
-              step of the customer in the field of Construction Machinery &
-              Equipment&apos;s and customers required verticals.
+              Reliflex Machinery & Equipments focus has always been on strong
+              relationships and mutual growth with the clients. We aim to
+              deliver excellent service and value at every step-from sourcing
+              materials to delivering construction machinery and equipment right
+              to the client&apos;s doorstep, ensuring a seamlessness in carrying
+              out our operations tailored to their needs.
             </Typography>
             <br />
             <Typography
               sx={[styles.paraFont, { fontWeight: 500, color: "black" }]}
             >
-              International and Domestic Market
+              Expansion into International Markets
             </Typography>
             <br />
             <Typography sx={styles.paraFont}>
-              With our expertise in manufacturing equipment and machinery for
-              the construction industry, we plan to span our product offerings
-              to the international markets. Reliflex Machinery &
-              Equipment&apos;s is a beacon of trust in the Indian construction
-              industry. We intend to benefit the global construction industry
-              with our premium, reliable, and secure services.
+              Though we hold a pioneering position in the Indian construction
+              equipment market, our vision is to take our reliable, high-quality
+              machines to the world stage. Reliflex shall strive to offer the
+              same reliability and quality that our domestic customers have come
+              to expect from the company to global markets.
             </Typography>
             <br />
             <Typography
@@ -790,17 +796,19 @@ const AboutUsPageContent = () => {
 
             <br />
             <Typography sx={styles.paraFont}>
-              We place a lot of value over interaction with our esteemed
-              clientele. This lets our clientele share their requirements with
-              us. This lets them have a fair bit of idea regarding our
-              capabilities and the services that we offer for them.
+              We appreciate open communication with our clients. Listening to
+              the needs of clients ensures achieving the best outputs from our
+              part. Our friendly team is here to make sure that your experience
+              with us goes smoothly and hassle free. Through our customer
+              support, we are ever ready to assist you, be it questions about
+              our products or in discussing your project. Our team will never be
+              too far out of reach through a call or message. We are here to
+              provide solutions and guide you at every step.
             </Typography>
             <br />
             <Typography sx={styles.paraFont}>
-              Our customer support agents are highly trained and you can contact
-              them at any time. A meeting with our consultants will let us have
-              a fair bit of an idea regarding your project requirements, and we
-              can consider the feasibility of the different solutions available.
+              At Reliflex, we want to be the partner you can rely upon for every
+              conceivable need in construction machinery and equipment.
             </Typography>
             <br />
             <Typography sx={styles.paraFont}>

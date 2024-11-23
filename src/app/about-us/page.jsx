@@ -219,19 +219,19 @@ const AboutUsPage = () => {
           Icon={WorkOutlineOutlined}
           percent={80}
           heading=" 800+ Dealer Network in India"
-          description="Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie."
+          description="Reliflex proudly operates with an extensive network of over 800 dealers across India, ensuring easy access to our products nationwide."
         />
         <CircularAbout
           Icon={GroupsOutlined}
           percent={90}
           heading="50k Trusted Clients"
-          description="Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie."
+          description="With a base of 50,000 trusted clients, Reliflex stands as a symbol of reliability and excellence."
         />
         <CircularAbout
           Icon={EmojiEventsOutlined}
           percent={70}
           heading="70+ dealers Across Globe"
-          description="Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie."
+          description="Reliflex has more than 70 dealers around the world. This global presence allows us to reach distant clients with our quality products and services."
         />
       </Box>
       <AboutHeading />
