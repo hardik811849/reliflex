@@ -139,67 +139,75 @@ const HowDoesItWorks = () => {
           mx: { xxl: 28, xl: 8, lg: 8, md: 10, sm: 4 },
         }}
       >
-        <ProcessItem
-          value={1}
-          heading="Search For The Equipment You Need"
-          content=" At Reliflex Machinery & Equipments, we provide you with the best machinery to deliver on all construction. From advanced import models to custom-made solutions, our right equipment awaits every project. Explore our wide selection and look for the most reliable, high-performance tools that can boost your work towards the maximum. Trust Reliflex to provide you with quality machinery that gives pace to progress within the building industry."
-          imgBlock={
-            <Box id="img" sx={{ position: "relative" }}>
-              <Image
-                src={Device}
-                alt="device"
-                style={{
-                  width:
-                    screenSizeXs && !screenSizeMd
-                      ? "220px"
-                      : screenSizeMd && !screenSizeLg
-                      ? "350px"
-                      : screenSizeLg && !screenSizeXl
-                      ? "400px"
-                      : "auto",
-                  height: "auto",
-                }}
-              />
-              <Image
-                src={Screen1}
-                alt="screen1"
-                style={{
-                  position: "absolute",
-                  left:
-                    screenSizeXs && !screenSizeMd
-                      ? "21px"
-                      : screenSizeMd && !screenSizeLg
-                      ? "34px"
-                      : screenSizeLg && !screenSizeXl
-                      ? "38px"
-                      : "64px",
-                  top:
-                    screenSizeXs && !screenSizeMd
-                      ? "4px"
-                      : screenSizeMd && !screenSizeLg
-                      ? "6px"
-                      : screenSizeLg && !screenSizeXl
-                      ? "6px"
-                      : "11px",
-                  width:
-                    screenSizeXs && !screenSizeMd
-                      ? "178px"
-                      : screenSizeMd && !screenSizeLg
-                      ? "282px"
-                      : screenSizeLg && !screenSizeXl
-                      ? "324px"
-                      : "auto",
-                  height: "auto",
-                }}
-              />
-            </Box>
-          }
-        />
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: screenSizeSm ? "column-reverse" : "row",
+          }}
+        >
+          <ProcessItem
+            value={1}
+            heading="Search For The Equipment You Need"
+            content=" At Reliflex Machinery & Equipments, we provide you with the best machinery to deliver on all construction. From advanced import models to custom-made solutions, our right equipment awaits every project. Explore our wide selection and look for the most reliable, high-performance tools that can boost your work towards the maximum. Trust Reliflex to provide you with quality machinery that gives pace to progress within the building industry."
+            imgBlock={
+              <Box id="img" sx={{ position: "relative" }}>
+                <Image
+                  src={Device}
+                  alt="device"
+                  style={{
+                    width:
+                      screenSizeXs && !screenSizeMd
+                        ? "220px"
+                        : screenSizeMd && !screenSizeLg
+                        ? "350px"
+                        : screenSizeLg && !screenSizeXl
+                        ? "400px"
+                        : "auto",
+                    height: "auto",
+                  }}
+                />
+                <Image
+                  src={Screen1}
+                  alt="screen1"
+                  style={{
+                    position: "absolute",
+                    left:
+                      screenSizeXs && !screenSizeMd
+                        ? "21px"
+                        : screenSizeMd && !screenSizeLg
+                        ? "34px"
+                        : screenSizeLg && !screenSizeXl
+                        ? "38px"
+                        : "64px",
+                    top:
+                      screenSizeXs && !screenSizeMd
+                        ? "4px"
+                        : screenSizeMd && !screenSizeLg
+                        ? "6px"
+                        : screenSizeLg && !screenSizeXl
+                        ? "6px"
+                        : "11px",
+                    width:
+                      screenSizeXs && !screenSizeMd
+                        ? "178px"
+                        : screenSizeMd && !screenSizeLg
+                        ? "282px"
+                        : screenSizeLg && !screenSizeXl
+                        ? "324px"
+                        : "auto",
+                    height: "auto",
+                  }}
+                />
+              </Box>
+            }
+          />
+        </Box>
         {screenSizeSm && (
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Image src={arrows1} alt="arrows1" />
           </Box>
         )}
+
         <ProcessItem
           value={2}
           heading="Find The Equipment And Order It by Contact us"
