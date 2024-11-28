@@ -51,6 +51,15 @@ import RTR80E from "../../../public/featuredProducts/Tamping Rammer/Asset 86.png
 import RTR100 from "../../../public/featuredProducts/Tamping Rammer/Asset 87.png";
 import RTR90 from "../../../public/featuredProducts/Tamping Rammer/Asset 88.png";
 import RTR110 from "../../../public/featuredProducts/Tamping Rammer/Asset 89.png";
+import BLADE from "../../../public/featuredProducts/Machines/Asset 41.png";
+import POWER_TROWEL_DISC from "../../../public/featuredProducts/Machines/Asset 43.png";
+import CEMENT_WHEEL_BARROW from "../../../public/featuredProducts/Machines/Asset 44.png";
+import ELECTRIC_PUMP_TROLLEY from "../../../public/featuredProducts/Machines/Asset 45.png";
+import VIBRATORY_ROAD_ROLLERS from "../../../public/featuredProducts/Machines/Asset 46.png";
+import CONCRETE_BATCHING_PLANT from "../../../public/featuredProducts/Machines/Asset 49.png";
+import PORTABLE_BATCHING_PLANT_500 from "../../../public/featuredProducts/Machines/Asset 50.png";
+import MIXER_TROLLEY_SET from "../../../public/featuredProducts/Machines/Asset 51.png";
+import CONCRETE_MIXER_HOPPER from "../../../public/featuredProducts/Machines/Asset 52.png";
 
 import Link from "next/link";
 const FeaturedProducts = () => {
@@ -160,78 +169,132 @@ const FeaturedProducts = () => {
       />,
     ],
     [
-      // Content for "Bar Bender Series" tab
       <Product
         key="product9"
         imgSrc={product9}
         imgAlt="product9"
-        text="GF26"
+        text="Bar Bender GF26"
       />,
       <Product
         key="product10"
         imgSrc={product10}
         imgAlt="product10"
-        text="GWH32"
+        text="Bar Bender GWH32"
       />,
       <Product
         key="product11"
         imgSrc={product11}
         imgAlt="product11"
-        text="GW20S"
+        text="Bar Bender GW20S"
       />,
       <Product
         key="product12"
         imgSrc={product12}
         imgAlt="product12"
-        text="GW20"
+        text="Bar Bender GW20"
       />,
-      <Product key="GW42J" imgSrc={GW42J} imgAlt="GW42J" text="GW42J" />,
-      <Product key="GW50" imgSrc={GW50} imgAlt="GW50" text="GW50" />,
+      <Product
+        key="GW42J"
+        imgSrc={GW42J}
+        imgAlt="GW42J"
+        text="Bar Bender GW42J"
+      />,
+      <Product key="GW50" imgSrc={GW50} imgAlt="GW50" text="Bar Bender GW50" />,
     ],
     [
       <Product
         key="GT4-14A_1"
         imgSrc={GT414A}
         imgAlt="GT4-14A"
-        text="GT4-14A"
+        text="Decoil Machine GT4-14A"
       />,
       <Product
         key="GT4-14A1"
         imgSrc={GT414A1}
         imgAlt="GT4-14A"
-        text="GT4-14A"
+        text="Decoil Machine GT4-14A"
       />,
-      <Product key="GTW4-10" imgSrc={GTW410} imgAlt="GTW4-10" text="GTW4-10" />,
+      <Product
+        key="GTW4-10"
+        imgSrc={GTW410}
+        imgAlt="GTW4-10"
+        text="Decoil Machine GTW4-10"
+      />,
       <Product
         key="GT4-14A_2"
         imgSrc={GT414A}
         imgAlt="GT4-14A"
-        text="GT4-14A"
+        text="Decoil Machine GT4-14A"
       />,
-      <Product key="GT4-14E" imgSrc={GT414E} imgAlt="GT4-14E" text="GT4-14E" />,
-      <Product key="GT4-14C" imgSrc={GT414C} imgAlt="GT4-14C" text="GT4-14C" />,
+      <Product
+        key="GT4-14E"
+        imgSrc={GT414E}
+        imgAlt="GT4-14E"
+        text="Decoil Machine GT4-14E"
+      />,
+      <Product
+        key="GT4-14C"
+        imgSrc={GT414C}
+        imgAlt="GT4-14C"
+        text="Decoil Machine GT4-14C"
+      />,
     ],
     [
-      <Product key="RT28" imgSrc={RT28} imgAlt="RT28" text="RT28" />,
-      <Product key="RT28_1" imgSrc={RT281} imgAlt="RT28" text="RT28" />,
-      <Product key="RT36" imgSrc={RT36} imgAlt="RT36" text="RT36" />,
-      <Product key="RT36L" imgSrc={RT36L} imgAlt="RT36L" text="RT36L" />,
-      <Product key="RT36_1" imgSrc={RT361} imgAlt="RT36" text="RT36" />,
+      <Product
+        key="RT28"
+        imgSrc={RT28}
+        imgAlt="RT28"
+        text="Ride On Trowel RT28"
+      />,
+      <Product
+        key="RT28_1"
+        imgSrc={RT281}
+        imgAlt="RT28"
+        text="Ride On Trowel RT28"
+      />,
+      <Product
+        key="RT36"
+        imgSrc={RT36}
+        imgAlt="RT36"
+        text="Ride On Trowel RT36"
+      />,
+      <Product
+        key="RT36L"
+        imgSrc={RT36L}
+        imgAlt="RT36L"
+        text="Ride On Trowel RT36L"
+      />,
+      <Product
+        key="RT36_1"
+        imgSrc={RT361}
+        imgAlt="RT36"
+        text="Ride On Trowel RT36"
+      />,
     ],
     [
       <Product
         key="RVS10B"
         imgSrc={RVS10B}
         imgAlt="RTRVS10B28"
-        text="RVS10B"
+        text="Vibrator Screed RVS10B"
       />,
-      <Product key="RVS25R" imgSrc={RVS25R} imgAlt="RVS25R" text="RVS25R" />,
-      <Product key="RVS25H" imgSrc={RVS25H} imgAlt="RVS25H" text="RVS25H" />,
+      <Product
+        key="RVS25R"
+        imgSrc={RVS25R}
+        imgAlt="RVS25R"
+        text="Vibrator Screed RVS25R"
+      />,
+      <Product
+        key="RVS25H"
+        imgSrc={RVS25H}
+        imgAlt="RVS25H"
+        text="Vibrator Screed RVS25H"
+      />,
       <Product
         key="RVS25E"
         imgSrc={RVS25E}
         imgAlt="RVS25E"
-        text="RVS25E/RVS25ES"
+        text="Vibrator Screed RVS25E/RVS25ES"
       />,
     ],
     [
@@ -239,21 +302,31 @@ const FeaturedProducts = () => {
         key="RPC200E"
         imgSrc={RPC200E}
         imgAlt="RPC200E"
-        text="RPC200E"
+        text="Plate Compactor RPC200E"
       />,
-      <Product key="RPC160" imgSrc={RPC160} imgAlt="RPC160" text="RPC160" />,
-      <Product key="RPC90" imgSrc={RPC90} imgAlt="RPC90" text="RPC90" />,
+      <Product
+        key="RPC160"
+        imgSrc={RPC160}
+        imgAlt="RPC160"
+        text="Plate Compactor RPC160"
+      />,
+      <Product
+        key="RPC90"
+        imgSrc={RPC90}
+        imgAlt="RPC90"
+        text="Plate Compactor RPC90"
+      />,
       <Product
         key="RPC300I"
         imgSrc={RPC300I}
         imgAlt="RPC300I"
-        text="RPC300I"
+        text="Plate Compactor RPC300I"
       />,
       <Product
         key="RPC500I"
         imgSrc={RPC500I}
         imgAlt="RPC500I"
-        text="RPC500I"
+        text="Plate Compactor RPC500I"
       />,
     ],
     [
@@ -261,12 +334,83 @@ const FeaturedProducts = () => {
         key="RTR80ES"
         imgSrc={RTR80ES}
         imgAlt="RTR80ES"
-        text="RTR80ES"
+        text="Tamping Rammer RTR80ES"
       />,
-      <Product key="RTR80E" imgSrc={RTR80E} imgAlt="RTR80E" text="RTR80E" />,
-      <Product key="RTR100" imgSrc={RTR100} imgAlt="RTR100" text="RTR100" />,
-      <Product key="RTR110" imgSrc={RTR110} imgAlt="RTR110" text="RTR110" />,
-      <Product key="RTR90" imgSrc={RTR90} imgAlt="RTR90" text="RTR90" />,
+      <Product
+        key="RTR80E"
+        imgSrc={RTR80E}
+        imgAlt="RTR80E"
+        text="Tamping Rammer RTR80E"
+      />,
+      <Product
+        key="RTR100"
+        imgSrc={RTR100}
+        imgAlt="RTR100"
+        text="Tamping Rammer RTR100"
+      />,
+      <Product
+        key="RTR110"
+        imgSrc={RTR110}
+        imgAlt="RTR110"
+        text="Tamping Rammer RTR110"
+      />,
+      <Product
+        key="RTR90"
+        imgSrc={RTR90}
+        imgAlt="RTR90"
+        text="Tamping Rammer RTR90"
+      />,
+    ],
+    [
+      <Product key="BLADE" imgSrc={BLADE} imgAlt="BLADE" text="BLADE" />,
+      <Product
+        key="POWER_TROWEL_DISC"
+        imgSrc={POWER_TROWEL_DISC}
+        imgAlt="POWER_TROWEL_DISC"
+        text="POWER TROWEL DISC"
+      />,
+      <Product
+        key="CEMENT_WHEEL_BARROW"
+        imgSrc={CEMENT_WHEEL_BARROW}
+        imgAlt="CEMENT_WHEEL_BARROW"
+        text="CEMENT WHEEL BARROW"
+      />,
+      <Product
+        key="ELECTRIC_PUMP_TROLLEY"
+        imgSrc={ELECTRIC_PUMP_TROLLEY}
+        imgAlt="ELECTRIC_PUMP_TROLLEY"
+        text="ELECTRIC PUMP TROLLEY"
+      />,
+      <Product
+        key="VIBRATORY_ROAD_ROLLERS"
+        imgSrc={VIBRATORY_ROAD_ROLLERS}
+        imgAlt="VIBRATORY_ROAD_ROLLERS"
+        text="VIBRATORY ROAD ROLLERS"
+      />,
+      <Product
+        key="CONCRETE_BATCHING_PLANT"
+        imgSrc={CONCRETE_BATCHING_PLANT}
+        imgAlt="CONCRETE_BATCHING_PLANT"
+        text="CONCRETE BATCHING PLANT"
+      />,
+      <Product
+        key="PORTABLE_BATCHING_PLANT_500"
+        imgSrc={PORTABLE_BATCHING_PLANT_500}
+        imgAlt="PORTABLE_BATCHING_PLANT_500"
+        text="PORTABLE BATCHING PLANT 500"
+      />,
+      <Product
+        key="MIXER_TROLLEY_SET"
+        imgSrc={MIXER_TROLLEY_SET}
+        imgAlt="MIXER_TROLLEY_SET"
+        text="MIXER TROLLEY SET"
+      />,
+      <Product
+        key="CONCRETE_MIXER_HOPPER"
+        imgSrc={CONCRETE_MIXER_HOPPER}
+        imgAlt="CONCRETE_MIXER_HOPPER"
+        text="CONCRETE MIXER HOPPER"
+      />,
     ],
   ];
   const handleChange = (event, newValue) => {

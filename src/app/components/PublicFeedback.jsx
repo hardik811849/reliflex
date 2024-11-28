@@ -9,13 +9,7 @@ import React from "react";
 import Image from "next/image";
 import greenVehicleLeftSide from "../../../public/publicFeedback/greenVehicleLeftSide.svg";
 import dotsGrid from "../../../public/dot.svg";
-import clientPhoto from "../../../public/publicFeedback/clientPhoto.svg";
 import vector from "../../../public/publicFeedback/vector.svg";
-import partnerLogo1 from "../../../public/publicFeedback/partner-logo-1.svg";
-import partnerLogo2 from "../../../public/publicFeedback/partner-logo-2.svg";
-import partnerLogo3 from "../../../public/publicFeedback/partner-logo-3.svg";
-import partnerLogo4 from "../../../public/publicFeedback/partner-logo-4.svg";
-
 const PublicFeedback = () => {
   const theme = useTheme();
   const screenSizeXl = useMediaQuery(theme.breakpoints.up("xl"));
@@ -127,38 +121,6 @@ const PublicFeedback = () => {
           alignItems: "center",
         }}
       >
-        <Image
-          src={clientPhoto}
-          alt="client photo"
-          style={{
-            width:
-              screenSizeXs && !screenSizeMd
-                ? "180px"
-                : screenSizeMd && !screenSizeLg
-                ? "200px"
-                : screenSizeLg && !screenSizeXl
-                ? "250px"
-                : "auto",
-            height: "auto",
-          }}
-        />
-        {screenSizeSm && (
-          <Image
-            src={vector}
-            alt="vector"
-            style={{
-              height:
-                screenSizeSm && !screenSizeMd
-                  ? "180px"
-                  : screenSizeMd && !screenSizeLg
-                  ? "200px"
-                  : screenSizeLg && !screenSizeXl
-                  ? "250px"
-                  : "auto",
-              width: "auto",
-            }}
-          />
-        )}
         <Box sx={{ mx: { xs: 2, sm: 0 } }}>
           <FormatQuoteIcon
             sx={{
@@ -174,10 +136,22 @@ const PublicFeedback = () => {
               fontSize: { md: "16px", sm: "14px" },
             }}
           >
-            posuere luctus orci. Donec vitae mattis quam, vitae tempor arcu.
-            Aenean non odio porttitor, convallis erat sit amet, facilisis velit.
-            Nulla ornare convallis malesuada. Phasellus molestie, ipsum ac
-            fringilla.
+            When it comes to dependable construction equipment, Reliflex
+            Machinery & Equipment stands out as a beacon of quality and service.
+            From the moment our project team made contact, it was clear we were
+            in good hands. The knowledge and professionalism of their staff set
+            a remarkably high standard; they took the time to understand our
+            specific needs and provided tailored recommendations that made all
+            the difference.
+            <p>
+              The equipment itself is top-notch! We recently rented several
+              heavy-duty excavators and earth movers, all of which were in
+              pristine condition. You can tell that Reliflex takes great pride
+              in maintaining their machinery, as everything overperformed
+              relative to our expectations. Having reliable tools on-site not
+              only ensures safety but enhances efficiency—an invaluable trait
+              when working on tight deadlines.
+            </p>
           </Typography>
           <Typography
             sx={{
@@ -187,43 +161,15 @@ const PublicFeedback = () => {
               mt: { xl: 6, lg: 3, md: 3, sm: 2, xs: 2 },
             }}
           >
-            Daniel Smith
+            Summit Builders
           </Typography>
           <Typography
             sx={{ color: theme.palette.primary.main, fontWeight: 400 }}
           >
-            Senior engineer
+            Spain
           </Typography>
         </Box>
-        {screenSizeSm && (
-          <Box sx={{ display: "flex", flexDirection: "column" }}>
-            <RadioButtonChecked
-              sx={{ color: theme.palette.primary.main, mb: 1 }}
-            />
-            <RadioButtonChecked sx={{ color: "#888888", mb: 1 }} />
-            <RadioButtonChecked sx={{ color: "#888888", mb: 1 }} />
-          </Box>
-        )}
       </Box>
-      {/* <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          my: 8,
-          mx: { sm: 5 },
-        }}
-      >
-        <Image src={partnerLogo1} alt="partnerLogo1" style={logoStyle} />
-        <Image src={partnerLogo2} alt="partnerLogo2" style={logoStyle} />
-        <Image src={partnerLogo3} alt="partnerLogo3" style={logoStyle} />
-        <Image src={partnerLogo4} alt="partnerLogo4" style={logoStyle} />
-        {screenSizeSm && (
-          <Image src={partnerLogo1} alt="partnerLogo1" style={logoStyle} />
-        )}
-        {screenSizeSm && (
-          <Image src={partnerLogo2} alt="partnerLogo2" style={logoStyle} />
-        )}
-      </Box> */}
     </Box>
   );
 };
