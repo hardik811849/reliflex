@@ -4,7 +4,7 @@ import Head from "next/head";
 import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
 import hero1 from "../../../public/hero/hero1.svg";
-import hero2 from "../../../public/slider2.gif";
+import hero2 from "../../../public/21.jpg";
 import hero3 from "../../../public/hero3.gif";
 import hero4 from "../../../public/hero4.png";
 import Slider from "react-slick";
