@@ -42,7 +42,7 @@ const AboutHeading = () => {
           color: theme.palette.text.subHead,
         }}
       >
-        Who are you?
+        Serving Worldwide Construction Industry Since 2011
       </Typography>
     </Box>
   );

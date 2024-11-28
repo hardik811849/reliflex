@@ -121,7 +121,7 @@ const EquipmentSidebar = ({ demoSelectModel, setSelectedCategory }) => {
                 color: activeSummary === item.name ? "#00AFF9" : "inherit",
               }}
             >
-              {item.name}
+              {item.name.toUpperCase()}
             </Typography>
             <ArrowForward
               sx={{

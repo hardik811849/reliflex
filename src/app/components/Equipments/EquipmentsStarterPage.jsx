@@ -259,7 +259,7 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
                   color: "black",
                 }}
               >
-                {item.Model}
+                {item.categoryName.toUpperCase()} - {item.Model}
               </Typography>
 
               <Box

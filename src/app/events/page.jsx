@@ -113,10 +113,7 @@ const EventsPage = () => {
             mb: { xs: 3, sm: 0 },
           }}
         >
-          Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-          turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
-          fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus
-          elit.
+          Stay tuned for our upcoming events, where we showcase the latest trends and innovations in the construction industry.
         </Typography>
       </Box>
       {screenSizeMd && (
