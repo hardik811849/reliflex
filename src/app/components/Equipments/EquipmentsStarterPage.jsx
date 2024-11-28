@@ -243,7 +243,7 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
                   style={{
                     borderTopLeftRadius: "10px",
                     borderTopRightRadius: "10px",
-                    objectFit: "contain",
+                    // objectFit: "contain",
                     maxWidth: "100%",
                     maxHeight: "100%",
                   }}

@@ -72,7 +72,7 @@ export default function Home() {
         <IndustriesWeServe />
         <HowDoesItWorks />
         <PublicFeedback />
-        <RecentNews />
+        {/* <RecentNews /> */}
 
         <Dialog
           open={openPopup}

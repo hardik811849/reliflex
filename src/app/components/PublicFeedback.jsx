@@ -121,6 +121,7 @@ const PublicFeedback = () => {
           display: "flex",
           flexDirection: { xs: "column", sm: "row" },
           mt: 10,
+          pb: 10,
           mx: { xl: 20, md: 10, sm: 2 },
           justifyContent: "space-evenly",
           alignItems: "center",
@@ -204,7 +205,7 @@ const PublicFeedback = () => {
           </Box>
         )}
       </Box>
-      <Box
+      {/* <Box
         sx={{
           display: "flex",
           justifyContent: "space-between",
@@ -222,7 +223,7 @@ const PublicFeedback = () => {
         {screenSizeSm && (
           <Image src={partnerLogo2} alt="partnerLogo2" style={logoStyle} />
         )}
-      </Box>
+      </Box> */}
     </Box>
   );
 };

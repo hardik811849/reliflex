@@ -28,10 +28,10 @@ const EquipmentSidebar = ({ demoSelectModel, setSelectedCategory }) => {
   const summaries = [
     { id: "1", name: "bar bender" },
     { id: "2", name: "suspended platform" },
-    { id: "3", name: "portable bar cutter series" },
+    { id: "3", name: "portable bar cutter" },
     { id: "4", name: "punching shearing machine" },
     { id: "5", name: "plate compactor" },
-    { id: "6", name: "vibratory road rollers" },
+    { id: "6", name: "vibratorry road roller" },
     { id: "7", name: "engines" },
     { id: "8", name: "machines" },
     { id: "9", name: "portable machine" },

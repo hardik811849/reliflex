@@ -144,12 +144,12 @@ const IndustriesWeServe = () => {
         >
           <Industry imgSrc={Shape1} imgAlt="shape1" text="Construction" />
           <Industry imgSrc={Shape2} imgAlt="shape2" text="Agriculture" />
-          <Industry
+          {/* <Industry
             imgSrc={Shape3}
             imgAlt="shape3"
             text="Waste recycling and demolition"
-          />
-          <Industry imgSrc={Shape4} imgAlt="shape4" text="Waste Management" />
+          /> */}
+          {/* <Industry imgSrc={Shape4} imgAlt="shape4" text="Waste Management" /> */}
           <Industry imgSrc={Shape5} imgAlt="shape5" text="Landscaping" />
           <Industry
             imgSrc={Shape6}
@@ -157,8 +157,8 @@ const IndustriesWeServe = () => {
             text="Roads/ Infrastructure"
           />
           <Industry imgSrc={Shape7} imgAlt="shape7" text="Mining" />
-          <Industry imgSrc={Shape8} imgAlt="shape8" text="Biomass" />
-          <Industry imgSrc={Shape9} imgAlt="shape9" text="Cotton" />
+          {/* <Industry imgSrc={Shape8} imgAlt="shape8" text="Biomass" /> */}
+          {/* <Industry imgSrc={Shape9} imgAlt="shape9" text="Cotton" /> */}
           <Industry imgSrc={Shape10} imgAlt="shape10" text="Oil and Gas" />
           <Industry
             imgSrc={Shape11}

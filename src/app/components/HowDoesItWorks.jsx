@@ -6,7 +6,7 @@ import concreteMixerMachine from "../../../public/howDoesItWorks/concrete-mixer-
 import Device from "../../../public/howDoesItWorks/Device.svg";
 import Screen1 from "../../../public/howDoesItWorks/Screen1.svg";
 import Screen2 from "../../../public/howDoesItWorks/Screen2.svg";
-import thirdStepMachine from "../../../public/howDoesItWorks/thirdStepMachine.svg";
+import thirdStepMachine from "../../../public/equipments/Engines/Asset 39.png";
 import arrows1 from "../../../public/howDoesItWorks/arrows1.svg";
 import arrows2 from "../../../public/howDoesItWorks/arrows2.svg";
 
@@ -287,7 +287,7 @@ const HowDoesItWorks = () => {
                       : screenSizeXs && !screenSizeXl
                       ? "324px"
                       : "auto",
-                  height: "auto",
+                  height: "325px",
                 }}
               />
             </Box>
