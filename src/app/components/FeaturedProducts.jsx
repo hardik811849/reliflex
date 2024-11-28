@@ -46,16 +46,12 @@ import RPC160 from "../../../public/featuredProducts/Plate Compactor/Asset 80.pn
 import RPC90 from "../../../public/featuredProducts/Plate Compactor/Asset 81.png";
 import RPC300I from "../../../public/featuredProducts/Plate Compactor/Asset 82.png";
 import RPC500I from "../../../public/featuredProducts/Plate Compactor/Asset 83.png";
-import RTR80ES from "..x/../../public/featuredProducts/Tamping Rammer/Asset 85.png";
+import RTR80ES from "../../../public/featuredProducts/Tamping Rammer/Asset 85.png";
 import RTR80E from "../../../public/featuredProducts/Tamping Rammer/Asset 86.png";
 import RTR100 from "../../../public/featuredProducts/Tamping Rammer/Asset 87.png";
 import RTR90 from "../../../public/featuredProducts/Tamping Rammer/Asset 88.png";
 import RTR110 from "../../../public/featuredProducts/Tamping Rammer/Asset 89.png";
-import RTR80ES from "../../../public/featuredProducts/Machines/Asset 41.png";
-import RTR80E from "../../../public/featuredProducts/Tamping Rammer/Asset 86.png";
-import RTR100 from "../../../public/featuredProducts/Tamping Rammer/Asset 87.png";
-import RTR90 from "../../../public/featuredProducts/Tamping Rammer/Asset 88.png";
-import RTR110 from "../../../public/featuredProducts/Tamping Rammer/Asset 89.png";
+
 import Link from "next/link";
 const FeaturedProducts = () => {
   const [selected, setSelected] = useState(0);
