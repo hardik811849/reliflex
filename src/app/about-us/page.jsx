@@ -210,7 +210,8 @@ const AboutUsPage = () => {
         sx={{
           display: "flex",
           flexDirection: { xs: "column", sm: "row" },
-          justifyContent: "space-between",
+          justifyContent: { xs: "center", sm: "space-between" },
+          alignItems: { xs: "center", sm: "space-between" },
           my: { lg: 8, md: 1 },
           mx: { md: 20, sm: 10, xs: "auto" },
         }}
@@ -218,19 +219,22 @@ const AboutUsPage = () => {
         <CircularAbout
           Icon={WorkOutlineOutlined}
           percent={80}
-          heading=" 800+ Dealer Network in India"
+          number={`800+`}
+          heading="Dealer Network in India"
           description="Reliflex proudly operates with an extensive network of over 800 dealers across India, ensuring easy access to our products nationwide."
         />
         <CircularAbout
           Icon={GroupsOutlined}
           percent={90}
+          number={`50K`}
           heading="50k Trusted Clients"
           description="With a base of 50,000 trusted clients, Reliflex stands as a symbol of reliability and excellence."
         />
         <CircularAbout
           Icon={EmojiEventsOutlined}
           percent={70}
-          heading="70+ dealers Across Globe"
+          number={`70+`}
+          heading="Dealers Across Globe"
           description="Reliflex has more than 70 dealers around the world. This global presence allows us to reach distant clients with our quality products and services."
         />
       </Box>

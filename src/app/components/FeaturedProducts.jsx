@@ -37,6 +37,21 @@ import RT281 from "../../../public/featuredProducts/RT28_1.svg";
 import RT36 from "../../../public/featuredProducts/RT36.svg";
 import RT36L from "../../../public/featuredProducts/RT36L.svg";
 import RT361 from "../../../public/featuredProducts/RT36_1.svg";
+import RVS10B from "../../../public/featuredProducts/Vibrator Screed/Asset 71.png";
+import RVS25R from "../../../public/featuredProducts/Vibrator Screed/Asset 72.png";
+import RVS25H from "../../../public/featuredProducts/Vibrator Screed/Asset 73.png";
+import RVS25E from "../../../public/featuredProducts/Vibrator Screed/Asset 74.png";
+import RPC200E from "../../../public/featuredProducts/Plate Compactor/Asset 79.png";
+import RPC160 from "../../../public/featuredProducts/Plate Compactor/Asset 80.png";
+import RPC90 from "../../../public/featuredProducts/Plate Compactor/Asset 81.png";
+import RPC300I from "../../../public/featuredProducts/Plate Compactor/Asset 82.png";
+import RPC500I from "../../../public/featuredProducts/Plate Compactor/Asset 83.png";
+import RTR80ES from "../../../public/featuredProducts/Tamping Rammer/Asset 85.png";
+import RTR80E from "../../../public/featuredProducts/Tamping Rammer/Asset 86.png";
+import RTR100 from "../../../public/featuredProducts/Tamping Rammer/Asset 87.png";
+import RTR90 from "../../../public/featuredProducts/Tamping Rammer/Asset 88.png";
+import RTR110 from "../../../public/featuredProducts/Tamping Rammer/Asset 89.png";
+
 import Link from "next/link";
 const FeaturedProducts = () => {
   const [selected, setSelected] = useState(0);
@@ -202,6 +217,56 @@ const FeaturedProducts = () => {
       <Product key="RT36" imgSrc={RT36} imgAlt="RT36" text="RT36" />,
       <Product key="RT36L" imgSrc={RT36L} imgAlt="RT36L" text="RT36L" />,
       <Product key="RT36_1" imgSrc={RT361} imgAlt="RT36" text="RT36" />,
+    ],
+    [
+      <Product
+        key="RVS10B"
+        imgSrc={RVS10B}
+        imgAlt="RTRVS10B28"
+        text="RVS10B"
+      />,
+      <Product key="RVS25R" imgSrc={RVS25R} imgAlt="RVS25R" text="RVS25R" />,
+      <Product key="RVS25H" imgSrc={RVS25H} imgAlt="RVS25H" text="RVS25H" />,
+      <Product
+        key="RVS25E"
+        imgSrc={RVS25E}
+        imgAlt="RVS25E"
+        text="RVS25E/RVS25ES"
+      />,
+    ],
+    [
+      <Product
+        key="RPC200E"
+        imgSrc={RPC200E}
+        imgAlt="RPC200E"
+        text="RPC200E"
+      />,
+      <Product key="RPC160" imgSrc={RPC160} imgAlt="RPC160" text="RPC160" />,
+      <Product key="RPC90" imgSrc={RPC90} imgAlt="RPC90" text="RPC90" />,
+      <Product
+        key="RPC300I"
+        imgSrc={RPC300I}
+        imgAlt="RPC300I"
+        text="RPC300I"
+      />,
+      <Product
+        key="RPC500I"
+        imgSrc={RPC500I}
+        imgAlt="RPC500I"
+        text="RPC500I"
+      />,
+    ],
+    [
+      <Product
+        key="RTR80ES"
+        imgSrc={RTR80ES}
+        imgAlt="RTR80ES"
+        text="RTR80ES"
+      />,
+      <Product key="RTR80E" imgSrc={RTR80E} imgAlt="RTR80E" text="RTR80E" />,
+      <Product key="RTR100" imgSrc={RTR100} imgAlt="RTR100" text="RTR100" />,
+      <Product key="RTR110" imgSrc={RTR110} imgAlt="RTR110" text="RTR110" />,
+      <Product key="RTR90" imgSrc={RTR90} imgAlt="RTR90" text="RTR90" />,
     ],
   ];
   const handleChange = (event, newValue) => {

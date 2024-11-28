@@ -82,7 +82,7 @@ const PublicFeedback = () => {
           mt: { sm: -20, xs: 2 },
         }}
       >
-        PUBLIC &nbsp;
+        CUSTOMER&apos;S&nbsp;
         <Typography
           component="span"
           sx={{
