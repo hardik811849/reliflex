@@ -137,10 +137,7 @@ const EquipmentPage = () => {
                 width: { sm: "46%", xs: "90%" },
               }}
             >
-              Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-              turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-              nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-              tellus elit.
+              We provide reliable, heavy-duty equipment designed to meet the toughest construction challenges.
             </Typography>
           </Box>
           <Box

@@ -50,10 +50,10 @@ const About = ({ showHeader, showSideCrane }) => {
                 screenSizeSm && !screenSizeLg
                   ? "180px"
                   : screenSizeLg && !screenSizeXXl
-                  ? "220px"
-                  : screenSizeXXl
-                  ? "100%"
-                  : "100%",
+                    ? "220px"
+                    : screenSizeXXl
+                      ? "100%"
+                      : "100%",
               width: "auto",
             }}
           />
@@ -90,9 +90,7 @@ const About = ({ showHeader, showSideCrane }) => {
               },
               color: theme.palette.text.subHead,
             }}
-          >
-            Reliflex Machinery & Equipments is a Division of Reliflex Exim
-            Services Pvt Ltd
+          > Reliflex Machinery & Equipments is your trusted partner for high-quality construction solutions and services.
           </Typography>
           <Typography
             sx={{
@@ -103,13 +101,13 @@ const About = ({ showHeader, showSideCrane }) => {
               mt: "20px",
             }}
           >
-            Reliflex Machinery & Equipmens is a rapidly growing company involved
-            in the design and manufacture of an extensive range of Machinery &
-            Equipments for the building and construction industry. We started
-            our business by importing these machineries from countries like
-            Germany, Japan, China, Turkey, USA, Vietnam to name few in the year
-            2011. Most of the machines are also manufactured or assembled in
-            In....
+            <p 
+            sx={{
+              paddingBottom: "10px",
+            }}>Reliflex Machinery & Equipment Company is growing fast in the company with over five years of experience designing, manufacturing, and supplying customers with a wide range of high quality machinery and equipment. Established in 2011 and mainly importing imported machinery from global leaders countries such as Germany, Japan, China, Turkey, USA, and Vietnam. Over time, Reliflex has slowly built up its capabilities by manufacturing and assembling many of its products in India, thus providing both international standards and local expertise. </p>
+
+            <p>Reliflex has its headquarters located in Bangalore, India. Here again, the company has expanded successfully in the major Indian cities by opening warehouses as well as showrooms. Apart from that, the company also boasts of having more than 800 dealers across India along with a rapidly growing outlet in international markets like Tanzania, Kenya, Dubai, Russia, and China.</p>
+
           </Typography>
           <Grid
             sx={{
@@ -128,7 +126,7 @@ const About = ({ showHeader, showSideCrane }) => {
                 ml: { xl: 0, lg: 2.5, md: 3, sm: 0, xs: 3 },
               }}
             >
-              Delivering Premium Quality Machinery And Equipment For...
+              From concepts to completions stands the test of time.
             </Typography>
           </Grid>
           <Grid
@@ -148,7 +146,7 @@ const About = ({ showHeader, showSideCrane }) => {
                 ml: { xl: 0, lg: 2.5, md: 3, sm: 0, xs: 3 },
               }}
             >
-              Delivering Premium Quality Machinery And Equipment For...
+              Your trusted partner for reliable construction services.
             </Typography>
           </Grid>
           <Button
