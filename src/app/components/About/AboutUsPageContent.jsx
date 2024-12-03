@@ -127,15 +127,10 @@ const AboutUsPageContent = () => {
                     : screenSizeLg
                     ? "-150px"
                     : "-100px",
-                marginLeft:
-                  screenSizeMd && !screenSizeLg
-                    ? "100px"
-                    : screenSizeLg
-                    ? "180px"
-                    : "80px",
+                marginLeft: screenSizeLg && "180px",
                 width:
                   screenSizeXs && !screenSizeSm
-                    ? 200
+                    ? "100%"
                     : screenSizeSm && !screenSizeMd
                     ? 260
                     : screenSizeMd && !screenSizeLg
@@ -354,7 +349,7 @@ const AboutUsPageContent = () => {
                 marginTop: screenSizeXs && !screenSizeSm ? "-40px" : "-150px",
                 width:
                   screenSizeXs && !screenSizeSm
-                    ? 200
+                    ? "100%"
                     : screenSizeSm && !screenSizeMd
                     ? 260
                     : screenSizeMd && !screenSizeLg
@@ -365,7 +360,6 @@ const AboutUsPageContent = () => {
                     ? 700
                     : 400,
                 height: "auto",
-                marginLeft: screenSizeXs && !screenSizeSm && "60px",
               }}
             />
             <Typography
@@ -448,15 +442,10 @@ const AboutUsPageContent = () => {
                     : screenSizeLg
                     ? "-150px"
                     : "-100px",
-                marginLeft:
-                  screenSizeMd && !screenSizeLg
-                    ? "100px"
-                    : screenSizeLg
-                    ? "180px"
-                    : "80px",
+                marginLeft: screenSizeLg ? "180px" : "0px",
                 width:
                   screenSizeXs && !screenSizeSm
-                    ? 200
+                    ? "100%"
                     : screenSizeSm && !screenSizeMd
                     ? 260
                     : screenSizeMd && !screenSizeLg
@@ -646,15 +635,10 @@ const AboutUsPageContent = () => {
               alt="image 4"
               style={{
                 marginTop: screenSizeXs && !screenSizeSm ? "-40px" : "-150px",
-                marginRight:
-                  screenSizeSm && !screenSizeMd
-                    ? "80px"
-                    : screenSizeMd && !screenSizeXl
-                    ? "100px"
-                    : "200px",
+                marginRight: screenSizeMd && !screenSizeXl ? "100px" : "0px",
                 width:
                   screenSizeXs && !screenSizeSm
-                    ? 200
+                    ? "100%"
                     : screenSizeSm && !screenSizeMd
                     ? 260
                     : screenSizeMd && !screenSizeLg
@@ -665,14 +649,14 @@ const AboutUsPageContent = () => {
                     ? 700
                     : 400,
                 height: "auto",
-                marginLeft: screenSizeXs && !screenSizeSm && "60px",
+                // marginLeft: screenSizeXs && !screenSizeSm && "60px",
               }}
             />
           </Box>
         </Box>
         <Box
           sx={{
-            display: "flex",
+            display: screenSizeXs && !screenSizeSm ? "hidden" : "flex",
             justifyContent: "flex-end",
             mt: { xl: 0, lg: -20 },
           }}
@@ -732,14 +716,16 @@ const AboutUsPageContent = () => {
                     ? "-150px"
                     : "-100px",
                 marginLeft:
-                  screenSizeMd && !screenSizeLg
+                  screenSizeXs && !screenSizeSm
+                    ? "0px"
+                    : screenSizeMd && !screenSizeLg
                     ? "100px"
                     : screenSizeLg
                     ? "180px"
                     : "80px",
                 width:
                   screenSizeXs && !screenSizeSm
-                    ? 200
+                    ? "100%"
                     : screenSizeSm && !screenSizeMd
                     ? 260
                     : screenSizeMd && !screenSizeLg

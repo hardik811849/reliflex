@@ -206,7 +206,7 @@ const AboutUsPage = () => {
       <Box sx={{ pb: 3 }}>
         <About />
       </Box>
-      <Box
+      {/* <Box
         sx={{
           display: "flex",
           flexDirection: { xs: "column", sm: "row" },
@@ -237,7 +237,7 @@ const AboutUsPage = () => {
           heading="Dealers Across Globe"
           description="Reliflex has more than 70 dealers around the world. This global presence allows us to reach distant clients with our quality products and services."
         />
-      </Box>
+      </Box> */}
       <AboutHeading />
       <Box sx={{ mt: { sm: -20, xs: 10 }, ml: -10 }}>
         <SideCraneWithBg leftSideCrane />

@@ -2,6 +2,7 @@
 import Hero from "./components/Hero";
 import About from "./components/About/About";
 import { Box, Dialog } from "@mui/material";
+import CancelIcon from "@mui/icons-material/Cancel";
 import Manufacturing from "./components/Manufacturing";
 import LatestUpdates from "./components/LatestUpdates";
 import OurServices from "./components/OurServices";
@@ -18,18 +19,6 @@ import "slick-carousel/slick/slick-theme.css";
 import ProductCarousel from "./components/ProductCarousel";
 
 export default function Home() {
-  // const [openPopup, setOpenPopup] = useState(false);
-  // useEffect(() => {
-  //   const hasSeenPopup = localStorage.getItem("hasSeenPopup");
-  //   if (!hasSeenPopup) {
-  //     setOpenPopup(true);
-  //     localStorage.setItem("hasSeenPopup", "true", { expire: 60 });
-  //   }
-  // }, []);
-
-  // const handleClose = () => {
-  //   setOpenPopup(false);
-  // };
   const [openPopup, setOpenPopup] = useState(false);
 
   useEffect(() => {
@@ -85,6 +74,20 @@ export default function Home() {
             },
           }}
         >
+          <Box
+            position="relative"
+            onClick={() => handleClose()}
+            sx={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "end",
+              backgroundColor: "#00AFF9",
+              color: "#fff",
+              cursor: "pointer",
+            }}
+          >
+            {<CancelIcon fontSize="medium" sx={{ margin: "10px" }} />}
+          </Box>
           <Slider {...settings}>
             <Box position="relative" height={"80vh"} width={"100%"}>
               <Image
