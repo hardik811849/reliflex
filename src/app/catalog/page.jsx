@@ -11,6 +11,7 @@ import {
 import Image from "next/image";
 import Thumbnail from "../../../public/7718725_125.jpg";
 import allSectionsHero from "../../../public/31090.jpg";
+import Link from "next/link";
 
 const CatalougePage = () => {
   const theme = useTheme();
@@ -162,7 +163,13 @@ const CatalougePage = () => {
               }}
               variant="text"
             >
-              Download
+              <Link
+                href="https://drive.google.com/file/d/1yzhZg3gcS2ujzXTbGDxBYqEAN1y7M0kh/view?usp=sharing"
+                target="_blank"
+              >
+                {" "}
+                Download
+              </Link>
             </Button>
           </Box>
         </Box>

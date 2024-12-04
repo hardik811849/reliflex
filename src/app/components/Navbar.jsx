@@ -195,6 +195,14 @@ const Navbar = () => {
           >
             Events
           </MenuItem>
+          <MenuItem
+            onClick={() => {
+              router.push("/catalog");
+              handleMediaCloseMenu();
+            }}
+          >
+            Catalouge
+          </MenuItem>
         </Menu>
         <Toolbar sx={{ mx: { xl: "100px", xxl: "250px" } }}>
           <IconButton
