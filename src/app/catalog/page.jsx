@@ -166,7 +166,7 @@ const CatalougePage = () => {
                 color: "white",
                 borderRadius: "4px",
                 "&:hover": {
-                  backgroundColor: "darkgreen", // Change to dark green on hover
+                  backgroundColor: "darkgreen",
                 },
               }}
               variant="text"
