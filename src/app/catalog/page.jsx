@@ -153,23 +153,26 @@ const CatalougePage = () => {
               alt="Thumbnail"
             />
           </Grid>
-          <Box
-            sx={{
-              cursor: "pointer",
-              backgroundColor: "green",
-              fontFamily: "inherit",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: { lg: "175px", md: "130px", xs: "inherit" },
-              height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
-              color: "white",
-              fontSize: { md: "16px", xxl: "20px", xs: "16px" },
-              fontWeight: 600,
-              borderRadius: "4px",
-            }}
-          >
-            Download
+          <Box>
+            <Button
+              sx={{
+                cursor: "pointer",
+                backgroundColor: "green",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: { lg: "175px", md: "130px", xs: "inherit" },
+                height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
+                color: "white",
+                borderRadius: "4px",
+                "&:hover": {
+                  backgroundColor: "darkgreen",
+                },
+              }}
+              variant="text"
+            >
+              Download
+            </Button>
           </Box>
         </Box>
       </Box>
