@@ -81,6 +81,24 @@ const Navbar = () => {
       Inquire Now
     </Box>
   );
+  const Catalouge = (
+    <Box
+      sx={{
+        backgroundColor: "orange",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: { lg: "175px", md: "130px", xs: "inherit" },
+        height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
+        color: "white",
+        fontSize: { md: "14px", xxl: "16px", xs: "14px" },
+        fontWeight: 600,
+        borderRadius: "4px",
+      }}
+    >
+      Catalouge
+    </Box>
+  );
   const navItems = [
     { label: "Home", path: "/" },
     { label: "Company", path: "/company" },
@@ -88,6 +106,7 @@ const Navbar = () => {
     { label: "Media", path: "/media" },
     { label: InquireNow, path: "/inquire" },
     { label: raiseTicketButton, path: "/raise-ticket" },
+    // { label: Catalouge, path: "/catalog" },
   ];
 
   const dropdownClick = (event, item) => {
