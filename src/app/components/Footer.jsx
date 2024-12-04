@@ -488,7 +488,7 @@ const Footer = () => {
               mx: { xs: "auto", sm: 0 },
             }}
           >
-            Powered by{" "}
+            Build with ❤️ by{" "}
             <Typography
               component="span"
               sx={{
@@ -496,7 +496,7 @@ const Footer = () => {
                 fontSize: { xs: "12px", sm: "16px" },
               }}
             >
-              Reliflex
+              <Link href="https://gfuturetech.com/">GFututre Tech</Link>
             </Typography>
           </Typography>
         </Box>

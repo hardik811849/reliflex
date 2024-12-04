@@ -15,9 +15,8 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import Image from "next/image";
-import Thumbnail from "../../../public/catalog.png";
-import allSectionsHero from "../../../public/allSectionsHero.svg";
-import redMachine from "../../../public/ourServices/redMachine.svg";
+import Thumbnail from "../../../public/7718725_125.jpg";
+import allSectionsHero from "../../../public/31090.jpg";
 import {
   MailOutline,
   PhonePausedOutlined,
