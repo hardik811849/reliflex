@@ -4,34 +4,23 @@ import {
   Box,
   Button,
   Divider,
-  FormControl,
-  FormLabel,
   Grid,
-  InputLabel,
-  MenuItem,
-  Select,
-  TextField,
   Typography,
   useMediaQuery,
 } from "@mui/material";
 import Image from "next/image";
 import Thumbnail from "../../../public/7718725_125.jpg";
 import allSectionsHero from "../../../public/31090.jpg";
-import {
-  MailOutline,
-  PhonePausedOutlined,
-  PlaceOutlined,
-} from "@mui/icons-material";
-import { useState } from "react";
+
 const CatalougePage = () => {
   const theme = useTheme();
-  const screenSizeMd = useMediaQuery(theme.breakpoints.up("md"));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   const styles = {
     container: {
       position: "relative",
       width: "100vw",
-      height: "600px",
+      height: isSmallScreen ? "300px" : "600px", // Adjust height for smaller screens
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
@@ -39,7 +28,7 @@ const CatalougePage = () => {
     heading: {
       color: "white",
       fontSize: {
-        xs: "2rem",
+        xs: "1.5rem", // Smaller size for mobile
         md: "2.5rem",
         xl: "56px",
         xxl: "60px",
@@ -49,18 +38,14 @@ const CatalougePage = () => {
     },
     subHeading: {
       fontWeight: 500,
-      fontSize: "18px",
+      fontSize: { xs: "14px", sm: "16px", md: "18px" }, // Adjust subheading size
       textAlign: "center",
     },
-    boxShadow: {
-      boxShadow: "0px 0px 10px 0px #00000040",
-    },
-    color: {
-      color: "#878787",
-    },
   };
+
   return (
     <Box sx={{ backgroundColor: "white", pb: 15 }}>
+      {/* Hero Section */}
       <Box sx={styles.container}>
         <Image
           src={allSectionsHero}
@@ -92,7 +77,9 @@ const CatalougePage = () => {
           </Typography>
         </Box>
       </Box>
-      <Box sx={{ mt: 10 }}>
+
+      {/* Content Section */}
+      <Box sx={{ mt: 10, px: { xs: 2, md: 3 } }}>
         <Typography
           sx={{
             fontWeight: 700,
@@ -129,30 +116,32 @@ const CatalougePage = () => {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            px: { xs: 2, md: 3 }, // Padding adjustments for responsiveness
           }}
         >
+          {/* Responsive Image */}
           <Grid
             container
             justifyContent="center"
             sx={{
-              width: "100%", // Ensure the Grid takes full width
-              maxWidth: "1200px", // Limit the maximum width
-              px: { xs: 2, md: 3 }, // Padding for responsiveness
-              mt: 3, // Space between contact info and form section
+              width: "100%",
+              maxWidth: "1200px",
+              px: { xs: 2, md: 3 },
+              mt: 3,
             }}
           >
             <Image
               src={Thumbnail}
               style={{
-                width: "100%", // Ensure the image is responsive
-                maxWidth: "100%", // Prevent image overflow
-                objectFit: "contain", // Maintain aspect ratio
+                width: "100%",
+                maxWidth: "1000px", // Limit max width
+                height: "auto",
+                objectFit: "contain",
               }}
               alt="Thumbnail"
             />
           </Grid>
-          <Box>
+          {/* Button */}
+          <Box sx={{ mt: 2 }}>
             <Button
               sx={{
                 cursor: "pointer",
@@ -164,9 +153,12 @@ const CatalougePage = () => {
                 height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
                 color: "white",
                 borderRadius: "4px",
+                fontSize: { md: "14px", xxl: "16px", xs: "14px" },
+                fontWeight: 600,
                 "&:hover": {
                   backgroundColor: "darkgreen",
                 },
+                mt: "20px",
               }}
               variant="text"
             >
