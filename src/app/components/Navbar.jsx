@@ -66,13 +66,13 @@ const Navbar = () => {
   const InquireNow = (
     <Box
       sx={{
-        backgroundColor: "white",
+        backgroundColor: "orange",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         width: { lg: "175px", md: "130px", xs: "inherit" },
         height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
-        color: theme.palette.primary.main,
+        color: "white",
         fontSize: { md: "14px", xxl: "16px", xs: "14px" },
         fontWeight: 600,
         borderRadius: "4px",
