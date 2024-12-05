@@ -21,18 +21,18 @@ import ProductCarousel from "./components/ProductCarousel";
 export default function Home() {
   const [openPopup, setOpenPopup] = useState(false);
 
-  useEffect(() => {
-    const hasSeenPopup = JSON.parse(localStorage.getItem("hasSeenPopup"));
+  // useEffect(() => {
+  //   const hasSeenPopup = JSON.parse(localStorage.getItem("hasSeenPopup"));
 
-    if (!hasSeenPopup || Date.now() > hasSeenPopup.expiration) {
-      setOpenPopup(true);
-      const expirationTime = 60000;
-      localStorage.setItem(
-        "hasSeenPopup",
-        JSON.stringify({ value: "true", expiration: expirationTime })
-      );
-    }
-  }, []);
+  //   if (!hasSeenPopup || Date.now() > hasSeenPopup.expiration) {
+  //     setOpenPopup(true);
+  //     const expirationTime = 60000;
+  //     localStorage.setItem(
+  //       "hasSeenPopup",
+  //       JSON.stringify({ value: "true", expiration: expirationTime })
+  //     );
+  //   }
+  // }, []);
 
   const handleClose = () => {
     setOpenPopup(false);
