@@ -361,9 +361,9 @@ const Footer = () => {
                     fontSize: { md: "16px", sm: "12px" },
                   }}
                 >
-                  Customer Support l:
+                  Customer Support :
                 </Typography>{" "}
-                +91 80299 00993
+                +91 80295 51786
               </Typography>
               <Typography
                 sx={{
