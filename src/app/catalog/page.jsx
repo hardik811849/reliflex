@@ -164,7 +164,7 @@ const CatalougePage = () => {
               variant="text"
             >
               <Link
-                href="https://drive.google.com/file/d/1yzhZg3gcS2ujzXTbGDxBYqEAN1y7M0kh/view?usp=sharing"
+                href="https://drive.google.com/file/d/19tkJEwvUZstqAYHzUt23tVr2zHZsMZI_/view?usp=sharing"
                 target="_blank"
               >
                 Download
