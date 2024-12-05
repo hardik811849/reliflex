@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import Thumbnail from "../../../public/7718725_125.jpg";
-import allSectionsHero from "../../../public/31090.jpg";
+import allSectionsHero from "../../../public/banner.jpg";
 import Link from "next/link";
 
 const CatalougePage = () => {
