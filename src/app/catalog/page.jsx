@@ -45,7 +45,7 @@ const CatalougePage = () => {
   };
 
   return (
-    <Box sx={{ backgroundColor: "white", pb: 15 }}>
+    <Box sx={{ backgroundColor: "white", pb: 10 }}>
       {/* Hero Section */}
       <Box sx={styles.container}>
         <Image
@@ -100,7 +100,7 @@ const CatalougePage = () => {
             Download
           </Typography>
           {"  "}
-          Catalouge
+          Our Catalouge
         </Typography>
         <Divider
           sx={{
@@ -159,7 +159,7 @@ const CatalougePage = () => {
                 "&:hover": {
                   backgroundColor: "darkgreen",
                 },
-                mt: "20px",
+                mt: "30px",
               }}
               variant="text"
             >
@@ -167,7 +167,6 @@ const CatalougePage = () => {
                 href="https://drive.google.com/file/d/1yzhZg3gcS2ujzXTbGDxBYqEAN1y7M0kh/view?usp=sharing"
                 target="_blank"
               >
-                {" "}
                 Download
               </Link>
             </Button>
