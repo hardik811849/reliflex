@@ -21,7 +21,7 @@ const CatalougePage = () => {
     container: {
       position: "relative",
       width: "100vw",
-      height: isSmallScreen ? "300px" : "600px", // Adjust height for smaller screens
+      height: isSmallScreen ? "300px" : "600px",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
@@ -29,7 +29,7 @@ const CatalougePage = () => {
     heading: {
       color: "white",
       fontSize: {
-        xs: "1.5rem", // Smaller size for mobile
+        xs: "1.5rem",
         md: "2.5rem",
         xl: "56px",
         xxl: "60px",
@@ -39,14 +39,13 @@ const CatalougePage = () => {
     },
     subHeading: {
       fontWeight: 500,
-      fontSize: { xs: "14px", sm: "16px", md: "18px" }, // Adjust subheading size
+      fontSize: { xs: "14px", sm: "16px", md: "18px" },
       textAlign: "center",
     },
   };
 
   return (
     <Box sx={{ backgroundColor: "white", pb: 10 }}>
-      {/* Hero Section */}
       <Box sx={styles.container}>
         <Image
           src={allSectionsHero}
@@ -79,7 +78,6 @@ const CatalougePage = () => {
         </Box>
       </Box>
 
-      {/* Content Section */}
       <Box sx={{ mt: 10, px: { xs: 2, md: 3 } }}>
         <Typography
           sx={{
@@ -119,7 +117,6 @@ const CatalougePage = () => {
             alignItems: "center",
           }}
         >
-          {/* Responsive Image */}
           <Grid
             container
             justifyContent="center"
@@ -134,7 +131,7 @@ const CatalougePage = () => {
               src={Thumbnail}
               style={{
                 width: "100%",
-                maxWidth: "1000px", // Limit max width
+                maxWidth: "1000px",
                 height: "auto",
                 objectFit: "contain",
               }}
@@ -159,7 +156,7 @@ const CatalougePage = () => {
                 "&:hover": {
                   backgroundColor: "darkgreen",
                 },
-                mt: "30px",
+                mt: "80px",
               }}
               variant="text"
             >

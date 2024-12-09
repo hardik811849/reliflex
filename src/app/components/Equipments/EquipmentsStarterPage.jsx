@@ -1,15 +1,22 @@
 "use client";
-import { Box, Grid, Typography, GridItem, useMediaQuery, Button } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Typography,
+  GridItem,
+  useMediaQuery,
+  Button,
+} from "@mui/material";
 import Image from "next/image";
 import { NavigateNext } from "@mui/icons-material";
-import DownloadIcon from '@mui/icons-material/Download';
+import DownloadIcon from "@mui/icons-material/Download";
 import { useTheme } from "@emotion/react";
 import { useEffect, useState } from "react";
 import { products } from "./product";
 import EquipmentSidebar from "./EquipmentSidebar";
+import Link from "next/link";
 
 const EquipmentsStarterPage = ({ selectedCategory }) => {
-
   const [exploremore, setExploremore] = useState(null); // null instead of "" for clarity
   const [exploremoreid, setExploremoreid] = useState(null); // null instead of "" for clarity
   const [catid, setcatid] = useState(null);
@@ -28,9 +35,7 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
 
   // This is the CardDetail component placed inside the same file
 
-
   if (exploremore === 1 && exploremoreid) {
-
     const tempProductArray = [];
 
     // Iterate through all categories and assign category IDs (index starting from 1)
@@ -59,19 +64,18 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
       });
     });
 
-
-    const filteredEquipment = tempProductArray.filter(item => item.id === exploremoreid);
-
+    const filteredEquipment = tempProductArray.filter(
+      (item) => item.id === exploremoreid
+    );
 
     return (
-
       <Box>
         {filteredEquipment.map((item, index) => (
           <Box
             key={index}
             mt={5}
             sx={{
-              p: { xs: 0, sm: 2, md: 5 }
+              p: { xs: 0, sm: 2, md: 5 },
             }}
             maxWidth="1300px"
             mx="auto"
@@ -107,35 +111,48 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
               {[
                 { label: "Model", value: item.Model },
                 { label: "Working Type", value: item.Working_Type },
-                { label: "Input Voltage (Phase / Current)", value: item.Input_Voltage },
+                {
+                  label: "Input Voltage (Phase / Current)",
+                  value: item.Input_Voltage,
+                },
                 { label: "Motor Power", value: item.Motor_Power },
-                { label: "Diameter (Round Bar)", value: item.Diameter_Round_Bar },
+                {
+                  label: "Diameter (Round Bar)",
+                  value: item.Diameter_Round_Bar,
+                },
                 { label: "Motor RPM", value: item.Motor_RPM },
-                { label: "Diameter (Threaded Steel)", value: item.Diameter_Threaded_Steel },
+                {
+                  label: "Diameter (Threaded Steel)",
+                  value: item.Diameter_Threaded_Steel,
+                },
                 { label: "Pedals", value: item.Pedals },
-                { label: "Diameter of Working Disc", value: item.Working_Disc_Diameter },
+                {
+                  label: "Diameter of Working Disc",
+                  value: item.Working_Disc_Diameter,
+                },
                 { label: "Dimensions", value: item.Dimensions },
-                { label: "Adjustable Bending Speed", value: item.Adjustable_Bending_Speed },
+                {
+                  label: "Adjustable Bending Speed",
+                  value: item.Adjustable_Bending_Speed,
+                },
                 { label: "Weight", value: item.Weight },
               ].map((detail, i) => (
-                <Box 
-                flexBasis="49%" 
-                mb={3} 
-                key={i} 
-                border="1px solid #0000001A" 
-                sx={{
-                  p: { xs: 0, sm: 2, md: 2 },
-                  borderRadius: "8px",
-                  display: { xs: 'block', md: 'flex' }, 
-                  alignItems: { md: 'center' },
-                }}
+                <Box
+                  flexBasis="49%"
+                  mb={3}
+                  key={i}
+                  border="1px solid #0000001A"
+                  sx={{
+                    p: { xs: 0, sm: 2, md: 2 },
+                    borderRadius: "8px",
+                    display: { xs: "block", md: "flex" },
+                    alignItems: { md: "center" },
+                  }}
                 >
                   <Typography fontWeight="bold" color="black">
                     {detail.label}:&nbsp;
                   </Typography>
-                  <Typography color="black">
-                    {detail.value || 'N/A'}
-                  </Typography>
+                  <Typography color="black">{detail.value || "N/A"}</Typography>
                 </Box>
               ))}
             </Box>
@@ -148,25 +165,26 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
                 size="medium"
                 startIcon={<DownloadIcon />} // Add icon before text
                 sx={{
-                  color: 'white', // Set text color to white
-                  backgroundColor: '#2196f3', // Set button background color (if needed)
-                  '&:hover': {
-                    backgroundColor: '#1976d2', // Optional: Hover effect color
-                  }
+                  color: "white", // Set text color to white
+                  backgroundColor: "#2196f3", // Set button background color (if needed)
+                  "&:hover": {
+                    backgroundColor: "#1976d2", // Optional: Hover effect color
+                  },
                 }}
               >
-                Download Brochure
+                <Link
+                  href="https://drive.google.com/file/d/1FMta2vPU7lTAk8FDERJ6zF-Ktklallre/view?usp=sharing"
+                  target="_blank"
+                >
+                  Download Brochure
+                </Link>
               </Button>
             </Box>
-
           </Box>
         ))}
       </Box>
-
     );
   } else {
-
-
     const tempProductArray = [];
 
     // Iterate through all categories and assign category IDs (index starting from 1)
@@ -195,12 +213,16 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
 
     // Filter products based on selectedCategory
     const filteredEquipment = selectedCategory
-      ? tempProductArray.filter(item => item.categoryName === selectedCategory)
-      : tempProductArray.filter(item => item.categoryId === 1);
+      ? tempProductArray.filter(
+          (item) => item.categoryName === selectedCategory
+        )
+      : tempProductArray.filter((item) => item.categoryId === 1);
 
     return (
       <Box>
-        <Grid container spacing={3}
+        <Grid
+          container
+          spacing={3}
           sx={{
             gap: 5,
             padding: { xs: 2, sm: 3, md: 3 },
@@ -212,7 +234,8 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
               xl: 21,
               xxl: 24,
             },
-          }}>
+          }}
+        >
           {filteredEquipment.map((item, index) => (
             <Grid
               key={index}
@@ -263,7 +286,9 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
               </Typography>
 
               <Box
-                onClick={() => handleExploreMoreClick(1, item.id, item.categoryId)}
+                onClick={() =>
+                  handleExploreMoreClick(1, item.id, item.categoryId)
+                }
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
@@ -273,7 +298,6 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
                 }}
               >
                 <Typography
-
                   sx={{
                     textTransform: "uppercase",
                     color: "black",
