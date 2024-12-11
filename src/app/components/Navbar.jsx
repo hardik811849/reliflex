@@ -110,12 +110,16 @@ const Navbar = () => {
   ];
 
   const dropdownClick = (event, item) => {
-    if (item.label === "Company") {
-      handleCompanyMenuOpen(event);
-    } else if (item.label === "Media") {
-      handleMediaMenuOpen(event);
-    } else {
-      router.push(item.path);
+    switch (item.label) {
+      case "Company":
+        handleCompanyMenuOpen(event);
+        break;
+      case "Media":
+        handleMediaMenuOpen(event);
+        break;
+      default:
+        router.push(item.path);
+        break;
     }
   };
 
