@@ -432,7 +432,14 @@ const Footer = () => {
             </Box>
           </Box>
         </Box>
-        <Box sx={{ display: "flex", alignItems: "center", pb: 1 }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            pb: 1,
+            justifyContent: "center",
+          }}
+        >
           <Divider
             sx={{
               borderColor: theme.palette.primary.main,
