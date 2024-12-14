@@ -108,6 +108,7 @@ const CatalougePage = () => {
             mx: "auto",
           }}
         />
+
         <Box
           sx={{
             mt: 3,
@@ -117,29 +118,7 @@ const CatalougePage = () => {
             alignItems: "center",
           }}
         >
-          <Grid
-            container
-            justifyContent="center"
-            sx={{
-              width: "100%",
-              maxWidth: "1200px",
-              px: { xs: 2, md: 3 },
-              mt: 3,
-            }}
-          >
-            <Image
-              src={Thumbnail}
-              style={{
-                width: "100%",
-                maxWidth: "1000px",
-                height: "auto",
-                objectFit: "contain",
-              }}
-              alt="Thumbnail"
-            />
-          </Grid>
-          {/* Button */}
-          <Box sx={{ mt: 2 }}>
+          <Box sx={{ display: "flex", gap: "20px" }}>
             <Button
               sx={{
                 cursor: "pointer",
@@ -151,18 +130,128 @@ const CatalougePage = () => {
                 height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
                 color: "white",
                 borderRadius: "4px",
-                fontSize: { md: "14px", xxl: "16px", xs: "14px" },
+                fontSize: { md: "14px", xxl: "20px", xs: "14px" },
                 fontWeight: 600,
                 "&:hover": {
                   backgroundColor: "darkgreen",
                 },
-                mt: "80px",
               }}
               variant="text"
             >
               <Link href="/reliflex_catalog.pdf" target="_blank">
                 Download
               </Link>
+            </Button>
+            <Button
+              sx={{
+                backgroundColor: "orange",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: { lg: "175px", md: "130px", xs: "inherit" },
+                height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
+                color: "white",
+                fontSize: { md: "14px", xxl: "20px", xs: "14px" },
+                fontWeight: 600,
+                borderRadius: "4px",
+                "&:hover": {
+                  backgroundColor: "darkorange",
+                },
+              }}
+            >
+              <Link href="/inquire"> Inquire Now</Link>
+            </Button>
+          </Box>
+          <Grid
+            container
+            justifyContent="center"
+            sx={{
+              width: "100%",
+              maxWidth: "1200px",
+              px: { xs: 2, md: 3 },
+              mt: 3,
+            }}
+          >
+            <iframe
+              src="/reliflex_catalog.pdf"
+              style={{
+                width: "100%",
+                height: "800px",
+                maxWidth: "1000px",
+                objectFit: "contain",
+              }}
+              alt="Thumbnail"
+            ></iframe>
+          </Grid>
+          {/* Button */}
+          {/* <Box>
+            <Button
+              sx={{
+                cursor: "pointer",
+                backgroundColor: "green",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: { lg: "175px", md: "130px", xs: "inherit" },
+                height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
+                color: "white",
+                borderRadius: "4px",
+                fontSize: { md: "14px", xxl: "20px", xs: "14px" },
+                fontWeight: 600,
+                "&:hover": {
+                  backgroundColor: "darkgreen",
+                },
+                mt: "50px",
+              }}
+              variant="text"
+            >
+              <Link href="/reliflex_catalog.pdf" target="_blank">
+                Download
+              </Link>
+            </Button>
+          </Box> */}
+          <Box sx={{ display: "flex", gap: "20px", mt: "50px" }}>
+            <Button
+              sx={{
+                cursor: "pointer",
+                backgroundColor: "green",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: { lg: "175px", md: "130px", xs: "inherit" },
+                height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
+                color: "white",
+                borderRadius: "4px",
+                fontSize: { md: "14px", xxl: "20px", xs: "14px" },
+                fontWeight: 600,
+                "&:hover": {
+                  backgroundColor: "darkgreen",
+                },
+              }}
+              variant="text"
+            >
+              <Link href="/reliflex_catalog.pdf" target="_blank">
+                Download
+              </Link>
+            </Button>
+            <Button
+              sx={{
+                backgroundColor: "orange",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: { lg: "175px", md: "130px", xs: "inherit" },
+                height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
+                color: "white",
+                fontSize: { md: "14px", xxl: "20px", xs: "14px" },
+                fontWeight: 600,
+                borderRadius: "4px",
+                "&:hover": {
+                  backgroundColor: "darkorange",
+                },
+              }}
+            >
+              <Link href="/inquire"> Inquire Now</Link>
             </Button>
           </Box>
         </Box>
