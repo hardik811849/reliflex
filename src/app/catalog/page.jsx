@@ -160,10 +160,7 @@ const CatalougePage = () => {
               }}
               variant="text"
             >
-              <Link
-                href="https://drive.google.com/file/d/1FMta2vPU7lTAk8FDERJ6zF-Ktklallre/view?usp=sharing"
-                target="_blank"
-              >
+              <Link href="/reliflex_catalog.pdf" target="_blank">
                 Download
               </Link>
             </Button>
