@@ -45,49 +45,53 @@ const Navbar = () => {
     setMediaAnchorEl(event.currentTarget);
   };
 
-  const raiseTicketButton = (
-    <Box
+  const RaiseTicketButton = () => (
+    <Button
       sx={{
         backgroundColor: theme.palette.primary.main,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        width: { lg: "175px", md: "130px", xs: "inherit" },
+        width: { lg: "175px", md: "130px", xs: "70%" },
         height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
         color: "white",
+        ml: { md: "0px", xs: "20px" },
         fontSize: { md: "14px", xxl: "16px", xs: "14px" },
         fontWeight: 600,
         borderRadius: "4px",
       }}
     >
       Raise a Ticket
-    </Box>
+    </Button>
   );
-  const InquireNow = (
-    <Box
+  const InquireNow = () => (
+    <Button
       sx={{
         backgroundColor: "orange",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        width: { lg: "175px", md: "130px", xs: "inherit" },
+        width: { lg: "175px", md: "130px", xs: "70%" },
         height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
         color: "white",
+        ml: { md: "0px", xs: "20px" },
+        mt: { md: "0px", xs: "20px" },
+        mb: { md: "0px", xs: "20px" },
         fontSize: { md: "14px", xxl: "16px", xs: "14px" },
         fontWeight: 600,
         borderRadius: "4px",
       }}
     >
       Inquire Now
-    </Box>
+    </Button>
   );
   const navItems = [
     { label: "Home", path: "/" },
     { label: "Company", path: "/company" },
     { label: "Equipment", path: "/equipment" },
     { label: "Media", path: "/media" },
-    { label: InquireNow, path: "/inquire" },
-    { label: raiseTicketButton, path: "/raise-ticket" },
+    { label: "Inquire Now", path: "/inquire" },
+    { label: "Raise Ticket", path: "/raise-ticket" },
     // { label: Catalouge, path: "/catalog" },
   ];
 
@@ -229,7 +233,23 @@ const Navbar = () => {
                 }
                 onClick={(event) => dropdownClick(event, item)}
               >
-                {typeof item.label === "string" ? item.label : item.label}
+                {/* {item.label === "Inquire Now" ? (
+                  <InquireNow />
+                ) : item.label === "Raise Ticket" ? (
+                  <raiseTicketButton />
+                ) : typeof item.label === "string" ? (
+                  item.label
+                ) : (
+                  item.label
+                )}
+                {item.label} */}
+                {item.label === "Inquire Now" ? (
+                  <InquireNow />
+                ) : item.label === "Raise Ticket" ? (
+                  <RaiseTicketButton />
+                ) : (
+                  item.label
+                )}
               </Button>
             ))}
           </Box>
@@ -254,17 +274,23 @@ const Navbar = () => {
         >
           {navItems.map((item) => (
             <ListItem key={item.label} disablePadding>
-              <ListItemButton sx={{ textAlign: "left", mx: 2 }}>
-                <ListItemText
-                  primary={typeof item.label === "string" ? item.label : ""}
-                  onClick={(event) => dropdownClick(event, item)}
-                />
-                {(item.label === "Company" || item.label === "Media") && (
-                  <KeyboardArrowDown
+              {item.label === "Inquire Now" ? (
+                <InquireNow />
+              ) : item.label === "Raise Ticket" ? (
+                <RaiseTicketButton />
+              ) : (
+                <ListItemButton sx={{ textAlign: "left", mx: 2 }}>
+                  <ListItemText
+                    primary={typeof item.label === "string" ? item.label : ""}
                     onClick={(event) => dropdownClick(event, item)}
                   />
-                )}
-              </ListItemButton>
+                  {(item.label === "Company" || item.label === "Media") && (
+                    <KeyboardArrowDown
+                      onClick={(event) => dropdownClick(event, item)}
+                    />
+                  )}
+                </ListItemButton>
+              )}
             </ListItem>
           ))}
         </Drawer>

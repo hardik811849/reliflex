@@ -11,32 +11,36 @@ import reliflexLogo from "../../../public/reliflex-logo.svg";
 import Image from "next/image";
 import WhatsAppIconOutlinedIcon from "@mui/icons-material/WhatsApp";
 import IosShareTwoToneIcon from "@mui/icons-material/IosShareTwoTone";
+import ShoppingCartIconOutlinedIcon from "@mui/icons-material/ShoppingCart";
+import CallIconOutlinedIcon from "@mui/icons-material/Call";
+import StarIconOutlinedIcon from "@mui/icons-material/Star";
+import LinkedInIconOutlinedIcon from "@mui/icons-material/LinkedIn";
 const Bio = () => {
   const links = [
     {
       label: "Products Catalog",
       url: "https://www.reliflexmachinery.in/catalog",
-      icon: <WhatsAppIconOutlinedIcon sx={{ color: "white" }} />,
+      icon: <ShoppingCartIconOutlinedIcon sx={{ color: "white" }} />,
     },
     {
       label: "Whatsapp",
       url: "https://wa.me/9901257700",
-      icon: <WhatsAppIconOutlinedIcon />,
+      icon: <WhatsAppIconOutlinedIcon sx={{ color: "white" }} />,
     },
     {
       label: "Call Now",
       url: "tel:9901257700",
-      icon: <WhatsAppIconOutlinedIcon />,
+      icon: <CallIconOutlinedIcon sx={{ color: "white" }} />,
     },
     {
       label: "Rate Us",
       url: "https://maps.app.goo.gl/hJbTuFt5mwfaByaw9",
-      icon: <WhatsAppIconOutlinedIcon />,
+      icon: <StarIconOutlinedIcon sx={{ color: "white" }} />,
     },
     {
       label: "LinkedIn",
       url: "https://www.linkedin.com/in/adnan-shabbir-boxwala-23b8aa76/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in",
-      icon: <WhatsAppIconOutlinedIcon />,
+      icon: <LinkedInIconOutlinedIcon sx={{ color: "white" }} />,
     },
   ];
 
@@ -56,7 +60,7 @@ const Bio = () => {
         </Typography>
       </Box>
 
-      <Stack spacing={2}>
+      <Stack spacing={3} sx={{ padding: "20px" }}>
         {links.map((link, index) => (
           <Button
             key={index}
@@ -69,7 +73,7 @@ const Bio = () => {
               textTransform: "none",
               borderRadius: "25px",
               padding: "30px 20px",
-              fontSize: "20px",
+              fontSize: "25px",
               display: "flex",
               justifyContent: "space-between",
             }}
