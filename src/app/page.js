@@ -17,7 +17,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ProductCarousel from "./components/ProductCarousel";
-
+import Head from "next/head";
 export default function Home() {
   const [openPopup, setOpenPopup] = useState(false);
 
@@ -51,6 +51,13 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Home | Reliflex Machinery & Equipment</title>
+        <meta
+          name="Reliflex Machinery & Equipment"
+          content="Welcome to the home page of Reliflex Machinery & Equipmen."
+        />
+      </Head>
       <Box sx={{ backgroundColor: "white" }}>
         <Hero />
         <About showHeader showSideCrane />

@@ -23,6 +23,7 @@ import {
   PlaceOutlined,
 } from "@mui/icons-material";
 import { useState } from "react";
+import Head from "next/head";
 
 const InquirePage = () => {
   const theme = useTheme();
@@ -66,6 +67,13 @@ const InquirePage = () => {
   };
   return (
     <Box sx={{ backgroundColor: "white", pb: 15 }}>
+      <Head>
+        <title>Home | Reliflex Machinery & Equipment</title>
+        <meta
+          name="Reliflex Machinery & Equipment"
+          content="Welcome to the home page of Reliflex Machinery & Equipmen."
+        />
+      </Head>
       <Box sx={styles.container}>
         <Image
           src={allSectionsHero}
