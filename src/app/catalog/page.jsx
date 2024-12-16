@@ -16,6 +16,7 @@ import Link from "next/link";
 const CatalougePage = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  console.log("isSmallScreen:", isSmallScreen);
 
   const styles = {
     container: {
@@ -167,49 +168,23 @@ const CatalougePage = () => {
             justifyContent="center"
             sx={{
               width: "100%",
-              maxWidth: "1200px",
               px: { xs: 2, md: 3 },
               mt: 3,
+              overflow: "hidden",
             }}
           >
             <iframe
               src="/reliflex_catalog.pdf"
               style={{
-                width: "100%",
-                height: "800px",
+                width: isSmallScreen ? "100%" : "100%", // Always responsive
+                height: isSmallScreen ? "500px" : "800px", // Adjust height for smaller devices
                 maxWidth: "1000px",
-                objectFit: "contain",
+                border: "none", // Ensure no unwanted borders
               }}
-              alt="Thumbnail"
+              title="Catalog"
             ></iframe>
           </Grid>
-          {/* Button */}
-          {/* <Box>
-            <Button
-              sx={{
-                cursor: "pointer",
-                backgroundColor: "green",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                width: { lg: "175px", md: "130px", xs: "inherit" },
-                height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
-                color: "white",
-                borderRadius: "4px",
-                fontSize: { md: "14px", xxl: "20px", xs: "14px" },
-                fontWeight: 600,
-                "&:hover": {
-                  backgroundColor: "darkgreen",
-                },
-                mt: "50px",
-              }}
-              variant="text"
-            >
-              <Link href="/reliflex_catalog.pdf" target="_blank">
-                Download
-              </Link>
-            </Button>
-          </Box> */}
+
           <Box sx={{ display: "flex", gap: "20px", mt: "50px" }}>
             <Button
               sx={{
