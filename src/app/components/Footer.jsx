@@ -363,7 +363,7 @@ const Footer = () => {
                 >
                   Customer Support :
                 </Typography>{" "}
-                +91 80295 51786
+                <Link href="tel:+91 80295 51786">+91 80295 51786</Link>
               </Typography>
               <Typography
                 sx={{
@@ -395,7 +395,7 @@ const Footer = () => {
                   mx: { xs: "auto", sm: 0 },
                 }}
               >
-                +91 63605 55872
+                <Link href="tel:+91 63605 55872">+91 63605 55872</Link>
               </Typography>
               <Typography
                 sx={{
@@ -415,7 +415,9 @@ const Footer = () => {
                 >
                   Email:{" "}
                 </Typography>{" "}
-                reliflexmachinery@reliflex.in
+                <Link href="mailto:reliflexmachinery@reliflex.in">
+                  reliflexmachinery@reliflex.in
+                </Link>
               </Typography>
               <Typography
                 sx={{
@@ -427,7 +429,10 @@ const Footer = () => {
                   mx: { xs: "auto", sm: 0 },
                 }}
               >
-                hello@reliflex.in
+                <Link href="mailto:reliflexmachinery@reliflex.in">
+                  {" "}
+                  hello@reliflex.in
+                </Link>
               </Typography>
             </Box>
           </Box>
@@ -495,7 +500,7 @@ const Footer = () => {
               mx: { xs: "auto", sm: 0 },
             }}
           >
-            Build with ❤️ by{" "}
+            Built with ❤️ by &nbsp;
             <Typography
               component="span"
               sx={{
@@ -503,7 +508,9 @@ const Footer = () => {
                 fontSize: { xs: "12px", sm: "16px" },
               }}
             >
-              <Link href="https://gfuturetech.com/">GFututre Tech</Link>
+              <Link href="https://gfuturetech.com/" target="_blank">
+                GFututre Tech Pvt Ltd
+              </Link>
             </Typography>
           </Typography>
         </Box>

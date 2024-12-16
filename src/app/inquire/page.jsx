@@ -362,7 +362,6 @@ const InquirePage = () => {
               Submit
             </Button>
           </Box>
-
           {/* Map Section */}
           <Box
             sx={{
