@@ -169,14 +169,14 @@ const Navbar = () => {
             },
           }}
         >
-          <MenuItem
+          {/* <MenuItem
             onClick={() => {
               router.push("/events");
               handleMediaCloseMenu();
             }}
           >
             Events
-          </MenuItem>
+          </MenuItem> */}
           <MenuItem
             onClick={() => {
               router.push("/catalog");

@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import {
   Container,
   Box,
@@ -6,7 +7,10 @@ import {
   Avatar,
   Button,
   Stack,
+  Snackbar,
+  IconButton,
 } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 import reliflexLogo from "../../../public/reliflex-logo.svg";
 import Image from "next/image";
 import WhatsAppIconOutlinedIcon from "@mui/icons-material/WhatsApp";
@@ -15,7 +19,10 @@ import ShoppingCartIconOutlinedIcon from "@mui/icons-material/ShoppingCart";
 import CallIconOutlinedIcon from "@mui/icons-material/Call";
 import StarIconOutlinedIcon from "@mui/icons-material/Star";
 import LinkedInIconOutlinedIcon from "@mui/icons-material/LinkedIn";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 const Bio = () => {
+  const [open, setOpen] = useState(false);
+  const [message, setMessage] = useState("");
   const links = [
     {
       label: "Products Catalog",
@@ -24,7 +31,7 @@ const Bio = () => {
     },
     {
       label: "Whatsapp",
-      url: "https://wa.me/9901257700",
+      url: "https://wa.me/+919901257700",
       icon: <WhatsAppIconOutlinedIcon sx={{ color: "white" }} />,
     },
     {
@@ -43,7 +50,29 @@ const Bio = () => {
       icon: <LinkedInIconOutlinedIcon sx={{ color: "white" }} />,
     },
   ];
-
+  const handleShare = async () => {
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: document.title,
+          url: window.location.href,
+        });
+      } else {
+        setMessage("Sharing is not supported on this browser.");
+        setOpen(true);
+      }
+    } catch (error) {
+      setMessage("Failed to share the page.");
+      setOpen(true);
+      console.error("Error sharing:", error);
+    }
+  };
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
   return (
     <Container
       maxWidth="sm"
@@ -72,21 +101,65 @@ const Bio = () => {
             sx={{
               textTransform: "none",
               borderRadius: "25px",
-              padding: "30px 20px",
-              fontSize: "25px",
+              padding: "25px 20px",
+              fontSize: "32px",
               display: "flex",
               justifyContent: "space-between",
             }}
           >
             <Box sx={{ display: "flex", gap: "10px" }}>
               {link.icon}
-              <Typography variant="body1" color="white" sx={{}}>
+              <Typography
+                variant="body1"
+                color="white"
+                sx={{ fontSize: "20px" }}
+              >
                 {link.label}
               </Typography>
             </Box>
             <IosShareTwoToneIcon />
           </Button>
         ))}
+      </Stack>
+      <Stack spacing={3} sx={{ padding: "20px", paddingTop: "0px" }}>
+        <Box
+          variant="contained"
+          bgcolor="white"
+          sx={{
+            textTransform: "none",
+            borderRadius: "25px",
+            padding: "25px 20px",
+            fontSize: "32px",
+            display: "flex",
+            justifyContent: "space-between",
+            cursor: "pointer",
+          }}
+          onClick={handleShare}
+        >
+          <Box sx={{ display: "flex", gap: "10px" }}>
+            <Typography variant="body1" color="black" sx={{ fontSize: "20px" }}>
+              Share this page
+            </Typography>
+          </Box>
+          <IosShareTwoToneIcon sx={{ color: "black" }} />
+          <Snackbar
+            anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+            open={open}
+            autoHideDuration={3000}
+            onClose={handleClose}
+            message={message}
+            action={
+              <IconButton
+                size="small"
+                aria-label="close"
+                color="inherit"
+                onClick={handleClose}
+              >
+                <CloseIcon fontSize="small" />
+              </IconButton>
+            }
+          />
+        </Box>
       </Stack>
     </Container>
   );

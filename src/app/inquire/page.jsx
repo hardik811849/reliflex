@@ -297,72 +297,73 @@ const InquirePage = () => {
           }}
         >
           {/* Contact Form */}
-          <Box
-            sx={{
-              backgroundColor: "#fff",
-              boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.25)",
-              borderRadius: "5px",
-              p: 3,
-              width: { xs: "100%", md: "48%" },
-            }}
-          >
-            <Typography
-              sx={{ fontWeight: 500, fontSize: "20px", color: "#333", mb: 2 }}
-            >
-              Contact Form
-            </Typography>
-
-            {/* Form Fields */}
-            {[
-              { label: "Department", type: "select" },
-              { label: "Full Name", type: "text" },
-              { label: "Contact Number", type: "text" },
-              { label: "Email Address", type: "text" },
-              { label: "Subject", type: "text" },
-            ].map((item, index) => (
-              <Box
-                key={index}
-                sx={{ display: "flex", mb: 2, alignItems: "center" }}
-              >
-                <Typography sx={{ width: "150px", color: "#878787" }}>
-                  {item.label} :
-                </Typography>
-                <FormControl sx={{ m: 1, minWidth: "80%" }}>
-                  {item.type === "select" ? (
-                    <Select value={department} onChange={handleChange}>
-                      <MenuItem value="department1">Department 1</MenuItem>
-                      <MenuItem value="department2">Department 2</MenuItem>
-                      <MenuItem value="department3">Department 3</MenuItem>
-                    </Select>
-                  ) : (
-                    <TextField
-                      variant="outlined"
-                      fullWidth
-                      sx={{ color: "#333" }}
-                    />
-                  )}
-                </FormControl>
-              </Box>
-            ))}
-
-            <Button
-              variant="contained"
+          <Form>
+            <Box
               sx={{
-                color: "white",
-                height: { xs: "36px", sm: "40px", xxl: "48px" },
-                width: { xs: "100%", sm: "100%" },
-                mt: "40px",
-                mx: "auto",
-                ":hover": {
-                  backgroundColor: theme.palette.primary.main,
-                  opacity: "0.7",
-                },
+                backgroundColor: "#fff",
+                boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.25)",
+                borderRadius: "5px",
+                p: 3,
+                width: { xs: "100%", md: "48%" },
               }}
             >
-              Submit
-            </Button>
-          </Box>
+              <Typography
+                sx={{ fontWeight: 500, fontSize: "20px", color: "#333", mb: 2 }}
+              >
+                Contact Form
+              </Typography>
 
+              {/* Form Fields */}
+              {[
+                { label: "Department", type: "select" },
+                { label: "Full Name", type: "text" },
+                { label: "Contact Number", type: "text" },
+                { label: "Email Address", type: "text" },
+                { label: "Subject", type: "text" },
+              ].map((item, index) => (
+                <Box
+                  key={index}
+                  sx={{ display: "flex", mb: 2, alignItems: "center" }}
+                >
+                  <Typography sx={{ width: "150px", color: "#878787" }}>
+                    {item.label} :
+                  </Typography>
+                  <FormControl sx={{ m: 1, minWidth: "80%" }}>
+                    {item.type === "select" ? (
+                      <Select value={department} onChange={handleChange}>
+                        <MenuItem value="department1">Department 1</MenuItem>
+                        <MenuItem value="department2">Department 2</MenuItem>
+                        <MenuItem value="department3">Department 3</MenuItem>
+                      </Select>
+                    ) : (
+                      <TextField
+                        variant="outlined"
+                        fullWidth
+                        sx={{ color: "#333" }}
+                      />
+                    )}
+                  </FormControl>
+                </Box>
+              ))}
+
+              <Button
+                variant="contained"
+                sx={{
+                  color: "white",
+                  height: { xs: "36px", sm: "40px", xxl: "48px" },
+                  width: { xs: "100%", sm: "100%" },
+                  mt: "40px",
+                  mx: "auto",
+                  ":hover": {
+                    backgroundColor: theme.palette.primary.main,
+                    opacity: "0.7",
+                  },
+                }}
+              >
+                Submit
+              </Button>
+            </Box>
+          </Form>
           {/* Map Section */}
           <Box
             sx={{
