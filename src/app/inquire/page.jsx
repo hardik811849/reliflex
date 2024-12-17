@@ -23,7 +23,7 @@ import {
   PlaceOutlined,
 } from "@mui/icons-material";
 import { useState } from "react";
-import Head from "next/head";
+
 import emailjs from "@emailjs/browser";
 const InquirePage = () => {
   const [formData, setFormData] = useState({
@@ -102,13 +102,6 @@ const InquirePage = () => {
   };
   return (
     <Box sx={{ backgroundColor: "white", pb: 15 }}>
-      <Head>
-        <title>Home | Reliflex Machinery & Equipment</title>
-        <meta
-          name="Reliflex Machinery & Equipment"
-          content="Welcome to the home page of Reliflex Machinery & Equipmen."
-        />
-      </Head>
       <Box sx={styles.container}>
         <Image
           src={allSectionsHero}
@@ -179,10 +172,9 @@ const InquirePage = () => {
             width: { sm: "46%", xs: "90%" },
           }}
         >
-          Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-          turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
-          fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus
-          elit.
+          We’re here to listen and provide the solutions you need. Send us your
+          inquiry, and let’s take the first step toward achieving your goals
+          together!
         </Typography>
       </Box>
       {screenSizeMd && (
