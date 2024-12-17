@@ -72,7 +72,7 @@ const FeaturedProducts = () => {
   const screenSizeXs = useMediaQuery(theme.breakpoints.up("xs"));
   const tabsStyle = {
     textTransform: "none",
-    fontSize: { md: "13px", xxl: "16px", lg: "14px", sm: "12px" },
+    fontSize: { md: "16px", xxl: "20px", lg: "14px", sm: "14px" },
   };
   const Product = ({ imgSrc, imgAlt, text }) => {
     return (
@@ -108,7 +108,7 @@ const FeaturedProducts = () => {
             sx={{
               fontWeight: 600,
               color: theme.palette.text.subHead,
-              fontSize: { xs: "12px", md: "16px" },
+              fontSize: { xs: "12px", md: "20px" },
             }}
           >
             {text}
