@@ -21,6 +21,8 @@ import { KeyboardArrowDown } from "@mui/icons-material";
 import { useRouter } from "next/navigation";
 import { Menu as MenuIcon } from "@mui/icons-material";
 import Link from "next/link";
+import { grey } from "@mui/material/colors";
+
 
 const Navbar = () => {
   const theme = useTheme();
@@ -214,26 +216,27 @@ const Navbar = () => {
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             {navItems.map((item, index) => (
               <Button
-                key={item.label}
-                sx={{
-                  color:
-                    router.pathname === item.path
-                      ? theme.palette.primary.main
-                      : theme.palette.primary.white,
-                  fontSize: { lg: "14px", xxl: "16px", md: "13px", sm: "12px" },
-                  fontWeight: 500,
-                  zIndex: 10,
-                  mr: index !== navItems.length - 1 ? 4 : 0,
-                  position: "relative",
-                }}
-                endIcon={
-                  (item.label === "Company" || item.label === "Media") && (
-                    <KeyboardArrowDown />
-                  )
-                }
-                onClick={(event) => dropdownClick(event, item)}
-              >
-                {/* {item.label === "Inquire Now" ? (
+              key={item.label}
+              sx={{
+               
+                color:
+                  router.pathname === item.path
+                    ? theme.palette.primary.main
+                    : theme.palette.primary.white,
+                fontSize: { lg: "14px", xxl: "16px", md: "13px", sm: "12px" },
+                fontWeight: 500,
+                zIndex: 10,
+                mr: index !== navItems.length - 1 ? 4 : 0,
+                position: "relative",
+              }}
+              endIcon={
+                (item.label === "Company" || item.label === "Media") && (
+                  <KeyboardArrowDown />
+                )
+              }
+              onClick={(event) => dropdownClick(event, item)}
+            >
+              {/* {item.label === "Inquire Now" ? (
                   <InquireNow />
                 ) : item.label === "Raise Ticket" ? (
                   <raiseTicketButton />
@@ -243,14 +246,15 @@ const Navbar = () => {
                   item.label
                 )}
                 {item.label} */}
-                {item.label === "Inquire Now" ? (
-                  <InquireNow />
-                ) : item.label === "Raise Ticket" ? (
-                  <RaiseTicketButton />
-                ) : (
-                  item.label
-                )}
-              </Button>
+              {item.label === "Inquire Now" ? (
+                <InquireNow />
+              ) : item.label === "Raise Ticket" ? (
+                <RaiseTicketButton />
+              ) : (
+                item.label
+              )}
+            </Button>
+            
             ))}
           </Box>
         </Toolbar>
@@ -272,14 +276,14 @@ const Navbar = () => {
             },
           }}
         >
-          {navItems.map((item) => (
+          {navItems.map((item,index) => (
             <ListItem key={item.label} disablePadding>
               {item.label === "Inquire Now" ? (
                 <InquireNow />
               ) : item.label === "Raise Ticket" ? (
                 <RaiseTicketButton />
               ) : (
-                <ListItemButton sx={{ textAlign: "left", mx: 2 }}>
+                <ListItemButton sx={{ textAlign: "left", mx: 2, backgroundColor: index % 2 === 0 ? grey[300] : grey[500], }}>
                   <ListItemText
                     primary={typeof item.label === "string" ? item.label : ""}
                     onClick={(event) => dropdownClick(event, item)}
