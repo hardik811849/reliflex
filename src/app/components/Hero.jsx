@@ -135,20 +135,22 @@ const Hero = () => {
                     Explore more
                   </Button>
                 </Link>
-                <Button
-                  variant="outlined"
-                  sx={{
-                    color: "white",
-                    height: { xl: "40px", xxl: "48px", borderWidth: "2px" },
-                    width: "165px",
-                    "&:hover": {
-                      backgroundColor: "white",
-                      color: "#00AFF9",
-                    },
-                  }}
-                >
-                  Get in touch
-                </Button>
+                <Link href="/inquire">
+                  <Button
+                    variant="outlined"
+                    sx={{
+                      color: "white",
+                      height: { xl: "40px", xxl: "48px", borderWidth: "2px" },
+                      width: "165px",
+                      "&:hover": {
+                        backgroundColor: "white",
+                        color: "#00AFF9",
+                      },
+                    }}
+                  >
+                    Get in touch
+                  </Button>
+                </Link>
               </Box>
             </Box>
           </Box>
@@ -208,20 +210,22 @@ const Hero = () => {
                     Explore more
                   </Button>
                 </Link>
-                <Button
-                  variant="outlined"
-                  sx={{
-                    color: "white",
-                    height: { xl: "40px", xxl: "48px", borderWidth: "2px" },
-                    width: "165px",
-                    "&:hover": {
-                      backgroundColor: "white",
-                      color: "#00AFF9",
-                    },
-                  }}
-                >
-                  Get in touch
-                </Button>
+                <Link href="/inquire">
+                  <Button
+                    variant="outlined"
+                    sx={{
+                      color: "white",
+                      height: { xl: "40px", xxl: "48px", borderWidth: "2px" },
+                      width: "165px",
+                      "&:hover": {
+                        backgroundColor: "white",
+                        color: "#00AFF9",
+                      },
+                    }}
+                  >
+                    Get in touch
+                  </Button>
+                </Link>
               </Box>
             </Box>
           </Box>
@@ -282,20 +286,22 @@ const Hero = () => {
                     Explore more
                   </Button>
                 </Link>
-                <Button
-                  variant="outlined"
-                  sx={{
-                    color: "white",
-                    height: { xl: "40px", xxl: "48px", borderWidth: "2px" },
-                    width: "165px",
-                    "&:hover": {
-                      backgroundColor: "white",
-                      color: "#00AFF9",
-                    },
-                  }}
-                >
-                  Get in touch
-                </Button>
+                <Link href="/inquire">
+                  <Button
+                    variant="outlined"
+                    sx={{
+                      color: "white",
+                      height: { xl: "40px", xxl: "48px", borderWidth: "2px" },
+                      width: "165px",
+                      "&:hover": {
+                        backgroundColor: "white",
+                        color: "#00AFF9",
+                      },
+                    }}
+                  >
+                    Get in touch
+                  </Button>
+                </Link>
               </Box>
             </Box>
           </Box>

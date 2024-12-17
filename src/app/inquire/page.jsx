@@ -24,14 +24,49 @@ import {
 } from "@mui/icons-material";
 import { useState } from "react";
 import Head from "next/head";
-
+import emailjs from "@emailjs/browser";
 const InquirePage = () => {
+  const [formData, setFormData] = useState({
+    department: "",
+    name: "",
+    phone: "",
+    email: "",
+    subject: "",
+  });
+  const [isSent, setIsSent] = useState(false);
   const theme = useTheme();
-  const [department, setDepartment] = useState("");
   const screenSizeMd = useMediaQuery(theme.breakpoints.up("md"));
 
   const handleChange = (event) => {
-    setDepartment(event.target.value);
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const SERVICE_ID = "service_1dkhuxh";
+    const TEMPLATE_ID = "template_bz14796";
+    const PUBLIC_KEY = "yCZ5eP3BpwFIOT0U_";
+    console.log("formData", formData);
+
+    emailjs
+      .send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        setIsSent(true);
+        setInterval(() => {
+          setIsSent(false);
+        }, 6000);
+        setFormData({
+          department: "",
+          name: "",
+          phone: "",
+          email: "",
+          subject: "",
+        });
+      })
+      .catch((err) => {
+        console.error("Failed", err);
+      });
   };
   const styles = {
     container: {
@@ -314,62 +349,126 @@ const InquirePage = () => {
               width: { xs: "100%", md: "48%" },
             }}
           >
-            <Typography
-              sx={{ fontWeight: 500, fontSize: "20px", color: "#333", mb: 2 }}
-            >
-              Contact Form
-            </Typography>
-
-            {/* Form Fields */}
-            {[
-              { label: "Department", type: "select" },
-              { label: "Full Name", type: "text" },
-              { label: "Contact Number", type: "text" },
-              { label: "Email Address", type: "text" },
-              { label: "Subject", type: "text" },
-            ].map((item, index) => (
-              <Box
-                key={index}
-                sx={{ display: "flex", mb: 2, alignItems: "center" }}
+            <form onSubmit={handleSubmit} style={{ width: "100%" }}>
+              <Typography
+                sx={{ fontWeight: 500, fontSize: "20px", color: "#333", mb: 2 }}
               >
-                <Typography sx={{ width: "150px", color: "#878787" }}>
-                  {item.label} :
+                Contact Form
+              </Typography>
+              {isSent && (
+                <Typography
+                  sx={{
+                    fontWeight: 700,
+                    fontSize: {
+                      xl: "20px",
+                      lg: "20px",
+                      md: "16px",
+                      xs: "12px",
+                    },
+                    textAlign: "center",
+                    color: theme.palette.primary.main,
+                  }}
+                >
+                  Thank you! Your message has been sent.
                 </Typography>
+              )}
+              {/* Form Fields */}
+
+              <Box
+                sx={{
+                  display: "flex",
+                  mb: 2,
+                  alignItems: "center",
+                }}
+              >
                 <FormControl sx={{ m: 1, minWidth: "80%" }}>
-                  {item.type === "select" ? (
-                    <Select value={department} onChange={handleChange}>
-                      <MenuItem value="department1">Department 1</MenuItem>
-                      <MenuItem value="department2">Department 2</MenuItem>
-                      <MenuItem value="department3">Department 3</MenuItem>
-                    </Select>
-                  ) : (
-                    <TextField
-                      variant="outlined"
-                      fullWidth
-                      sx={{ color: "#333" }}
-                    />
-                  )}
+                  <Typography sx={{ width: "150px", color: "#878787" }}>
+                    Department:
+                  </Typography>
+                  <Select
+                    name="department"
+                    value={formData.department}
+                    onChange={handleChange}
+                  >
+                    <MenuItem value="General Inquiry">General Inquiry</MenuItem>
+                    <MenuItem value="sales">Sales</MenuItem>
+                    <MenuItem value="support">Support</MenuItem>
+                  </Select>
+                  <Typography
+                    sx={{ width: "150px", color: "#878787", mt: "20px" }}
+                  >
+                    Full Name:
+                  </Typography>
+                  <TextField
+                    name="name"
+                    onChange={handleChange}
+                    value={formData.name}
+                    variant="outlined"
+                    fullWidth
+                    sx={{ color: "#333" }}
+                  />
+                  <Typography
+                    sx={{ width: "150px", color: "#878787", mt: "20px" }}
+                  >
+                    Email:
+                  </Typography>
+                  <TextField
+                    name="email"
+                    onChange={handleChange}
+                    value={formData.email}
+                    variant="outlined"
+                    fullWidth
+                    sx={{ color: "#333" }}
+                  />
+                  <Typography
+                    sx={{ width: "150px", color: "#878787", mt: "20px" }}
+                  >
+                    Phone Number:
+                  </Typography>
+                  <TextField
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    variant="outlined"
+                    fullWidth
+                    sx={{ color: "#333" }}
+                  />
+                  <Typography
+                    sx={{ width: "150px", color: "#878787", mt: "20px" }}
+                  >
+                    Subject:
+                  </Typography>
+                  <TextField
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    variant="outlined"
+                    fullWidth
+                    sx={{ color: "#333" }}
+                  />
                 </FormControl>
               </Box>
-            ))}
 
-            <Button
-              variant="contained"
-              sx={{
-                color: "white",
-                height: { xs: "36px", sm: "40px", xxl: "48px" },
-                width: { xs: "100%", sm: "100%" },
-                mt: "40px",
-                mx: "auto",
-                ":hover": {
-                  backgroundColor: theme.palette.primary.main,
-                  opacity: "0.7",
-                },
-              }}
-            >
-              Submit
-            </Button>
+              <Button
+                type="submit"
+                variant="contained"
+                sx={{
+                  color: "white",
+                  height: { xs: "36px", sm: "40px", xxl: "48px" },
+                  width: { xs: "100%", sm: "100%" },
+                  mt: "40px",
+                  mx: "auto",
+                  ":hover": {
+                    backgroundColor: theme.palette.primary.main,
+                    opacity: "0.7",
+                  },
+                }}
+              >
+                Submit
+              </Button>
+            </form>
           </Box>
+
           {/* Map Section */}
           <Box
             sx={{
