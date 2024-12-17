@@ -19,7 +19,8 @@ import ShoppingCartIconOutlinedIcon from "@mui/icons-material/ShoppingCart";
 import CallIconOutlinedIcon from "@mui/icons-material/Call";
 import StarIconOutlinedIcon from "@mui/icons-material/Star";
 import LinkedInIconOutlinedIcon from "@mui/icons-material/LinkedIn";
-import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import Head from "next/head";
+
 const Bio = () => {
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState("");
@@ -74,30 +75,65 @@ const Bio = () => {
     setOpen(false);
   };
   return (
-    <Container
-      maxWidth="sm"
-      style={{ textAlign: "center", padding: "2rem 0", marginTop: "90px" }}
-    >
-      <Box>
-        <Image
-          alt="Profile Picture"
-          src={reliflexLogo}
-          sx={{ width: 120, height: 120, margin: "0 auto" }}
+    <>
+      <Head>
+        <title>Home | Reliflex Machinery & Equipment</title>
+        <meta
+          name="Reliflex Machinery & Equipment"
+          content="Welcome to the home page of Reliflex Machinery & Equipmen."
         />
-        <Typography variant="body1" color="white" sx={{ marginBottom: 2 }}>
-          Welcome to our official link page!
-        </Typography>
-      </Box>
+      </Head>
+      <Container
+        maxWidth="sm"
+        style={{ textAlign: "center", padding: "2rem 0", marginTop: "90px" }}
+      >
+        <Box>
+          <Image
+            alt="Profile Picture"
+            src={reliflexLogo}
+            sx={{ width: 120, height: 120, margin: "0 auto" }}
+          />
+          <Typography variant="body1" color="white" sx={{ marginBottom: 2 }}>
+            Welcome to our official link page!
+          </Typography>
+        </Box>
 
-      <Stack spacing={3} sx={{ padding: "20px" }}>
-        {links.map((link, index) => (
-          <Button
-            key={index}
+        <Stack spacing={3} sx={{ padding: "20px" }}>
+          {links.map((link, index) => (
+            <Button
+              key={index}
+              variant="contained"
+              color="primary"
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                textTransform: "none",
+                borderRadius: "25px",
+                padding: "25px 20px",
+                fontSize: "32px",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <Box sx={{ display: "flex", gap: "10px" }}>
+                {link.icon}
+                <Typography
+                  variant="body1"
+                  color="white"
+                  sx={{ fontSize: "20px" }}
+                >
+                  {link.label}
+                </Typography>
+              </Box>
+              <IosShareTwoToneIcon />
+            </Button>
+          ))}
+        </Stack>
+        <Stack spacing={3} sx={{ padding: "20px", paddingTop: "0px" }}>
+          <Box
             variant="contained"
-            color="primary"
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
+            bgcolor="white"
             sx={{
               textTransform: "none",
               borderRadius: "25px",
@@ -105,63 +141,41 @@ const Bio = () => {
               fontSize: "32px",
               display: "flex",
               justifyContent: "space-between",
+              cursor: "pointer",
             }}
+            onClick={handleShare}
           >
             <Box sx={{ display: "flex", gap: "10px" }}>
-              {link.icon}
               <Typography
                 variant="body1"
-                color="white"
+                color="black"
                 sx={{ fontSize: "20px" }}
               >
-                {link.label}
+                Share this page
               </Typography>
             </Box>
-            <IosShareTwoToneIcon />
-          </Button>
-        ))}
-      </Stack>
-      <Stack spacing={3} sx={{ padding: "20px", paddingTop: "0px" }}>
-        <Box
-          variant="contained"
-          bgcolor="white"
-          sx={{
-            textTransform: "none",
-            borderRadius: "25px",
-            padding: "25px 20px",
-            fontSize: "32px",
-            display: "flex",
-            justifyContent: "space-between",
-            cursor: "pointer",
-          }}
-          onClick={handleShare}
-        >
-          <Box sx={{ display: "flex", gap: "10px" }}>
-            <Typography variant="body1" color="black" sx={{ fontSize: "20px" }}>
-              Share this page
-            </Typography>
+            <IosShareTwoToneIcon sx={{ color: "black" }} />
+            <Snackbar
+              anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+              open={open}
+              autoHideDuration={3000}
+              onClose={handleClose}
+              message={message}
+              action={
+                <IconButton
+                  size="small"
+                  aria-label="close"
+                  color="inherit"
+                  onClick={handleClose}
+                >
+                  <CloseIcon fontSize="small" />
+                </IconButton>
+              }
+            />
           </Box>
-          <IosShareTwoToneIcon sx={{ color: "black" }} />
-          <Snackbar
-            anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
-            open={open}
-            autoHideDuration={3000}
-            onClose={handleClose}
-            message={message}
-            action={
-              <IconButton
-                size="small"
-                aria-label="close"
-                color="inherit"
-                onClick={handleClose}
-              >
-                <CloseIcon fontSize="small" />
-              </IconButton>
-            }
-          />
-        </Box>
-      </Stack>
-    </Container>
+        </Stack>
+      </Container>
+    </>
   );
 };
 
