@@ -196,7 +196,7 @@ const InquirePage = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          px: { xs: 2, md: 3 }, // Padding adjustments for responsiveness
+          px: { xs: 2, md: 3 },
         }}
       >
         {/* Contact Info Section */}

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata = {
-  title: "Reliflex Machinery & Equipment | About Us",
+  title: " About Us | Reliflex Machinery & Equipment ",
   description: "About Us page of reliflex.",
   metadataBase: new URL("https://www.reliflexmachinery.in/about-us"),
 };
