@@ -53,11 +53,20 @@ const InquirePage = () => {
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
         setIsSent(true);
+        setInterval(() => {
+          setIsSent(false);
+        }, 6000);
+        setFormData({
+          department: "",
+          name: "",
+          phone: "",
+          email: "",
+          subject: "",
+        });
       })
       .catch((err) => {
         console.error("Failed", err);
       });
-    setFormData("");
   };
   const styles = {
     container: {
@@ -346,7 +355,23 @@ const InquirePage = () => {
               >
                 Contact Form
               </Typography>
-              {isSent ? <p>Thank you! Your message has been sent.</p> : null}
+              {isSent && (
+                <Typography
+                  sx={{
+                    fontWeight: 700,
+                    fontSize: {
+                      xl: "20px",
+                      lg: "20px",
+                      md: "16px",
+                      xs: "12px",
+                    },
+                    textAlign: "center",
+                    color: theme.palette.primary.main,
+                  }}
+                >
+                  Thank you! Your message has been sent.
+                </Typography>
+              )}
               {/* Form Fields */}
 
               <Box
