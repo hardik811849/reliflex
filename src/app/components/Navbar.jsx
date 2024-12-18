@@ -271,8 +271,6 @@ const Navbar = () => {
             <ListItem key={item.label} disablePadding>
               {item.label === "Inquire Now" ? (
                 <InquireNow />
-              ) : item.label === "Raise Ticket" ? (
-                <RaiseTicketButton />
               ) : (
                 <ListItemButton
                   sx={{
