@@ -58,8 +58,8 @@ const Footer = () => {
       case "About us":
         href = "/about-us";
         break;
-      case "Equipment":
-        href = "/equipment";
+      case "Catalouge":
+        href = "/catalog";
         break;
       case "Inquire Now":
         href = "/inquire";
@@ -305,7 +305,7 @@ const Footer = () => {
                 <FooterItem text="Home" />
                 <FooterItem text="About us" />
                 <FooterItem text="Equipment" />
-                <FooterItem text="Events" />
+                <FooterItem text="Catalouge" />
                 <FooterItem text="Inquire Now" />
               </Box>
             </Box>
@@ -314,7 +314,7 @@ const Footer = () => {
               <FooterItem text="Home" />
               <FooterItem text="About us" />
               <FooterItem text="Equipment" />
-              <FooterItem text="Events" />
+              <FooterItem text="Catalouge" />
               <FooterItem text="Inquire Now" />
             </Box>
             <Box
@@ -338,9 +338,10 @@ const Footer = () => {
                   color: theme.palette.text.footer,
                   fontWeight: 500,
                   mb: 3,
-                  fontSize: { md: "16px", sm: "12px" },
+                  fontSize: { md: "16px", sm: "12px" }, 
                 }}
               >
+                RELIFLEX machinery & equipment's<br/>
                 65, Shed 2A, Mantapa Bannerghatta Jigani Road, Banglore-560083,
                 Karnatak, India.
               </Typography>
@@ -490,7 +491,7 @@ const Footer = () => {
               mx: { xs: "auto", sm: 0 },
             }}
           >
-            @ Copyright 2024 Reliflex. All Rights Reserved.{" "}
+            ©️Copyright 2024 Reliflex. All Rights Reserved.{" "}
           </Typography>
           <Typography
             sx={{

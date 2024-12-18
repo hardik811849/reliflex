@@ -64,7 +64,7 @@ const EquipmentPage = () => {
           }}
         />
         <Box sx={{ position: "absolute", zIndex: 10 }}>
-          <Typography sx={styles.heading}>Our Equipment&apos;s</Typography>
+          <Typography sx={styles.heading}>Our Equipments</Typography>
           <Typography sx={[styles.subHeading, { color: "white" }]}>
             <Typography
               component="span"
@@ -115,7 +115,7 @@ const EquipmentPage = () => {
                   fontSize: { xl: "50px", lg: "40px", md: "30px", xs: "20px" },
                 }}
               >
-                EQUIPMENT’S
+                EQUIPMENT'S
               </Typography>
               {"  "}
               BY CATEGORIES
