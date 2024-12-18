@@ -341,7 +341,7 @@ const Footer = () => {
                   fontSize: { md: "16px", sm: "12px" }, 
                 }}
               >
-                RELIFLEX machinery & equipment's<br/>
+                RELIFLEX machinery & equipment&apos;s<br/>
                 65, Shed 2A, Mantapa Bannerghatta Jigani Road, Banglore-560083,
                 Karnatak, India.
               </Typography>

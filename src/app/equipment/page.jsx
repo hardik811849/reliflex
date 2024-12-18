@@ -115,7 +115,7 @@ const EquipmentPage = () => {
                   fontSize: { xl: "50px", lg: "40px", md: "30px", xs: "20px" },
                 }}
               >
-                EQUIPMENT'S
+                EQUIPMENT&apos;S
               </Typography>
               {"  "}
               BY CATEGORIES
