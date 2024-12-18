@@ -45,25 +45,25 @@ const Navbar = () => {
     setMediaAnchorEl(event.currentTarget);
   };
 
-  const RaiseTicketButton = () => (
-    <Button
-      sx={{
-        backgroundColor: theme.palette.primary.main,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        width: { lg: "175px", md: "130px", xs: "70%" },
-        height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
-        color: "white",
-        ml: { md: "0px", xs: "20px" },
-        fontSize: { md: "14px", xxl: "16px", xs: "14px" },
-        fontWeight: 600,
-        borderRadius: "4px",
-      }}
-    >
-      Raise a Ticket
-    </Button>
-  );
+  // const RaiseTicketButton = () => (
+  //   <Button
+  //     sx={{
+  //       backgroundColor: theme.palette.primary.main,
+  //       display: "flex",
+  //       alignItems: "center",
+  //       justifyContent: "center",
+  //       width: { lg: "175px", md: "130px", xs: "70%" },
+  //       height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
+  //       color: "white",
+  //       ml: { md: "0px", xs: "20px" },
+  //       fontSize: { md: "14px", xxl: "16px", xs: "14px" },
+  //       fontWeight: 600,
+  //       borderRadius: "4px",
+  //     }}
+  //   >
+  //     Raise a Ticket
+  //   </Button>
+  // );
   const InquireNow = () => (
     <Button
       sx={{
@@ -89,9 +89,9 @@ const Navbar = () => {
     { label: "Home", path: "/" },
     { label: "Company", path: "/company" },
     { label: "Equipment", path: "/equipment" },
-    { label: "Media", path: "/media" },
+    { label: "Catalog", path: "/catalog" },
     { label: "Inquire Now", path: "/inquire" },
-    { label: "Raise Ticket", path: "/raise-ticket" },
+    // { label: "Raise Ticket", path: "/raise-ticket" },
     // { label: Catalouge, path: "/catalog" },
   ];
 
@@ -157,7 +157,7 @@ const Navbar = () => {
             About Us
           </MenuItem>
         </Menu>
-        <Menu
+        {/* <Menu
           anchorEl={mediaAnchorEl}
           open={Boolean(mediaAnchorEl)}
           onClose={handleMediaCloseMenu}
@@ -169,14 +169,14 @@ const Navbar = () => {
             },
           }}
         >
-          {/* <MenuItem
+          <MenuItem
             onClick={() => {
               router.push("/events");
               handleMediaCloseMenu();
             }}
           >
             Events
-          </MenuItem> */}
+          </MenuItem>
           <MenuItem
             onClick={() => {
               router.push("/catalog");
@@ -185,7 +185,7 @@ const Navbar = () => {
           >
             Catalouge
           </MenuItem>
-        </Menu>
+        </Menu> */}
         <Toolbar sx={{ mx: { xl: "100px", xxl: "250px" } }}>
           <IconButton
             color="inherit"
@@ -206,7 +206,7 @@ const Navbar = () => {
                 src={reliflexLogo}
                 width={screenSizeXs && !screenSizeMd ? 120 : 200}
                 height={screenSizeXs && !screenSizeMd ? "auto" : 60}
-                alt="reliflex logo"
+                alt="reliflex"
                 priority
               />
             </Link>
@@ -243,13 +243,7 @@ const Navbar = () => {
                   item.label
                 )}
                 {item.label} */}
-                {item.label === "Inquire Now" ? (
-                  <InquireNow />
-                ) : item.label === "Raise Ticket" ? (
-                  <RaiseTicketButton />
-                ) : (
-                  item.label
-                )}
+                {item.label === "Inquire Now" ? <InquireNow /> : item.label}
               </Button>
             ))}
           </Box>
