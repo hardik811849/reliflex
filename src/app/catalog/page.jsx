@@ -12,6 +12,7 @@ import Image from "next/image";
 import Thumbnail from "../../../public/7718725_125.jpg";
 import allSectionsHero from "../../../public/banner.jpg";
 import Link from "next/link";
+import WhatsAppIconOutlinedIcon from "@mui/icons-material/WhatsApp";
 
 const CatalougePage = () => {
   const theme = useTheme();
@@ -162,6 +163,12 @@ const CatalougePage = () => {
             >
               <Link href="/inquire"> Inquire Now</Link>
             </Button>
+            <Link href="https://wa.me/+919901257700" target="_blank">
+              {" "}
+              <WhatsAppIconOutlinedIcon
+                sx={{ color: "green", cursor: "pointer", fontSize: "40px" }}
+              />
+            </Link>
           </Box>
           <Grid
             container
@@ -228,6 +235,12 @@ const CatalougePage = () => {
             >
               <Link href="/inquire"> Inquire Now</Link>
             </Button>
+            <Link href="https://wa.me/+919901257700" target="_blank">
+              {" "}
+              <WhatsAppIconOutlinedIcon
+                sx={{ color: "green", cursor: "pointer", fontSize: "40px" }}
+              />
+            </Link>
           </Box>
         </Box>
       </Box>

@@ -230,9 +230,12 @@ const InquirePage = () => {
                   height: "40px",
                   width: "40px",
                   color: "#878787",
+                  mr: 2,
                 }}
               />
-              <Typography sx={{ color: "#878787", fontWeight: 600 }}>
+              <Typography
+                sx={{ color: "#878787", fontWeight: 600, fontSize: "16px" }}
+              >
                 65, Shed 2A, Mantapa Bannerghatta Jigani Road, Bangalore-560083,
                 Karnataka, India.
               </Typography>
@@ -261,7 +264,9 @@ const InquirePage = () => {
                   mr: 2,
                 }}
               />
-              <Typography sx={{ color: "#878787", fontWeight: 600 }}>
+              <Typography
+                sx={{ color: "#878787", fontWeight: 600, fontSize: "16px" }}
+              >
                 <a
                   href="tel:+919901257700"
                   style={{ color: "#878787", textDecoration: "none" }}
@@ -301,7 +306,9 @@ const InquirePage = () => {
                   mr: 2,
                 }}
               />
-              <Typography sx={{ color: "#878787", fontWeight: 600 }}>
+              <Typography
+                sx={{ color: "#878787", fontWeight: 600, fontSize: "16px" }}
+              >
                 <a
                   href="mailto:reliflexmachinery@reliflex.in"
                   style={{ color: "#878787", textDecoration: "none" }}

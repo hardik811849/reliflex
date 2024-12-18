@@ -235,7 +235,7 @@ const Footer = () => {
                 <Box sx={{ display: "flex" }}>
                   <Image
                     src={reliflexLogo}
-                    alt="reliflex logo"
+                    alt="reliflex"
                     width={screenSizeXs && !screenSizeMd ? 120 : 200}
                     height={screenSizeXs && !screenSizeMd ? "auto" : 60}
                     style={{

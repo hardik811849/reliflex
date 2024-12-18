@@ -23,7 +23,6 @@ import { Menu as MenuIcon } from "@mui/icons-material";
 import Link from "next/link";
 import { grey } from "@mui/material/colors";
 
-
 const Navbar = () => {
   const theme = useTheme();
   const screenSizeMd = useMediaQuery(theme.breakpoints.up("md"));
@@ -47,25 +46,25 @@ const Navbar = () => {
     setMediaAnchorEl(event.currentTarget);
   };
 
-  const RaiseTicketButton = () => (
-    <Button
-      sx={{
-        backgroundColor: theme.palette.primary.main,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        width: { lg: "175px", md: "130px", xs: "70%" },
-        height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
-        color: "white",
-        ml: { md: "0px", xs: "20px" },
-        fontSize: { md: "14px", xxl: "16px", xs: "14px" },
-        fontWeight: 600,
-        borderRadius: "4px",
-      }}
-    >
-      Raise a Ticket
-    </Button>
-  );
+  // const RaiseTicketButton = () => (
+  //   <Button
+  //     sx={{
+  //       backgroundColor: theme.palette.primary.main,
+  //       display: "flex",
+  //       alignItems: "center",
+  //       justifyContent: "center",
+  //       width: { lg: "175px", md: "130px", xs: "70%" },
+  //       height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
+  //       color: "white",
+  //       ml: { md: "0px", xs: "20px" },
+  //       fontSize: { md: "14px", xxl: "16px", xs: "14px" },
+  //       fontWeight: 600,
+  //       borderRadius: "4px",
+  //     }}
+  //   >
+  //     Raise a Ticket
+  //   </Button>
+  // );
   const InquireNow = () => (
     <Button
       sx={{
@@ -91,9 +90,9 @@ const Navbar = () => {
     { label: "Home", path: "/" },
     { label: "Company", path: "/company" },
     { label: "Equipment", path: "/equipment" },
-    { label: "Media", path: "/media" },
+    { label: "Catalog", path: "/catalog" },
     { label: "Inquire Now", path: "/inquire" },
-    { label: "Raise Ticket", path: "/raise-ticket" },
+    // { label: "Raise Ticket", path: "/raise-ticket" },
     // { label: Catalouge, path: "/catalog" },
   ];
 
@@ -159,7 +158,7 @@ const Navbar = () => {
             About Us
           </MenuItem>
         </Menu>
-        <Menu
+        {/* <Menu
           anchorEl={mediaAnchorEl}
           open={Boolean(mediaAnchorEl)}
           onClose={handleMediaCloseMenu}
@@ -171,14 +170,14 @@ const Navbar = () => {
             },
           }}
         >
-          {/* <MenuItem
+          <MenuItem
             onClick={() => {
               router.push("/events");
               handleMediaCloseMenu();
             }}
           >
             Events
-          </MenuItem> */}
+          </MenuItem>
           <MenuItem
             onClick={() => {
               router.push("/catalog");
@@ -187,7 +186,7 @@ const Navbar = () => {
           >
             Catalouge
           </MenuItem>
-        </Menu>
+        </Menu> */}
         <Toolbar sx={{ mx: { xl: "100px", xxl: "250px" } }}>
           <IconButton
             color="inherit"
@@ -208,7 +207,7 @@ const Navbar = () => {
                 src={reliflexLogo}
                 width={screenSizeXs && !screenSizeMd ? 120 : 200}
                 height={screenSizeXs && !screenSizeMd ? "auto" : 60}
-                alt="reliflex logo"
+                alt="reliflex"
                 priority
               />
             </Link>
@@ -216,27 +215,26 @@ const Navbar = () => {
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             {navItems.map((item, index) => (
               <Button
-              key={item.label}
-              sx={{
-               
-                color:
-                  router.pathname === item.path
-                    ? theme.palette.primary.main
-                    : theme.palette.primary.white,
-                fontSize: { lg: "14px", xxl: "16px", md: "13px", sm: "12px" },
-                fontWeight: 500,
-                zIndex: 10,
-                mr: index !== navItems.length - 1 ? 4 : 0,
-                position: "relative",
-              }}
-              endIcon={
-                (item.label === "Company" || item.label === "Media") && (
-                  <KeyboardArrowDown />
-                )
-              }
-              onClick={(event) => dropdownClick(event, item)}
-            >
-              {/* {item.label === "Inquire Now" ? (
+                key={item.label}
+                sx={{
+                  color:
+                    router.pathname === item.path
+                      ? theme.palette.primary.main
+                      : theme.palette.primary.white,
+                  fontSize: { lg: "14px", xxl: "16px", md: "13px", sm: "12px" },
+                  fontWeight: 500,
+                  zIndex: 10,
+                  mr: index !== navItems.length - 1 ? 4 : 0,
+                  position: "relative",
+                }}
+                endIcon={
+                  (item.label === "Company" || item.label === "Media") && (
+                    <KeyboardArrowDown />
+                  )
+                }
+                onClick={(event) => dropdownClick(event, item)}
+              >
+                {/* {item.label === "Inquire Now" ? (
                   <InquireNow />
                 ) : item.label === "Raise Ticket" ? (
                   <raiseTicketButton />
@@ -246,15 +244,8 @@ const Navbar = () => {
                   item.label
                 )}
                 {item.label} */}
-              {item.label === "Inquire Now" ? (
-                <InquireNow />
-              ) : item.label === "Raise Ticket" ? (
-                <RaiseTicketButton />
-              ) : (
-                item.label
-              )}
-            </Button>
-            
+                {item.label === "Inquire Now" ? <InquireNow /> : item.label}
+              </Button>
             ))}
           </Box>
         </Toolbar>
@@ -276,14 +267,18 @@ const Navbar = () => {
             },
           }}
         >
-          {navItems.map((item,index) => (
+          {navItems.map((item, index) => (
             <ListItem key={item.label} disablePadding>
               {item.label === "Inquire Now" ? (
                 <InquireNow />
-              ) : item.label === "Raise Ticket" ? (
-                <RaiseTicketButton />
               ) : (
-                <ListItemButton sx={{ textAlign: "left", mx: 2, backgroundColor: index % 2 === 0 ? grey[300] : grey[500], }}>
+                <ListItemButton
+                  sx={{
+                    textAlign: "left",
+                    mx: 2,
+                    backgroundColor: index % 2 === 0 ? grey[300] : grey[500],
+                  }}
+                >
                   <ListItemText
                     primary={typeof item.label === "string" ? item.label : ""}
                     onClick={(event) => dropdownClick(event, item)}
