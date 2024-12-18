@@ -21,6 +21,7 @@ import { KeyboardArrowDown } from "@mui/icons-material";
 import { useRouter } from "next/navigation";
 import { Menu as MenuIcon } from "@mui/icons-material";
 import Link from "next/link";
+import { grey } from "@mui/material/colors";
 
 const Navbar = () => {
   const theme = useTheme();
@@ -266,14 +267,20 @@ const Navbar = () => {
             },
           }}
         >
-          {navItems.map((item) => (
+          {navItems.map((item, index) => (
             <ListItem key={item.label} disablePadding>
               {item.label === "Inquire Now" ? (
                 <InquireNow />
               ) : item.label === "Raise Ticket" ? (
                 <RaiseTicketButton />
               ) : (
-                <ListItemButton sx={{ textAlign: "left", mx: 2 }}>
+                <ListItemButton
+                  sx={{
+                    textAlign: "left",
+                    mx: 2,
+                    backgroundColor: index % 2 === 0 ? grey[300] : grey[500],
+                  }}
+                >
                   <ListItemText
                     primary={typeof item.label === "string" ? item.label : ""}
                     onClick={(event) => dropdownClick(event, item)}
