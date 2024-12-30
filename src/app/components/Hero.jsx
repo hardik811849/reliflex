@@ -306,68 +306,6 @@ const Hero = () => {
             </Box>
           </Box>
         </Box>
-        <Box sx={styles.container}>
-          <Image
-            src={hero4}
-            alt="hero1 image"
-            fill
-            style={{ objectFit: "cover" }}
-          />
-          {/* <Box
-            sx={{
-              position: "absolute",
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              justifyContent: "center",
-              background: "rgba(0, 40, 57, 0.8)",
-            }}
-          >
-            <Box
-              sx={{
-                position: "absolute",
-                width: "80%",
-                height: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "Center",
-                flexDirection: "column",
-              }}
-            >
-              <Typography sx={styles.heading}>
-                RELIABLE MACHINERY FOR HEAVY CONSTRUCTIONS
-              </Typography>
-              <Typography sx={styles.subHeading}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Lorem ipsum dolor sit amet.
-              </Typography>
-              <Box sx={styles.buttonContainer}>
-                <Button
-                  variant="contained"
-                  sx={{
-                    color: "white",
-                    height: { xl: "40px", xxl: "48px" },
-                    width: "174px",
-                    mb: { xs: "20px", md: 0 },
-                  }}
-                >
-                  Explore more
-                </Button>
-                <Button
-                  variant="outlined"
-                  sx={{
-                    color: "white",
-                    height: { xl: "40px", xxl: "48px", borderWidth: "2px" },
-                    width: "165px",
-                  }}
-                >
-                  Get in touch
-                </Button>
-              </Box>
-            </Box>
-          </Box> */}
-        </Box>
       </Slider>
     </>
   );

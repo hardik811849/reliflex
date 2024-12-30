@@ -85,7 +85,12 @@ const Bio = () => {
       </Head>
       <Container
         maxWidth="sm"
-        style={{ textAlign: "center", padding: "2rem 0", marginTop: "90px" }}
+        style={{
+          textAlign: "center",
+          padding: "2rem 0",
+          marginTop: "90px",
+          backgroundColor: "black",
+        }}
       >
         <Box>
           <Image

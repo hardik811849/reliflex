@@ -158,35 +158,6 @@ const Navbar = () => {
             About Us
           </MenuItem>
         </Menu>
-        {/* <Menu
-          anchorEl={mediaAnchorEl}
-          open={Boolean(mediaAnchorEl)}
-          onClose={handleMediaCloseMenu}
-          sx={{
-            mt: 1,
-            position: "absolute",
-            "& .MuiMenu-list": {
-              width: { sm: "180px", xs: "60%", md: "auto" },
-            },
-          }}
-        >
-          <MenuItem
-            onClick={() => {
-              router.push("/events");
-              handleMediaCloseMenu();
-            }}
-          >
-            Events
-          </MenuItem>
-          <MenuItem
-            onClick={() => {
-              router.push("/catalog");
-              handleMediaCloseMenu();
-            }}
-          >
-            Catalouge
-          </MenuItem>
-        </Menu> */}
         <Toolbar sx={{ mx: { xl: "100px", xxl: "250px" } }}>
           <IconButton
             color="inherit"
@@ -283,7 +254,7 @@ const Navbar = () => {
                     primary={typeof item.label === "string" ? item.label : ""}
                     onClick={(event) => dropdownClick(event, item)}
                   />
-                  {(item.label === "Company" || item.label === "Media") && (
+                  {item.label === "Company" && (
                     <KeyboardArrowDown
                       onClick={(event) => dropdownClick(event, item)}
                     />
