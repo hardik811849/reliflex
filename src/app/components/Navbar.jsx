@@ -104,6 +104,7 @@ const Navbar = () => {
     { label: "Equipment", path: "/equipment" },
     { label: "Catalog", path: "/catalog" },
     { label: "Inquire Now", path: "/inquire" },
+    // { label: "Share", path: "/share" },
     // { label: "Raise Ticket", path: "/raise-ticket" },
     // { label: Catalouge, path: "/catalog" },
   ];
@@ -298,7 +299,7 @@ const Navbar = () => {
                     style={{
                       textAlign: "center",
                       fontWeight: "bold",
-                      marginLeft: "1.2rem",  
+                      marginLeft: "1.2rem",
                       padding: "17px 0",
                       marginRight: "2.5rem", // Similar to mx: 2.5 (horizontal margin)
                       marginTop: "0.45rem",  // Similar to mt: 0.75 (top margin)
@@ -316,6 +317,9 @@ const Navbar = () => {
                     }}
                     onMouseOver={(e) => (e.target.style.backgroundColor = "orange")} // Hover effect
                     onMouseOut={(e) => (e.target.style.backgroundColor = "orange")} // Hover effect
+                    onClick={() => {
+                      window.location.href = "/inquire";  // Redirect to /inquire path
+                    }}
                   >
                     <span style={{ fontSize: "15px" }}>Inquire Now</span>
                   </button>
@@ -325,31 +329,35 @@ const Navbar = () => {
                     style={{
                       textAlign: "center",
                       fontWeight: "bold",
-                      marginLeft: "1.2rem",  
+                      marginLeft: "1.2rem",
                       padding: "17px 0",
-                      marginRight: "2.5rem", // Similar to mx: 2.5 (horizontal margin)
-                      marginTop: "0.45rem",  // Similar to mt: 0.75 (top margin)
-                      marginBottom: "0.75rem", // Similar to mb: 0.75 (bottom margin)
-                      borderRadius: "7px",   // Border radius for rounded corners
-                      backgroundColor: "orange", // Background color of the button
-                      color: "white",        // Text color
-                      border: "1px solid transparent", // Border (invisible)
-                      backgroundSize: "contain", // Make sure background fits properly
-                      backgroundPosition: "center", // Position background image at the center
-                      backgroundRepeat: "no-repeat", // Prevent repeating background image
-                      width: "100%",          // Full width
-                      cursor: "pointer",     // Change cursor on hover to indicate clickable button
-                      transition: "background-color 0.3s", // Smooth transition for hover effect
+                      marginRight: "2.5rem",
+                      marginTop: "0.45rem",
+                      marginBottom: "0.75rem",
+                      borderRadius: "7px",
+                      backgroundColor: "green",
+                      color: "white",
+                      border: "1px solid transparent",
+                      backgroundSize: "contain",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                      width: "100%",
+                      cursor: "pointer",
+                      transition: "background-color 0.3s",
                     }}
-                    onMouseOver={(e) => (e.target.style.backgroundColor = "green")} // Hover effect
-                    onMouseOut={(e) => (e.target.style.backgroundColor = "green")} // Hover effect
+                    onMouseOver={(e) => (e.target.style.backgroundColor = "green")}
+                    onMouseOut={(e) => (e.target.style.backgroundColor = "green")}
+                    onClick={() => {
+                      window.location.href = "/share";  // Redirect to /share path
+                    }}
                   >
                     <span style={{ fontSize: "15px" }}>Share</span>
                   </button>
+
                 </div>
 
               ) : (
-                
+
                 <ListItemButton
                   sx={{
                     textAlign: "left",
