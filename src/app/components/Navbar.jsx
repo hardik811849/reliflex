@@ -71,6 +71,7 @@ const Navbar = () => {
       <Button
         sx={{
           textAlign: "left",
+          px: 3.5,
           mx: 2.5,
           mb: 1.5, // Adds space between buttons (5px)
           borderRadius: "7px", // Adds minor border radius
@@ -80,7 +81,7 @@ const Navbar = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          width: "208px",
+          width: "100%",
           height: { lg: "40px", xxl: "48px", md: "36px", xs: "49px" },
           fontSize: { md: "14px", xxl: "16px", xs: "14px" },
           fontWeight: 600,
@@ -93,60 +94,9 @@ const Navbar = () => {
         Inquire Now
       </Button>
 
-      {/* Second Button - Green */}
-      {/* <Button
-        sx={{
-          textAlign: "left",
-          mx: 2.5,
-          mb: 1.5, // Adds space between buttons (5px)
-          borderRadius: "7px", // Adds minor border radius
-          backgroundColor: "green", // Primary color (keeps the color the same)
-          color: "white", // Text color white
-          border: "1px solid transparent", // Default border (invisible)
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "208px",
-          height: { lg: "40px", xxl: "48px", md: "36px", xs: "49px" },
-          fontSize: { md: "14px", xxl: "16px", xs: "14px" },
-          fontWeight: 600,
-          "&:hover": {
-            backgroundColor: "green",
-            color: "white",
-          },
-        }}
-      >
-        Share
-      </Button> */}
     </div>
   );
 
-  const ShareButtonn = () => (
-    <Button
-        sx={{
-          textAlign: "left",
-          mx: 2.5,
-          mb: 1.5, // Adds space between buttons (5px)
-          borderRadius: "7px", // Adds minor border radius
-          backgroundColor: "green", // Primary color (keeps the color the same)
-          color: "white", // Text color white
-          border: "1px solid transparent", // Default border (invisible)
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "208px",
-          height: { lg: "40px", xxl: "48px", md: "36px", xs: "49px" },
-          fontSize: { md: "14px", xxl: "16px", xs: "14px" },
-          fontWeight: 600,
-          "&:hover": {
-            backgroundColor: "green",
-            color: "white",
-          },
-        }}
-      >
-        Share
-      </Button>
-  );
 
   const navItems = [
     { label: "Home", path: "/" },
@@ -326,7 +276,7 @@ const Navbar = () => {
                 }}
               />
             </Link>
-            
+
           </div>
 
 
@@ -336,45 +286,104 @@ const Navbar = () => {
               mb: "3px", // Adds margin-bottom of 10px
             }}>
               {item.label === "Inquire Now" ? (
-                <>
-                <InquireNow />
-                <ShareButtonn />
-                </>
+                <div
+                  style={{
+                    display: "flex", // Use flexbox to align children
+                    flexDirection: "column", // Stack items vertically
+                    width: "85%", // Ensure it spans the full width
+                  }}
+                >
+                  {/* Orange Button */}
+                  <button
+                    style={{
+                      textAlign: "center",
+                      fontWeight: "bold",
+                      marginLeft: "1.2rem",  
+                      padding: "17px 0",
+                      marginRight: "2.5rem", // Similar to mx: 2.5 (horizontal margin)
+                      marginTop: "0.45rem",  // Similar to mt: 0.75 (top margin)
+                      marginBottom: "0.75rem", // Similar to mb: 0.75 (bottom margin)
+                      borderRadius: "7px",   // Border radius for rounded corners
+                      backgroundColor: "orange", // Background color of the button
+                      color: "white",        // Text color
+                      border: "1px solid transparent", // Border (invisible)
+                      backgroundSize: "contain", // Make sure background fits properly
+                      backgroundPosition: "center", // Position background image at the center
+                      backgroundRepeat: "no-repeat", // Prevent repeating background image
+                      width: "100%",          // Full width
+                      cursor: "pointer",     // Change cursor on hover to indicate clickable button
+                      transition: "background-color 0.3s", // Smooth transition for hover effect
+                    }}
+                    onMouseOver={(e) => (e.target.style.backgroundColor = "orange")} // Hover effect
+                    onMouseOut={(e) => (e.target.style.backgroundColor = "orange")} // Hover effect
+                  >
+                    <span style={{ fontSize: "15px" }}>Inquire Now</span>
+                  </button>
+
+                  {/* Green Button */}
+                  <button
+                    style={{
+                      textAlign: "center",
+                      fontWeight: "bold",
+                      marginLeft: "1.2rem",  
+                      padding: "17px 0",
+                      marginRight: "2.5rem", // Similar to mx: 2.5 (horizontal margin)
+                      marginTop: "0.45rem",  // Similar to mt: 0.75 (top margin)
+                      marginBottom: "0.75rem", // Similar to mb: 0.75 (bottom margin)
+                      borderRadius: "7px",   // Border radius for rounded corners
+                      backgroundColor: "orange", // Background color of the button
+                      color: "white",        // Text color
+                      border: "1px solid transparent", // Border (invisible)
+                      backgroundSize: "contain", // Make sure background fits properly
+                      backgroundPosition: "center", // Position background image at the center
+                      backgroundRepeat: "no-repeat", // Prevent repeating background image
+                      width: "100%",          // Full width
+                      cursor: "pointer",     // Change cursor on hover to indicate clickable button
+                      transition: "background-color 0.3s", // Smooth transition for hover effect
+                    }}
+                    onMouseOver={(e) => (e.target.style.backgroundColor = "green")} // Hover effect
+                    onMouseOut={(e) => (e.target.style.backgroundColor = "green")} // Hover effect
+                  >
+                    <span style={{ fontSize: "15px" }}>Share</span>
+                  </button>
+                </div>
+
               ) : (
+                
                 <ListItemButton
-                sx={{
-                  textAlign: "left",
-                  mx: 2.5,
-                  mt: 0.75,
-                  mb: 0.75, // Adds space between buttons (5px)
-                  borderRadius: "7px", // Adds minor border radius
-                  backgroundColor: "#00AFF9",
-                  color: "white",
-                  border: "1px solid transparent", // Default border (invisible)
-                  backgroundImage: item.label === "Home" ? "url(/path/to/home-logo.png)" : "none", // Add logo behind Home button
-                  backgroundSize: "contain", // Ensure the logo is contained within the button
-                  backgroundPosition: "center", // Center the logo
-                  backgroundRepeat: "no-repeat", // Prevent the logo from repeating
-                  "&:hover": {
+                  sx={{
+                    textAlign: "left",
+                    mx: 2.5,
+                    mt: 0.75,
+                    mb: 0.75, // Adds space between buttons (5px)
+                    borderRadius: "7px", // Adds minor border radius
                     backgroundColor: "#00AFF9",
                     color: "white",
-                  },
-                }}
-              >
-                <ListItemText
-                  primary={typeof item.label === "string" ? item.label : ""}
-                  onClick={(event) => dropdownClick(event, item)}
-                  sx={{ fontSize: "30px" }} // Set font size to a bigger value (e.g., 20px)
-                />
-                {item.label === "Company" && (
-                  <KeyboardArrowDown
+                    border: "1px solid transparent", // Default border (invisible)
+                    backgroundImage: item.label === "Home" ? "url(/path/to/home-logo.png)" : "none", // Add logo behind Home button
+                    backgroundSize: "contain", // Ensure the logo is contained within the button
+                    backgroundPosition: "center", // Center the logo
+                    backgroundRepeat: "no-repeat", // Prevent the logo from repeating
+                    "&:hover": {
+                      backgroundColor: "#00AFF9",
+                      color: "white",
+                    },
+                  }}
+                >
+                  <ListItemText
+                    primary={typeof item.label === "string" ? item.label : ""}
                     onClick={(event) => dropdownClick(event, item)}
-                    sx={{
-                      color: "inherit", // Ensures the arrow color matches text color
-                    }}
+                    sx={{ fontSize: "30px" }} // Set font size to a bigger value (e.g., 20px)
                   />
-                )}
-              </ListItemButton>
+                  {item.label === "Company" && (
+                    <KeyboardArrowDown
+                      onClick={(event) => dropdownClick(event, item)}
+                      sx={{
+                        color: "inherit", // Ensures the arrow color matches text color
+                      }}
+                    />
+                  )}
+                </ListItemButton>
 
               )}
             </ListItem>
