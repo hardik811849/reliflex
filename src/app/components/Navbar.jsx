@@ -71,7 +71,7 @@ const Navbar = () => {
       <Button
         sx={{
           textAlign: "left",
-          mx: 2,
+          mx: 2.5,
           mb: 1.5, // Adds space between buttons (5px)
           borderRadius: "7px", // Adds minor border radius
           backgroundColor: "orange", // Primary color (keeps the color the same)
@@ -80,7 +80,7 @@ const Navbar = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          width: "263px",
+          width: "208px",
           height: { lg: "40px", xxl: "48px", md: "36px", xs: "49px" },
           fontSize: { md: "14px", xxl: "16px", xs: "14px" },
           fontWeight: 600,
@@ -94,10 +94,10 @@ const Navbar = () => {
       </Button>
 
       {/* Second Button - Green */}
-      <Button
+      {/* <Button
         sx={{
           textAlign: "left",
-          mx: 2,
+          mx: 2.5,
           mb: 1.5, // Adds space between buttons (5px)
           borderRadius: "7px", // Adds minor border radius
           backgroundColor: "green", // Primary color (keeps the color the same)
@@ -106,7 +106,35 @@ const Navbar = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          width: "263px",
+          width: "208px",
+          height: { lg: "40px", xxl: "48px", md: "36px", xs: "49px" },
+          fontSize: { md: "14px", xxl: "16px", xs: "14px" },
+          fontWeight: 600,
+          "&:hover": {
+            backgroundColor: "green",
+            color: "white",
+          },
+        }}
+      >
+        Share
+      </Button> */}
+    </div>
+  );
+
+  const ShareButtonn = () => (
+    <Button
+        sx={{
+          textAlign: "left",
+          mx: 2.5,
+          mb: 1.5, // Adds space between buttons (5px)
+          borderRadius: "7px", // Adds minor border radius
+          backgroundColor: "green", // Primary color (keeps the color the same)
+          color: "white", // Text color white
+          border: "1px solid transparent", // Default border (invisible)
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "208px",
           height: { lg: "40px", xxl: "48px", md: "36px", xs: "49px" },
           fontSize: { md: "14px", xxl: "16px", xs: "14px" },
           fontWeight: 600,
@@ -118,10 +146,6 @@ const Navbar = () => {
       >
         Share
       </Button>
-    </div>
-
-
-
   );
 
   const navItems = [
@@ -231,7 +255,7 @@ const Navbar = () => {
                     router.pathname === item.path
                       ? theme.palette.primary.main
                       : theme.palette.primary.white,
-                  fontSize: { lg: "14px", xxl: "16px", md: "13px", sm: "12px" },
+                  fontSize: { lg: "14px", xxl: "16px", md: "23px", sm: "23px" },
                   fontWeight: 500,
                   zIndex: 10,
                   mr: index !== navItems.length - 1 ? 4 : 0,
@@ -272,8 +296,7 @@ const Navbar = () => {
             display: { sm: "block", md: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: { sm: "30%", xs: "60%" },
-              pt: 2,
+              width: { sm: "40%", xs: "50%" },
             },
           }}
         >
@@ -284,6 +307,7 @@ const Navbar = () => {
               display: "flex", // Aligns the content horizontally
               justifyContent: "center", // Centers the logo horizontally
               padding: "10px 0", // Adds vertical padding for better spacing
+              margin: "0 0 10px 0"
             }}
           >
             <Link href="/">
@@ -302,51 +326,55 @@ const Navbar = () => {
                 }}
               />
             </Link>
+            
           </div>
 
 
           {navItems.map((item, index) => (
-            <ListItem key={item.label} disablePadding>
+            <ListItem key={item.label} disablePadding sx={{
+              mt: "3px", // Adds margin-top of 10px
+              mb: "3px", // Adds margin-bottom of 10px
+            }}>
               {item.label === "Inquire Now" ? (
+                <>
                 <InquireNow />
+                <ShareButtonn />
+                </>
               ) : (
                 <ListItemButton
-                  sx={{
-                    textAlign: "left",
-                    mx: 2,
-                    mt: 0.75,
-                    mb: 0.75, // Adds space between buttons (5px)
-                    borderRadius: "7px", // Adds minor border radius
+                sx={{
+                  textAlign: "left",
+                  mx: 2.5,
+                  mt: 0.75,
+                  mb: 0.75, // Adds space between buttons (5px)
+                  borderRadius: "7px", // Adds minor border radius
+                  backgroundColor: "#00AFF9",
+                  color: "white",
+                  border: "1px solid transparent", // Default border (invisible)
+                  backgroundImage: item.label === "Home" ? "url(/path/to/home-logo.png)" : "none", // Add logo behind Home button
+                  backgroundSize: "contain", // Ensure the logo is contained within the button
+                  backgroundPosition: "center", // Center the logo
+                  backgroundRepeat: "no-repeat", // Prevent the logo from repeating
+                  "&:hover": {
                     backgroundColor: "#00AFF9",
                     color: "white",
-                    border: "1px solid transparent", // Default border (invisible)
-                    backgroundImage: item.label === "Home" ? "url(/path/to/home-logo.png)" : "none", // Add logo behind Home button
-                    backgroundSize: "contain", // Ensure the logo is contained within the button
-                    backgroundPosition: "center", // Center the logo
-                    backgroundRepeat: "no-repeat", // Prevent the logo from repeating
-                    "&:hover": {
-                      backgroundColor: "#00AFF9",
-                      color: "white",
-                    },
-                  }}
-                >
-                  <ListItemText
-                    primary={typeof item.label === "string" ? item.label : ""}
+                  },
+                }}
+              >
+                <ListItemText
+                  primary={typeof item.label === "string" ? item.label : ""}
+                  onClick={(event) => dropdownClick(event, item)}
+                  sx={{ fontSize: "30px" }} // Set font size to a bigger value (e.g., 20px)
+                />
+                {item.label === "Company" && (
+                  <KeyboardArrowDown
                     onClick={(event) => dropdownClick(event, item)}
+                    sx={{
+                      color: "inherit", // Ensures the arrow color matches text color
+                    }}
                   />
-                  {item.label === "Company" && (
-                    <KeyboardArrowDown
-                      onClick={(event) => dropdownClick(event, item)}
-                      sx={{
-                        color: "inherit", // Ensures the arrow color matches text color
-                      }}
-                    />
-                  )}
-                </ListItemButton>
-
-
-
-
+                )}
+              </ListItemButton>
 
               )}
             </ListItem>
