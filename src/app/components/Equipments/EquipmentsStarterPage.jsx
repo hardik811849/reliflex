@@ -300,8 +300,9 @@ const EquipmentsStarterPage = ({ selectedCategory }) => {
                 <Typography
                   sx={{
                     textTransform: "uppercase",
+                    background: "grey[300]",
                     color: "black",
-                    fontWeight: 500,
+                    fontWeight: 700,
                     fontSize: { md: "18px", xs: "14px" },
                   }}
                 >
