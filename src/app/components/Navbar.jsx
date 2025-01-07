@@ -66,26 +66,64 @@ const Navbar = () => {
   //   </Button>
   // );
   const InquireNow = () => (
-    <Button
-      sx={{
-        backgroundColor: "orange",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        width: { lg: "175px", md: "130px", xs: "70%" },
-        height: { lg: "40px", xxl: "48px", md: "36px", xs: "30px" },
-        color: "white",
-        ml: { md: "0px", xs: "20px" },
-        mt: { md: "0px", xs: "20px" },
-        mb: { md: "0px", xs: "20px" },
-        fontSize: { md: "14px", xxl: "16px", xs: "14px" },
-        fontWeight: 600,
-        borderRadius: "4px",
-      }}
-    >
-      Inquire Now
-    </Button>
+    <div>
+      {/* First Button - Orange */}
+      <Button
+        sx={{
+          textAlign: "left",
+          mx: 2,
+          mb: 1.5, // Adds space between buttons (5px)
+          borderRadius: "7px", // Adds minor border radius
+          backgroundColor: "orange", // Primary color (keeps the color the same)
+          color: "white", // Text color white
+          border: "1px solid transparent", // Default border (invisible)
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "263px",
+          height: { lg: "40px", xxl: "48px", md: "36px", xs: "49px" },
+          fontSize: { md: "14px", xxl: "16px", xs: "14px" },
+          fontWeight: 600,
+          "&:hover": {
+            backgroundColor: "orange",
+            color: "white",
+          },
+        }}
+      >
+        Inquire Now
+      </Button>
+
+      {/* Second Button - Green */}
+      <Button
+        sx={{
+          textAlign: "left",
+          mx: 2,
+          mb: 1.5, // Adds space between buttons (5px)
+          borderRadius: "7px", // Adds minor border radius
+          backgroundColor: "green", // Primary color (keeps the color the same)
+          color: "white", // Text color white
+          border: "1px solid transparent", // Default border (invisible)
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "263px",
+          height: { lg: "40px", xxl: "48px", md: "36px", xs: "49px" },
+          fontSize: { md: "14px", xxl: "16px", xs: "14px" },
+          fontWeight: 600,
+          "&:hover": {
+            backgroundColor: "green",
+            color: "white",
+          },
+        }}
+      >
+        Share
+      </Button>
+    </div>
+
+
+
   );
+
   const navItems = [
     { label: "Home", path: "/" },
     { label: "Company", path: "/company" },
@@ -117,6 +155,7 @@ const Navbar = () => {
       setBackgroundDrop(false);
     }
   };
+
   useEffect(() => {
     global?.window && window.addEventListener("scroll", changeColor);
   }, []);
@@ -238,6 +277,34 @@ const Navbar = () => {
             },
           }}
         >
+          <div
+            style={{
+              width: "100%", // Makes the div take the full width of its container
+              backgroundColor: "#33566c", // Sets the background color to the desired blue
+              display: "flex", // Aligns the content horizontally
+              justifyContent: "center", // Centers the logo horizontally
+              padding: "10px 0", // Adds vertical padding for better spacing
+            }}
+          >
+            <Link href="/">
+              <Image
+                src={reliflexLogo}
+                width={screenSizeXs && !screenSizeMd ? 180 : 250} // Increase size as needed
+                height={80} // Increased height to make it bigger
+                alt="reliflex"
+                priority
+                sx={{
+                  padding: "20px", // Adds 20px padding around the logo
+                  paddingLeft: "30px", // Adds 30px left padding
+                  objectFit: "contain", // Ensure the logo scales properly without distortion
+                  backgroundColor: "#00AFF9", // Set background color to the desired blue
+                  borderRadius: "10px", // Optionally, add border radius for rounded corners
+                }}
+              />
+            </Link>
+          </div>
+
+
           {navItems.map((item, index) => (
             <ListItem key={item.label} disablePadding>
               {item.label === "Inquire Now" ? (
@@ -247,7 +314,20 @@ const Navbar = () => {
                   sx={{
                     textAlign: "left",
                     mx: 2,
-                    backgroundColor: index % 2 === 0 ? grey[300] : grey[500],
+                    mt: 0.75,
+                    mb: 0.75, // Adds space between buttons (5px)
+                    borderRadius: "7px", // Adds minor border radius
+                    backgroundColor: "#00AFF9",
+                    color: "white",
+                    border: "1px solid transparent", // Default border (invisible)
+                    backgroundImage: item.label === "Home" ? "url(/path/to/home-logo.png)" : "none", // Add logo behind Home button
+                    backgroundSize: "contain", // Ensure the logo is contained within the button
+                    backgroundPosition: "center", // Center the logo
+                    backgroundRepeat: "no-repeat", // Prevent the logo from repeating
+                    "&:hover": {
+                      backgroundColor: "#00AFF9",
+                      color: "white",
+                    },
                   }}
                 >
                   <ListItemText
@@ -257,9 +337,17 @@ const Navbar = () => {
                   {item.label === "Company" && (
                     <KeyboardArrowDown
                       onClick={(event) => dropdownClick(event, item)}
+                      sx={{
+                        color: "inherit", // Ensures the arrow color matches text color
+                      }}
                     />
                   )}
                 </ListItemButton>
+
+
+
+
+
               )}
             </ListItem>
           ))}
