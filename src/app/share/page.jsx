@@ -84,15 +84,24 @@ const Bio = () => {
         />
       </Head>
       <Container
-        maxWidth="sm"
+        maxWidth={false} // Disables the default maxWidth restriction
         style={{
           textAlign: "center",
           padding: "2rem 0",
-          marginTop: "90px",
-          backgroundColor: "black",
+          paddingTop: "90px",
+          paddingRight: "35px",
+          display: "flex",
+          flexDirection: "column", // Arranges child elements in a column
+          alignItems: "center", // Centers the items horizontally
+          height: "100vh", // Makes the container cover the full height of the viewport
+          width: "100vw", // Makes the container cover the full width of the viewport
+          backgroundImage: "url('/circle.jpg')",
+          backgroundSize: "cover", // Makes the image cover the entire container
+          backgroundPosition: "center", // Centers the image
+          backgroundRepeat: "no-repeat", // Prevents repeating the image
         }}
       >
-        <Box>
+        {/* <Box>
           <Image
             alt="Profile Picture"
             src={reliflexLogo}
@@ -101,9 +110,16 @@ const Bio = () => {
           <Typography variant="body1" color="white" sx={{ marginBottom: 2 }}>
             Welcome to our official link page!
           </Typography>
-        </Box>
+        </Box> */}
 
-        <Stack spacing={3} sx={{ padding: "20px" }}>
+        <Stack spacing={3} sx={{
+          padding: "20px", width: {
+            xs: "90%", // Extra small screens
+            sm: "80%", // Small screens
+            md: "70%", // Medium screens
+            lg: "50%", // Large and above
+          },
+        }}>
           {links.map((link, index) => (
             <Button
               key={index}
@@ -135,7 +151,14 @@ const Bio = () => {
             </Button>
           ))}
         </Stack>
-        <Stack spacing={3} sx={{ padding: "20px", paddingTop: "0px" }}>
+        <Stack spacing={3} sx={{
+          padding: "20px", paddingTop: "0px", width: {
+            xs: "90%", // Extra small screens
+            sm: "80%", // Small screens
+            md: "70%", // Medium screens
+            lg: "50%", // Large and above
+          },
+        }}>
           <Box
             variant="contained"
             bgcolor="white"
